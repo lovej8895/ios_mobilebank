@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>还款计划查询</title>
+		<link rel="stylesheet" href="../../css/mui.min.css" />
+		<link rel="stylesheet" href="../../css/mui.picker.css" />
+		<link rel="stylesheet" href="../../css/mui.poppicker.css" />
+		<link rel="stylesheet" href="../../css/mui.listpicker.css" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+	</head>
+	<body>
+	   	<div id="pullRefresh" class="mui-scroll-wrapper">
+	   		<div class="content_box5px">
+				<div id="repaymentPlan"></div>
+			</div>
+        </div>
+        <div class="content_box5px m_top5px" id="showMsgDiv" style="display: none;">
+			<div class="fail_icon1 suc_top7px"></div>
+			<p class="fz_15 text_m">无记录！</p>
+		</div>
+		<script src="../../js/core/support.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/mui.min.js"></script>
+		<script src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script src="../../js/common/sea.js"></script>
+		<script src="../../js/common/mui.picker.js"></script>
+		<script src="../../js/common/mui.poppicker.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('loan/repaymentPlanList');
+		</script>
+	</body>
+</html>

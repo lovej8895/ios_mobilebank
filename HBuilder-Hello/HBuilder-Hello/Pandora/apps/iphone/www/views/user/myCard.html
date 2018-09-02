@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>手机银行名片</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+	</head>
+	
+	<body style="background: #F5F5F5;">
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+		     	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">手机银行名片</h1>
+		    </div>
+		</header>
+		<div class="content_BOXall hb_cont">
+			<div class="barcode_box">
+				<p class="barc_tit m_top20px">扫一扫</p><p class="fz_15 color_6">下载手机银行</p>
+				<div class="barc_pic"><img src="../../img/barcode.png" /></div>
+				<!--<p class="color_9 fz_12" id="version"></p>-->
+			</div>
+			<div class="barcode_s"></div>
+			<!--<div class="barc_btn_bg" id="share">
+				<button class="but_315px but_red">我要分享
+					<span class="barc_ico"></span>
+				</button>
+			</div>-->
+			<div style="display: none;">
+				<img id="pic" src="../img/share.png"/>
+			</div>
+			<!--<div class="backbox_two" style="height: 30px;">
+				<p class="backbox_tit"><span></span></p>
+			</div>
+			<div class="backbox_two" style="height: 330px;">
+				<p class="backbox_tit"><span id="productName"></span></p>
+				<ul style="padding-left: 15px;">
+					<li>
+						<span></span>
+						<span style="margin-left: 10%;"><img style="width: 280px;height: 280px;" src="../../img/2D_3.png"/></span><br />
+					</li>
+					<li>
+						<span style="margin-left: 36%;">湖北银行：2.0</span>
+					</li>
+				</ul>
+			</div>
+			<div class="content_box5px">
+				<div class="backbox_tit_bg">
+				    <p class="backbox_tit_ico"></p>
+			    </div>
+			</div>
+			<div class="content_box5px">
+				<div class="backbox_th p_lr10px">
+					<ul>
+					    <li id="share">
+				    	    <a class="mui-navigate-right"><span>我要分享</span></a>
+				    	    <span class="input_m14px"></span>
+					    </li>
+					</ul>
+			   	</div>
+			</div>
+			<div class="but_m20px">
+				<button class="but_315px but_red" id="backButton">返回</button>
+			</div>-->
+		</div>
+		
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('user/myCard');
+		</script>
+	</body>
+</html>

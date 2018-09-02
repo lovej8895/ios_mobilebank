@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>基金投资</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+			<div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">宝类签约</h1>
+				<!--<a class="nav_code"></a>-->
+		   </div>
+		</header>
+		<div class="content_BOXall hb_cont">
+			<div class="success_icon1 suc_top7px" id="successDiv" style="display: none;"></div>
+			<div class="fail_icon1 suc_top7px" id="failDiv" style="display: none;"></div>
+				<p class="fz_15 text_m" id="msg">宝类签约成功</p>
+			<br /><br />
+			<!--<div class="btn_bg_f2">
+				<button class="but_315px but_red but_d10px" id="continueBtn">继续购买</button>
+			</div>-->
+			<!--<div style="width: 100%;text-align: center;margin-top: 10px;">-->
+			<div class="but_m20px">
+				<button class="but_315px but_red but_d10px" id="continueBtn" style="display: none;">继续购买</button>
+				<button class="but_315px but_red but_d10px" id="backBtn" style="display: none;">返回基金首页</button>
+			</div>
+		</div>
+		<script src="../../js/core/support.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/mui.min.js"></script>
+		<script src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script src="../../js/core/utils.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('fund/treasureClassSign_Result');
+		</script>
+	</body>
+</html>

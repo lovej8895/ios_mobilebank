@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>付款成功</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" href="../../css/mui.min.css" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+		<style>
+			.qr_paylogobox {
+				border-bottom: none;
+				margin: 30px 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+			<h1 class="mui-title hb-title">付款结果</h1>
+		</header>
+		<div class="content_BOXall p_down10px hb_cont" id="noShowDetail" style="display: none;">
+			<div class="">
+			    <div class="warn_icon1 suc_pdtop"></div>
+				<p class="fz_15 text_m" id="msg"></p>
+				<p class="fz_12 text_m hint_con" id="tip"></p>
+			</div>
+		</div>
+		<div class="content_BOXall hb_cont" id="showDetail" style="display: none;">
+			<div class="qrcode_paybg">
+				<div class="qr_paylogobox">
+					<img class="qr_paylogo" src="../../img/qr_success.png" />
+					<p class="fz_18">付款成功</p>
+					<p class="color_6 m_top5px" id="payResult"></p>
+					<div class="color_9 m_top10px">
+						<a class="color_b m_left10px" id="queryDetail">查看详情</a>
+					</div>
+				</div>
+			</div>
+			<img class="qr_bgd" src="../../img/qr_bgd.png" />
+			<div class="btn_bg_f2">
+				<button class="but_315px but_red" id="backBtn">完&nbsp;&nbsp;成</button>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('qrcodePay/sumQRcode_c2c_end');
+		</script>
+	</body>
+
+</html>

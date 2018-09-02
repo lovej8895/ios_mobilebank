@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html class="ui-page-login">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+		<title>支付管理</title>
+		<link rel="stylesheet" href="../../css/mui.min.css"/>
+		<link rel="stylesheet" href="../../css/public.css"/>
+		<link rel="stylesheet" href="../../css/style.css" />
+	</head>
+	<body>
+		<div class="pickernew_bg" id="msgBox" style="display: none;">
+			<div class="update_box" style="margin-top: 180px;">
+		     	<div class="update_tit_bg">
+			     	<p class="fz_16">请输入短信验证码</p>
+			     	<a id="msgClose"></a>
+		     	</div>
+		     	<div class="backbox_th_pr p_lr10px" data-security="needAuth">
+				    <ul>
+					   <!--删除之前配置的密码li与短信li元素-->
+				    </ul>
+			    </div>
+		     	<div class="update_btnbox">
+			     	<button class="update_btn" data-checkAuth='true' id="qrSignBt">确&nbsp;&nbsp;定</button>
+		     	</div>
+		    </div>
+		</div>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">支付管理</h1>
+				
+		    </div>
+		</header>
+		<div class="content_BOXall p_down20px hb_cont">
+			<div class="content_box5px" id="payManagerDiv">
+				<div class="backbox_th p_lr10px ove_hid m_top10px">
+				    <ul>
+					    <li>
+					    	<span class="input_lbg_w">当面付款</span>
+					    	<div class="mui-switch mui-switch-blue mui-switch-mini flo_rihgt" id="qrSwitch">
+						        <div class="mui-switch-handle" id="qrHandle"></div>
+					        </div>  
+					    </li>
+				    </ul>
+			    </div>
+			    <div class="backbox_th p_lr10px ove_hid m_top10px">
+				    <ul>
+					    <li id="debitList" path="../qrcodePay/debitList.html" noCheck="false">
+					    	<span class="input_lbg_w">扣款顺序</span>
+					    	<a class="link_rbg"></a>
+					    </li>
+					    <li id="freepay" path="../qrcodePay/freepay.html" noCheck="false">
+				    	    <span class="input_lbg_w">小额免密</span>
+				    	    <p class="mxjeset" id="freepayStatus">关闭</p>
+				    	    <a class="link_rbg"></a>				    	    
+					    </li>
+				    </ul>
+			    </div>
+			    <div class="backbox_th p_lr10px ove_hid m_top10px" id="fingerPay">
+				    <ul>
+					    <li>
+					    	<span class="input_lbg_w">指纹支付</span>
+					    	<div class="mui-switch mui-switch-blue mui-switch-mini flo_rihgt" id="fingerSwitch">
+						        <div class="mui-switch-handle" id="fingerHandle"></div>
+					        </div>  
+					    </li>
+				    </ul>
+			    </div>
+			    <p class="hint_con fz_12" id="fingerDesc">开启后，可通过验证指纹快速完成支付</p>
+			    <div class="backbox_th p_lr10px ove_hid m_top10px">
+				    <ul>
+					    <li id="consumingQuery">
+					    	<span class="input_lbg_w">消费查询</span>
+					    	<a class="link_rbg"></a>
+					    </li>
+					    <li id="commonProblem" path="../qrcodePay/qrCommonProblem.html" noCheck="false">
+					    	<span class="input_lbg_w">常见问题</span>
+					    	<a class="link_rbg"></a>
+					    </li>
+				    </ul>
+			    </div>
+			</div>
+		</div>
+	    <script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/core/param.js"></script>
+	    <script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script type="text/javascript" src="../../js/core/utils.js"></script>   
+		<script type="text/javascript" src="../../js/core/initSecurityContent.js"></script>
+		<script type="text/javascript" src="../../js/common/keyboard/plugin-wtxc-keyboard.js"></script>
+		<script type="text/javascript" charset="UTF-8" src="../../js/common/finger/plugin-fingerprint.js"></script>
+	    <script type="text/javascript" charset="UTF-8" src="../../js/common/finger/plugin-login.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('qrcodePay/qrCodeSet');
+		</script>
+	</body>
+</html>

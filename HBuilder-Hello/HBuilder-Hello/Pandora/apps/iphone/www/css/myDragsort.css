@@ -1,0 +1,93 @@
+
+.mui-slider-item{
+	width: 100%;
+	display: inline-block;
+	background: #FFFFFF;
+}
+.hb-dragsort-div .main_menu_ul{
+	overflow: hidden;
+	padding: 0px;
+	margin: 0px;
+}
+.hb-dragsort-div .main_menu_ul li{ 
+	width: 25%; 
+	float: left; 
+	text-align:center;
+	border: none;
+	box-sizing:border-box;
+	border-right: 1px #EEEEEE solid;
+	border-bottom: 1px #EEEEEE solid;
+	position: relative;
+}
+
+.hb-dragsort-div .main_menu_ul li:nth-child(4n){
+	border-right: none;
+}
+
+.hb-dragsort-div .main_menu_ul a{
+	display:block;
+	color:#666666;
+	width:100%;
+	padding:1.6rem 0 1.6rem 0;
+}
+.hb-dragsort-div .main_menu_ul span{
+	width:100%;
+	display:inline-block;
+	text-align:center;
+}
+
+.hb-dragsort-div .main_menu_ul .placeHolder{
+	border-bottom: 1px dotted #BBBBBB;
+	border-left: 1px dotted #BBBBBB;
+	border-right: 1px dotted #BBBBBB;
+	border-top: 1px dotted #BBBBBB;
+}
+
+.hb-menu-title{
+	background-color: #A9A9A9;
+}
+
+
+.hb-dragsort-div .main_menu_ul .icon-default{
+	height: 3.2rem;
+	background: url(../img/h_ico.png) center center no-repeat ;
+	background-size: auto 100%;
+}
+
+
+
+.hb-dragsort-div .hb-drag-plus:after{
+	content: "+";
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	/*background-color: #7F7F7F;*/
+	width: 15px;
+	height: 15px;
+	text-align: center;
+	
+}
+
+.hb-dragsort-div .hb-drag-minus:after{
+	content: "-";
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	/*background-color: #7F7F7F;*/
+	width: 15px;
+	height: 15px;
+	text-align: center;
+}
+
+.drag-menu-bg{
+	position: relative;
+}
+
+.menu-edit{
+	position: absolute;
+	top:16px;
+	right: 0px;
+	padding: 0px;
+	margin: 0px;
+	text-decoration: none;
+}

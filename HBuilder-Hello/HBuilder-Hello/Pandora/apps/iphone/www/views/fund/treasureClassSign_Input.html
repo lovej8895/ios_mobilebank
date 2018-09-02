@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>基金投资</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">签约</h1>
+		    </div>
+		</header>
+		<div class="content_BOXall hb_cont">
+			<div class="content_box5px">
+				<div class="backbox_tit_bg">
+				    <p class="backbox_tit_ico"></p>
+				    <p class="backbox_tit">签约信息</p>
+				</div>
+				<div class="backbox_th p_lr10px">
+					<ul>
+						<li>
+					    	<span class="input_lbg">签约账号</span>
+					    	<span class="input_m12px" id="deposit_acct"></span>
+					    	<!--<a class="link_rbg" id="link"></a>-->
+					    	<input type="hidden" id="deposit_acct" value=""/>
+						</li>
+					   	<li>
+					    	<span class="input_lbg">联系电话</span>
+					    	<span class="input_m12px" id="telno"></span>
+					    	<!--<input class="input_m12px" type="number" placeholder="请输入联系电话" id="mobile_telno" value="" maxlength="11"></input>-->
+					   	</li>
+						<!--<li id="changeDeliver_type">
+					    	<span class="input_lbg">对账单寄送选择</span>
+					    	<span class="input_m12px" id="showdeliver_type"></span>
+					    	<a class="link_rbg" id="link"></a>
+					    	<input type="hidden" id="deliver_type" value=""/>
+						</li>
+						<li id="changeDeliver_way" style="display: none;">
+					    	<span class="input_lbg">对账单寄送方式</span>
+					    	<span class="input_m12px" id="showdeliver_way" ></span>
+					    	<a class="link_rbg" id="link"></a>
+					    	<input type="hidden" id="deliver_way" value=""/>
+						</li>-->
+						<li id="postCodeStyle">
+					    	<span class="input_lbg">邮政编码</span>
+					    	<input class="input_m12px" type="tel" placeholder="请输入邮政编码" id="post_code" value="" maxlength="6" oninput="checkNum(this);"></input>
+					   	</li>
+					   	<li id="addressStyle">
+					    	<span class="input_lbg" >通讯地址</span>
+					    	<input class="input_m12px" type="text" placeholder="请输入通讯地址" id="address" maxlength="256" value=""></input>
+					   	</li>
+					   	<!--<li id="faxnoStyle" style="display: none;">
+					    	<span class="input_lbg">传真号码</span>
+					    	<input class="input_m12px" type="number" placeholder="请输入传真号码" id="faxno" maxlength="12" value=""></input>
+					   	</li>-->
+					   	<li id="emailStyle">
+					    	<span class="input_lbg">电子邮箱</span>
+					    	<input class="input_m12px" type="email" placeholder="请输入电子邮箱" id="email" value=""></input>
+					   	</li>
+					   		<li>
+					    	<span class="input_lbg">理财经理代码</span>
+					    	<input class="input_m12px" type="tel" placeholder="非必输" id="fm_manager" value="" maxlength="11" oninput="checkNum(this);"></input>
+					   	</li>
+					</ul>
+				</div>
+			</div>
+			<div class="btn_bg_f2">
+				<button class="but_315px but_red" id="nextButton">下一步</button>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script type="text/javascript" src="../../js/core/param.js"></script>
+		<script type="text/javascript" src="../../js/common/smart.poppicker.js"></script>
+		<script type="text/javascript">
+			//限制输入长度用maxlength，限制输入正整数
+			function checkNum(obj) {
+			    var reg = new RegExp("^[0-9]*$");
+			    var length = obj.value.length;
+			    for(var i = 0;i < length;i++){//循环处理一次输入多个字符问题
+					//校验是否符合正整数规则，不符合则截取掉最后一位字符
+					if(!reg.test(obj.value)){
+						//适用type!="number"的情况，如type="tel"
+						obj.value = obj.value.substring(0, obj.value.length - 1);
+					}
+			    }
+			}
+		</script>
+		<script type="text/javascript">
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('fund/treasureClassSign_Input');
+		</script>
+	</body>
+</html>

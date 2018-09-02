@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+		<title>中燃燃气费</title>
+		<link rel="stylesheet" href="../../css/mui.min.css"/>
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+			<h1 class="mui-title hb-title">中燃燃气费</h1>
+		</header>
+		<div class="content_BOXall hb_cont">
+			<div class="content_box5px">
+				<div class="backbox_tit_bg">
+				    <p class="backbox_tit_ico"></p>
+				    <p class="backbox_tit">缴费录入</p>
+			    </div>
+				<div class="backbox_th p_lr10px">
+				    <ul>
+					    <li id="changeArea">
+					    	<span class="input_lbg">缴费地区</span>
+					    	<span class="input_m12px" id="areaPicker"></span>
+					    	<a class="link_rbg"></a>
+					    </li>
+					    <li>
+					    	<span class="input_lbg">客户编号</span>
+					    	<input class="input_m12px" type="number" id="chargeNo" value="" placeholder="请输入客户编号"></input>
+					    </li>
+				    </ul>
+			    </div>
+			</div>
+			
+			<div class="content_box5px p_lr10px box_top15px p_down66px">
+				<p class="hint">温馨提示</p>
+				<p class="hint_con fz_12">缴费地区表示客户缴纳费用的所在区域，并非客户所在地区。</p>
+			</div>
+			<div class="btn_bg_f2">
+				<button class="but_315px but_red" id="queryButton">查询</button>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/smart.poppicker.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('feePayment/chinaGasFeePayQuery');
+		</script>
+	</body>
+</html>

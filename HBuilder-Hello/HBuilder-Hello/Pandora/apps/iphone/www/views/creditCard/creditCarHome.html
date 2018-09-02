@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>信用卡</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/index.css" />
+		
+	</head>
+	<script></script>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">信用卡</h1>
+				<!--<a class="nav_code"></a>-->
+		    </div>
+		</header>
+		<div id="credit_scroll" class="mui-scroll-wrapper p_down66px">
+			<!--<div style="width: 100%; height: 64px;"></div>-->
+			<div class="mui-scroll">
+			<div id="frameBlockC" class="content_BOXall hb_cont">
+				<div id="frameBlock">
+					<div id="slider" class="banner_bg mui-slider">
+					<div class="mui-slider-group mui-slider-loop">
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#"><img src="../../img/card_banner.png"></a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#"><img src="../../img/bank_img.png"></a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#"><img src="../../img/card_banner.png"></a>
+						</div>
+						<div class="mui-slider-item">
+							<a href="#"><img src="../../img/bank_img.png"></a>
+						</div>
+						<div class="mui-slider-item mui-slider-item-duplicate">
+							<a href="#"><img src="../../img/card_banner.png"></a>
+						</div>
+					</div>
+					<div class="mui-slider-indicator rollbox">
+						<div class="mui-indicator rollone mui-active"></div>
+						<div class="mui-indicator rollone"></div>
+						<div class="mui-indicator rollone"></div>
+					</div>
+				</div>
+			</div>
+			</div>
+	    <div>
+	    	 <!--  <div class="banner_bg">
+					<div class="banner_imgbox">
+						<a><img src="../../img/card_banner.png"/></a>
+					</div>
+				</div>-->
+				<!--<div class="card_bg">
+				<div class="swiper-container">
+			        <div class="swiper-wrapper" id="slidList">
+			        	
+			        </div>
+				</div>
+				<div class="swiper-pagination"></div>
+			</div>-->
+			<!--<div class="backbox_tit_bg">
+				    <p class="backbox_tit_ico"></p>
+				    <p class="backbox_tit">卡片管理</p>
+		    </div>-->
+			<!--<div style="background: #eee; border-top: 1px solid #ddd;">
+				
+			</div>-->
+			<div class="mui-slider-item" style="padding: 10px;">
+				<ul class="main_menu_ul main_w33">
+					<li><a id="applicationAndActivation" path="../creditCard/applicationAndActivation.html" noCheck="false"><span class="main_icon icon-card6"></span><p class="color_6">申办与激活</p></a></li>
+					<li><a id="limitManager" path="../creditCard/limitManager.html" noCheck="false"><span class="main_icon icon-card3"></span><p class="color_6">额度管理</p></a></li>
+					<li><a id="billManager" path="../creditCard/billManager.html" noCheck="false"><span class="main_icon icon-card2"></span><p class="color_6">账单管理</p></a></li>
+				</ul>
+				<ul class="main_menu_ul main_w33">
+					<li><a id="thisInitiativeRefundMenuInfo" path="../creditCard/thisInitiativeRefundMenuInfo.html" noCheck="false"><span class="main_icon icon-card5"></span><p class="color_6">信用卡还款</p></a></li>
+					<li><a id="installmentCreditMenuInfo" path="../creditCard/installmentCreditMenuInfo.html" noCheck="false"><span class="main_icon icon-card4"></span><p class="color_6">分期信贷</p></a></li>
+				    <li><a id="thirdPayMenuInfo" path="../creditCard/thirdPayMenuInfo.html" noCheck="false"><span class="main_icon icon-card8"></span><p class="color_6">支付管理</p></a></li>
+				</ul>
+				<ul class="main_menu_ul main_w33">
+				    <li><a id="pointQuery" path="../creditCard/pointQuery.html" noCheck="false"><span class="main_icon icon-card7"></span><p class="color_6">积分管理</p></a></li>
+				    <li></li>
+				    <li></li>
+				</ul>
+	       </div>
+	       <div class="banner_bg" id="adlist" style="display: none;">
+	       	    <div class="backbox_tit_bg">
+				    <p class="backbox_tit_ico"></p>
+				    <p class="backbox_tit">活动</p>
+		        </div>
+		        <div id="ADlist">
+		       		<!--<div class="banner_imgbox m_bottom10px"><a><img src="../../img/f_banner.png"/></a></div>-->
+		        </div>
+			</div>
+		<!--	
+				       
+	       <div id="adDesArea" style="display: none;">
+				<span id="showAdDes"></span>
+				<button onclick="closeAdDesArea()" class="pay_bnt">关闭</button>
+			</div>-->
+	       
+	    </div>
+	    </div>
+		</div>
+		<script src="../../js/core/support.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/mui.min.js"></script>
+		<script src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script src="../../js/core/utils.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/core/param.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/sea.js"></script>
+		<script src="../../js/common/swiper.min.js"></script>
+		<script src="../../js/common/maskLayer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/controllers/adView/ad_load_html.js"></script>
+		<script> 
+			document.getElementById("credit_scroll").addEventListener('touchmove',function(e){
+				e.preventDefault();
+			});
+			mui('header')[0].addEventListener('touchmove',function(e){e.preventDefault();})
+			var divH = jQuery("#frameBlock > div > div > div > a > img").width() * 294/750;
+			jQuery("#frameBlock").height(divH);
+			jQuery("#slider").hide();
+			 /*var swiper = new Swiper('.swiper-container', {
+	            spaceBetween: 50,//slide之间的距离
+	            slidesPerView: 2,
+	            centeredSlides: true,
+	            observer:true,
+	            observeParents:true,
+	       });*/
+			 
+			//页面弹性滚动  
+			mui('.mui-scroll-wrapper').scroll({
+				deceleration:0.005
+			});
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('creditCard/creditCarHome');
+		</script>
+	</body>
+</html>

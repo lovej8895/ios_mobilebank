@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>基金定投</title>
+		<link rel="stylesheet" type="text/css" href="../../css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+		<link rel="stylesheet" href="../../css/style.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+			<div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title" id="title">基金定投</h1>
+			</div>
+		</header>
+		<div class="content_BOXall p_down66px hb_cont">
+			<div class="backbox_fo">
+			    <p class="backbox_tit2" id="p_title">基金定投信息</p>
+			    <ul class="p_lr30px">
+		    	        <li>
+		    	    	        <span class="detail_left">基金名称</span><span class="detail_right" id="f_prodname_prodcode"></span>
+		    	        </li>
+		    	        <li>
+		    	    	        <span class="detail_left">交易账号</span><span class="detail_right" id="f_deposit_acct"></span>
+		    	        </li>
+		    	        <li id="li_f_investcycle">
+		    	    	        <span class="detail_left" id="s_f_investcycle">定投周期</span><span class="detail_right" id="f_investcycle"></span>
+		    	        </li>
+		    	        <!--<li>
+		    	    	        <span class="detail_left">定投间隔</span><span class="detail_right" id="f_investcyclevalue"></span>
+		    	        </li>-->
+		    	        <!--<li id="li_f_investmode">
+		    	    	        <span class="detail_left">定投模式</span><span class="detail_right" id="f_investmode"></span>
+		    	        </li>-->
+		    	        <li>
+		    	    	        <span class="detail_left" id="f_investamount_title">定投金额</span><span class="detail_right" id="f_investamount"></span>
+		    	        </li>
+		    	        <li id="li_f_continueinvestamount" style="display: none;">
+		    	    	        <span class="detail_left">后续投资金额</span><span class="detail_right" id="f_continueinvestamount"></span>
+		    	        </li>
+		    	        <li>
+		    	    	        <span class="detail_left">终止条件</span><span class="detail_right" id="f_investtime"></span>
+		    	        </li>
+		       </ul>
+		  	</div>
+		  	<div class="content_box5px p_down66px">
+		   	    <div class="backbox_tit_bg">
+				    <p class="backbox_tit_ico"></p>
+				    <p class="backbox_tit">密码及验证码</p>
+			    </div>
+			    <div class="backbox_th p_lr10px" data-security="needPassword|needAuth">
+				    <ul>
+					   
+				    </ul>
+			    </div>
+		    </div>
+		   <div class="btn_bg_f2">
+		       <button class="but_150px but_w" id="lastButton" noCheck="false">上一步</button>
+		       <button class="but_150px but_red" id="nextButton" noCheck="false">下一步</button>
+		   </div>
+		</div>	
+		<script src="../../js/common/mui.min.js"></script>
+		<script src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script src="../../js/core/support.js" type="text/javascript" charset="utf-8"></script>
+		<!--初始化构建安全认证页面，密码与短信验证码输入框 以及隐藏域-->   
+		<script src="../../js/core/param.js"></script> 
+		<script src="../../js/core/utils.js"></script>   
+		<script type="text/javascript" src="../../js/core/initSecurityContent.js"></script>
+		<script type="text/javascript" src="../../js/common/keyboard/plugin-wtxc-keyboard.js"></script> 
+		<script src="../../js/common/sea.js"></script>
+		<script type="text/javascript">
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('fund/investmentConfirm')
+		</script>
+	</body>
+</html>

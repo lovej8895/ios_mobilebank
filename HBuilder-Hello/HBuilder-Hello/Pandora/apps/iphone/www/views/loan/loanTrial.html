@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>贷款试算</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<!--<link href="../../css/mui.picker.css" rel="stylesheet" />
+		<link href="../../css/mui.poppicker.css" rel="stylesheet" />
+		<link href="../../css/mui.listpicker.css" rel="stylesheet" />-->
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">贷款试算</h1>
+		    </div>
+		</header>
+		<div class="content_BOXall m_top10px hb_cont">
+			<div class="content_box5px">
+				<div class="backbox_th p_lr10px">
+					<ul>
+						<li id="changeTrialType">
+						    <span class="input_lbg">贷款试算类型</span>
+						    <span class="input_m14px" id="trialType"></span>
+				    	    <a class="link_rbg"></a>
+						</li>
+						<li>
+						    <span class="input_lbg">贷款本金</span>
+						    <input class="input_m14px" type="number" id="principal" placeholder="必输项"></input>
+						    <p class="input_rmb">元</p>
+						</li>
+						<li id="changeRepaymentCycle">
+						    <span class="input_lbg">还款周期</span>
+						    <span class="input_m14px" id="repaymentCycle"></span>
+				    	    <a class="link_rbg"></a>
+						</li>
+						<li id="repaymentCycleHidden" style="display: none;">
+						    <span class="input_lbg">还款周期</span>
+						    <span class="input_m14px" style="color: grey;">按月</span>
+						    <a class="link_rbg"></a>
+						</li>
+						<li>
+						    <span class="input_lbg">贷款期限</span>
+						    <input class="input_m14px" type="number" id="loanPeriod" placeholder="必输项"></input>
+						    <p class="input_rmb">月</p>
+						</li>
+						<li>
+						    <span class="input_lbg">贷款年利率</span>
+						    <input class="input_m14px" type="number" id="loanRate" placeholder="必输项"></input>
+						    <p class="input_rmb">%</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="content_box5px p_lr10px box_top15px p_down66px">
+				<p class="hint">温馨提示</p>
+				<p class="hint_con fz_12">按期等额本息中把按揭贷款的本金总额与利息总额相加，然后平均分摊到还款期限的每个月中，作为还款人，每月还给银行固定金额，但每月还款额中的本金比重逐月增加，利息比重逐月递减。</p>
+			</div>
+			<div class="btn_bg_f2">
+				<button class="but_150px but_red" id="trialButton">试&nbsp;&nbsp;算</button>
+				<button class="but_150px but_w" id="resetButton">重&nbsp;&nbsp;置</button>
+			</div>
+		</div>
+		<script src="../../js/core/support.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/mui.min.js"></script>
+		<script src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script src="../../js/core/utils.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/sea.js"></script>
+		<script src="../../js/common/smart.poppicker.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('loan/loanTrial');
+		</script>
+	</body>
+</html>

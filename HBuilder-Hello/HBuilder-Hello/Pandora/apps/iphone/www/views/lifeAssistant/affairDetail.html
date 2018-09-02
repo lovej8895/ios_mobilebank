@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>理财产品交易</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+	</head>
+	
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">提醒详情</h1>
+		    </div>
+		</header>
+		<div class="content_BOXall hb_cont">
+			<div class="content_box5px">
+				<div class="backbox_tit_bg">
+				    <p class="backbox_tit_ico"></p>
+				    <p class="backbox_tit">提醒信息</p>
+			    </div>
+				<div class="backbox_th p_lr10px">
+					<ul>
+						<li>
+				    	    <span class="input_lbg">提醒类别</span>
+				    	    <span class="input_m14px" id="type"></span>
+					    </li>
+					    <li>
+				    	    <span class="input_lbg">主题</span>
+				    	    <span class="input_m14px" id="topic"></span>
+					    </li>
+					    <li>
+				    	    <span class="input_lbg">日期</span>
+				    	    <span class="input_m14px" id="dateTime"></span>
+					    </li>
+					    <li>
+				    	    <span class="input_lbg">备注</span>
+				    	    <span class="input_m14px" id="remark"></span>
+					    </li>
+					</ul>
+			   	</div>
+			</div>
+
+			<div class="but_m20px" style="position: fixed;bottom: 0;">
+				<button class="but_315px but_w but_d10px" id="delRemind_Success" path="delRemind_Success.html" noCheck="true">删除</button>
+				<button class="but_315px but_red" id="affairDetailBack">返回</button>
+			</div>
+		</div>
+		
+		<script src="../../js/core/support.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/mui.min.js"></script>
+		<script src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script src="../../js/core/utils.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('lifeAssistant/affairDetail');
+		</script>
+	</body>
+</html>

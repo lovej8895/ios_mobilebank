@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>黄金定投</title>
+		<link rel="stylesheet" href="../../css/mui.min.css" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+	</head>
+	<style type="text/css">
+		.gold_but{
+			display: block;
+			width: 25%;
+			padding: 4% 0;
+			border-radius: 4px;
+			-webkit-border-radius: 4px;
+			background: none;
+			color: #666;
+		}
+	</style>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">计划买</h1>
+		    </div>
+		</header>
+		<div class="content_BOXall hb_cont">
+			<div class="content_box5px">
+				<div class="backbox_tit_bg">
+				    <p class="backbox_tit_ico"></p>
+				    <p class="backbox_tit">计划买信息</p>
+			    </div>
+			    <div class="backbox_th p_lr10px">
+					<ul>
+						<li>
+					    	<span class="input_lbg">签约账号</span>
+					    	<span class="input_m12px" id="accountNo"></span>
+						</li>
+					    <li id="changeInvestPeriod">
+							<span class="input_lbg">定投周期</span>
+					    	<span class="input_m12px" id="investPeriod">请选择</span>
+					    	<a class="link_rbg"></a>
+						</li>
+						<li id="changeInvestTime">
+					    	<span class="input_lbg">定投日期</span>
+					    	<span class="input_m12px" id="investTime">请选择</span>
+					    	<a class="link_rbg"></a>
+						</li>
+						<li id="amtChange">
+					    	<span class="input_lbg">购买金额/元</span>	  	
+					    	<p class="phone_butbox m_top10px" style="text-align: center;">
+					     		<a class="gold_but border_red fz_14" id="amt1" value="200" style="margin-left: 5%;">200</a>
+					     	    <a class="gold_but border_f fz_14 phone_but_m_left2" id="amt2" value="500">500</a>
+					     	    <a class="gold_but border_f fz_14 phone_but_m_left2" id="amt3" value="1000">1000</a>
+					     	</p>
+					     	<p class="phone_butbox m_top10px">
+					     		<a class="gold_but border_f fz_14" id="userDefine" value="0"   style="margin-left: 5%">自定义</a>
+					     		<input class="input_m14px" type="text" id="investAmt" placeholder="请输入购买金额" style="padding-left: 20px;margin-top: 10px; display: none;"></input>
+					     	</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="btn_bg_f2">
+				<button class="but_315px but_red" id="nextBtn" noCheck="false">下一步</button>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/smart.poppicker.js"></script>
+		<script type="text/javascript" src="../../js/core/param.js"></script>
+		<script type="text/javascript" src="../../js/core/utils.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script type="text/javascript">
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('gold/goldBuyPlanInput');
+		</script>
+	</body>
+</html>

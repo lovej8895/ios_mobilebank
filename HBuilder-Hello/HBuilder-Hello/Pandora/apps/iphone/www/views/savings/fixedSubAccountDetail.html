@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>定期子账户明细</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">定期子账户明细</h1>
+		    </div>
+		</header>	
+		<div class="content_BOXall p_down66px hb_cont">
+			<div class="backbox_fo">
+			    <p class="backbox_tit2">账户信息</p>
+			    <ul class="p_lr30px">
+		    	        <li>
+		    	    	    <span class="detail_left">子账户</span><span class="detail_right" id="subAccountNo"></span>
+		    	        </li>
+		    	        <li>
+		    	    	    <span class="detail_left">币种</span><span class="detail_right" id="currencyType"></span>
+		    	        </li>
+		    	       <!-- <li>
+		    	    	    <span class="detail_left">账户状态</span><span class="detail_right" id="accountStatus"></span>
+		    	        </li>	-->	    	        
+		    	        <li>
+		    	    	    <span class="detail_left">储种</span><span class="detail_right" id="depositType"></span>
+		    	        </li>
+		    	        <!--<li>
+		    	    	    <span class="detail_left">存期</span><span class="detail_right" id="savingPeriod"></span>
+		    	        </li>-->
+		    	        <li>
+		    	    	    <span class="detail_left">利率</span><span class="detail_right" id="interestRate"></span>
+		    	        </li>	
+		    	        <li>
+		    	    	    <span class="detail_left">起息日</span><span class="detail_right" id="interestBeginDate"></span>
+		    	        </li>	
+		    	        <li>
+		    	    	    <span class="detail_left">到期日</span><span class="detail_right" id="interestEndDate"></span>
+		    	        </li>	
+		    	        <li>
+		    	    	    <span class="detail_left">金额</span><span class="detail_right"><span id="balance"></span>元</span>
+		    	        </li>
+		    	        <li>
+		    	    	    <span class="detail_left">是否转存</span><span class="detail_right" id="transferSaveType"></span>
+		    	        </li>	
+		    	        <!--<li id="transferSaveDaysLi" style="display:none;">
+		    	    	    <span class="detail_left">自动转存存期</span><span class="detail_right" id="transferSaveDays"></span>
+		    	        </li>	-->		    	        
+		       </ul>
+		   </div>
+	   
+		   <div class="btn_bg_f2">
+				<button class="but_315px but_red" id="backButton">返&nbsp;&nbsp;回</button>
+		   </div>
+		</div>	
+	<body>  
+
+			
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/core/param.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('savings/fixedSubAccountDetail');
+		</script>			
+	</body>
+</html>

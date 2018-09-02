@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title>首页</title>
+      <!--  <link rel="stylesheet" href="../css/global.css"/>-->
+		<link rel="stylesheet" href="../css/mui.min.css"/> 
+		<link rel="stylesheet" href="../css/public.css"/> 
+</head>
+<body>
+<!--填写信息-->
+  <!--<div class="floor">
+    <ul id="tab-nav">
+      <li> <a  class="tab-item-menu menu_btn1 currmain curr1" id="main" data-title="宇信互联网银行">首页</a></li>
+      <li> <a  class="tab-item-menu menu_btn2 " id="fund" data-title="理财超市">理财</a></li>
+      <li> <a  class="tab-item-menu menu_btn3 " id="myLife" data-title="生活">生活</a></li>
+      <li> <a  class="tab-item-menu menu_btn4" id="personalCenter" data-title="个人中心">个人中心</a></li>
+    </ul>
+  </div>-->
+  <div class="footer">
+		<div class="footer_menu clearfix">
+			<ul id="footerUl">
+				<li class="mui-active" id="main" data-title="湖北银行" path="../views/main/main.html" noCheck="true">
+					<span class="footer_icon footer_icon1"></span>
+					<span class="fz_11">首页</span>
+				</li>
+				<li id="productList" data-title="金融超市" path="../views/banking/banking_home.html" noCheck="true">
+					<span class="footer_icon footer_icon2"></span>
+					<span class="fz_11">金融</span>
+				</li>
+				<li id="life" data-title="" path="../views/life/lifeHome.html" noCheck="true">
+					<span class="footer_icon footer_icon3"></span>
+					<span class="fz_11">生活</span>
+				</li>
+				<li id="myOwn" data-title="个人中心" path="../views/user/user.html" noCheck="true">
+					<span class="footer_icon footer_icon4"></span>
+					<span class="fz_11">我的</span>
+				</li>
+			</ul>
+		</div>    
+	</div> 
+	<div class="pickernew_bg" id="layerMaskDiv" style="display: none;">
+    </div>
+	<script src="../js/common/jquery-1.12.0.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/common/mui.min.js" type="text/javascript" charset="utf-8"></script> 
+	<script src="../js/core/support.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/core/utils.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../js/core/param.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="../js/common/crashLog/plugin-getcrashlog.js"></script>
+	<script type="text/javascript" src="../js/common/crashLog/plugin-getIpAdderss.js"></script>
+	<script type="text/javascript" src="../js/common/crashLog/plugin-getMAC.js"></script>
+	<script src="../js/common/sea.js"></script>
+	<script type="text/javascript">
+		seajs.config({
+			base: "../js/controllers/"
+		});
+		 
+		seajs.use('index');  
+		
+	</script>
+</body>
+</html>

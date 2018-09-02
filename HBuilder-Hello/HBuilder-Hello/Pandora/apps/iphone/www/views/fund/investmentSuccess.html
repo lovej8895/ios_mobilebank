@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>基金定投</title>
+		<link rel="stylesheet" type="text/css" href="../../css/mui.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../../css/public.css"/>
+		<link rel="stylesheet" href="../../css/style.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+			<div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title" id="title"></h1>
+			</div>
+		</header>
+		<div class="content_BOXall p_down10px hb_cont">
+			<div class=""  id="noShowDetail" style="display: none;">
+			    <div class="success_icon1 suc_top7px"></div>
+				<p class="fz_18 text_m" id="msg"></p>
+			</div>	
+			<div class="backbox_fo suc_ptop7px"  id="showDetail" style="display: none;">
+			    <div class="success_icon1 suc_top0px"></div>
+				<p class="fz_18 text_m" id="showMsg"></p>
+				<div class="p_lr30px">
+				    <ul>
+			    	        <li>
+			    	    	        <span class="detail_left">基金名称</span><span class="detail_right" id="f_prodname_prodcode"></span>
+			    	        </li>
+			    	        <li>
+			    	    	        <span class="detail_left">交易账号</span><span class="detail_right" id="f_deposit_acct"></span>
+			    	        </li>
+			    	        <li>
+			    	    	        <span class="detail_left" id="s_investcycle">定投周期</span><span class="detail_right" id="f_investcycle"></span>
+			    	        </li>
+			    	        <!--<li>
+			    	    	        <span class="detail_left">定投间隔</span><span class="detail_right" id="f_investcyclevalue"></span>
+			    	        </li>-->
+			    	        <!--<li id="li_f_investmode">
+			    	    	        <span class="detail_left">定投模式</span><span class="detail_right" id="f_investmode"></span>
+			    	        </li>-->
+			    	        <li>
+			    	    	        <span class="detail_left" id="f_investamount_title">定投金额</span><span class="detail_right" id="f_investamount"></span>
+			    	        </li>
+			    	        <li id="li_f_continueinvestamount" style="display: none;">
+			    	    	        <span class="detail_left">后续投资金额</span><span class="detail_right" id="f_continueinvestamount"></span>
+			    	        </li>
+			    	        <li>
+			    	    	        <span class="detail_left">终止条件</span><span class="detail_right" id="f_investtime"></span>
+			    	        </li>
+			        </ul>
+			    </div>
+			</div>	
+		</div>	
+	   <!--<div style="width: 100%;text-align: center;margin-top: 10px;">-->
+	    <div class="but_m20px" id="butDiv" style="display: none;">
+	   		<button class="but_315px but_w but_d10px" id="lastButton" noCheck="false">返回</button>
+	       	<button class="but_315px but_red" id="myInvestment" noCheck="false">我的定投</button>
+		</div>
+		<div class="content_box5px" id="banner" style="display:none;">
+				<a class="banner_bg2"><img src="" /></a>
+		</div>
+		<script src="../../js/common/mui.min.js"></script>
+		<script src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script src="../../js/core/utils.js"></script>   
+		<script src="../../js/core/param.js"></script> 
+		<script src="../../js/common/sea.js"></script>
+		<script type="text/javascript" src="../../js/controllers/adView/ad_load_html.js"></script>
+		<script type="text/javascript">
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('fund/investmentSuccess')
+		</script>
+	</body>
+</html>

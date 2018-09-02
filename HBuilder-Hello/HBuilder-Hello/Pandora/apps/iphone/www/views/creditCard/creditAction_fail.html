@@ -1,0 +1,41 @@
+<!--
+	作者：suxing
+	时间：2017-03-15
+	描述：信用卡操作失败成功页面
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>账号维护</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<h1 class="mui-title hb-title" id="title"></h1>
+		    </div>
+		</header>
+		<div class="content_BOXall hb_cont">
+			<div class="fail_icon1 suc_top7px" ></div>
+			<p class="fz_18 text_m" id="context"></p>
+		</div>
+		<div class="but_bottom20px">
+				<button class="but_315px but_red" id="creditAction_failBack" >返&nbsp;&nbsp;回</button>
+		</div>
+		
+		<script src="../../js/core/support.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/core/utils.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/jquery-1.12.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/mui.min.js"></script>
+		<script src="../../js/common/sea.js"></script>
+		<script type="text/javascript">
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('creditCard/creditACtion_fail');
+		</script>
+	</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+		<title>设置手势密码登录</title>
+		<link rel="stylesheet" href="../../css/mui.min.css"/>
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+			<h1 class="mui-title hb-title">设置手势密码登录</h1>
+		</header>
+		<div class="content_BOXall hb_cont">
+			<div class="content_box5px m_top10px">
+				<div class="backbox_th p_lr10px">
+				    <ul>
+					    <li>
+					    	<span class="input_lbg2">手势密码登录</span>
+					    	<div class="mui-switch mui-switch-blue mui-switch-mini flo_rihgt" id="gesturePwdSet">
+						       	<div class="mui-switch-handle"></div>
+					        </div>  
+					    </li>
+					    <li id="lockerShow" style="display: none;">
+					    	<span class="input_lbg2" id="lockerShowMsg" >隐藏手势密码轨迹</span>
+					    	<div class="mui-switch mui-switch-blue mui-switch-mini flo_rihgt" id="lockerShowSet">
+						       	<div class="mui-switch-handle"></div>
+					        </div>  
+					    </li>
+					    <li id="lockerModify" style="display: none;">
+					    	<span class="input_lbg">修改手势密码</span>
+					    	<a class="link_rbg"></a>
+					    </li>
+				    </ul>
+			    </div>
+			</div>
+			<!--<div class="content_box5px box_top15px">
+				<p class="hint">温馨提示</p>
+				<p class="hint_con">设置手势登录</p>
+			</div>-->
+		</div>
+		<script type="text/javascript" charset="UTF-8" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" charset="UTF-8" src="../../js/common/mui.min.js"></script>
+	    <script type="text/javascript" charset="UTF-8" src="../../js/common/hmac-md5.js"></script>
+	    <script type="text/javascript" charset="UTF-8" src="../../js/common/sea.js"></script>
+		<script type="text/javascript">
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('safeCenter/userLockerManage');
+		</script>
+	</body>
+</html>

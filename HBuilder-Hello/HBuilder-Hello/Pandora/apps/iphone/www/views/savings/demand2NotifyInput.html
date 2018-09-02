@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>开立通知存款</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/mui.picker.css" rel="stylesheet" />
+		<link href="../../css/mui.poppicker.css" rel="stylesheet" />
+		<link href="../../css/mui.listpicker.css" rel="stylesheet" />			
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">开立通知存款</h1>
+		    </div>
+		</header>	
+		<div class="content_BOXall hb_cont">
+			<div class="backbox_fo">
+			    <p class="backbox_tit2">账户信息</p>
+			    <ul class="p_lr30px">
+		    	        <li>
+		    	    	    <span class="detail_left">账号</span><span class="detail_right" id="accountNo"></span>
+		    	        </li>
+	
+		    	        <li>
+		    	    	    <span class="detail_left">可用余额</span><span class="detail_right"><span id="balance"></span>元</span>
+		    	        </li>		    	        
+		       </ul>
+		   </div>
+		   <div class="content_box5px">
+		   	    <div class="backbox_tit_bg">
+				    <p class="backbox_tit_ico"></p>
+				    <p class="backbox_tit">通知存款类型及金额</p>
+			    </div>
+			    <div class="backbox_th p_lr10px ove_hid">
+				    <ul>
+					    <li>
+					    	<span class="input_lbg">币种 </span>
+					    	<span class="input_m14px">人民币</span>        
+					    </li>					    	
+					    <li>
+					    	<span class="input_lbg left_fl">通知存款类型</span>
+				    	    <div class="radio_box">
+				    	    	<div class="mui-input-row mui-radio mui-left radio_f_left">
+					                <label>一天通知存款</label>
+					                <input name="savingPeriod" value="01" type="radio">						           
+				                </div>
+				    	    	<div class="mui-input-row mui-radio mui-left radio_f_left">
+					                <label>七天通知存款</label>
+					                <input name="savingPeriod" value="07" type="radio" checked>						           
+				                </div>
+				           </div>
+					    </li>	
+					    <li>
+				    	    <span class="input_lbg">存款金额</span>
+				    	    <input class="input_m14px" type="text" id="amount" placeholder="请输入存款金额"></input>
+				    	    <p class="input_rmb">元</p>
+					    </li>				    
+				    </ul>
+			    </div>
+		   </div>
+		   <div class="content_box5px p_lr10px box_top15px p_down66px">
+				<p class="hint">温馨提示</p>
+				<p class="hint_con fz_12">1、通知存款种类分为7天通知和1天通知，表示您在支取通知存款时需提前通知银行的天数。</p>
+				<p class="hint_con fz_12">2、个人通知存款最低起存金额和最低留存金额均为5万元。</p>
+				<p class="hint_con fz_12">3、通知存款需一次性存入，可以一次或多次支取，最低支取金额为5万元。</p>
+				<p class="hint_con fz_12">4、未提前通知而支取通知存款或已办理通知手续而提前支取通知存款，支取部分按活期存款利率计息。</p>
+		   </div>
+		   <div class="btn_bg_f2">
+				<button class="but_315px but_red" id="confirmButton">确&nbsp;&nbsp;定</button>
+		   </div>
+		</div>	
+	<body>  
+
+			
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/core/param.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script src="../../js/common/mui.poppicker.js"></script>
+		<script src="../../js/common/mui.listpicker.js"></script>		
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('savings/demand2NotifyInput');
+		</script>			
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+	<body style="background: transparent;">
+		<div class="pickernew_bg" id="maskLayer" style="z-index: 998;"></div> 
+		<div class="main_guide" id="mainGuide" style="z-index: 999;">
+			<img src="../../img/guide1.png"/>
+		</div>
+		<div class="guide_btn" style="z-index: 999;">
+			<img src="../../img/guide_btn.png" id="guideBtn"/>
+		</div>
+		
+		<script src="../../js/common/mui.min.js"></script>
+		<script src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('guide/guide_main');
+		</script>
+	</body>
+</html>

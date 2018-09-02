@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>当日委托查询</title>
+		<link rel="stylesheet" href="../../css/mui.min.css" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css"  />		
+		
+	</head>
+	<body>
+		<div class="bg_screen content_box5px" >
+		
+			<div class="backbox_th p_lr10px">
+				
+			    <ul>
+				    <li class="b_das" id="changeAccount">
+			    	    <span class="input_lbg">银行账号</span>
+			    	    <span class="input_m14px" id="accountNo"></span>
+			    	    <a class="link_rbg"></a>
+				    </li>
+			    </ul>
+		    </div>
+		</div>
+						
+		<div id="pullRefresh" class="mui-scroll-wrapper p_down66px" style="margin-top: 62px;">
+		<!--<div class="content_BOXall p_down66px hb_cont" id="pullRefresh">-->
+			<!--<div class="mui-content p_down66px hb_cont" id="pullRefresh">-->			
+			<div class="content_box5px">
+			<ul id="fundList"></ul>
+			<!--<div class="content_box5px" style="margin: 15px 0 0 0;">
+				<div class="fund_bgfff1 m_top10px">
+					<ul id="fundList"></ul>
+					<div class="mynotice_left">
+						<p><span class="fz_22 color_red">10.00</span>%</p>
+						<p class="color_6">七日年化收益</p> 
+					</div>
+					<div class="mynotice_right">
+						<p class="mynotice_fundtit m_top5px fz_15">基金名称<span class="color_6">(950001)</span></p>
+						<p class="m_top5px"><span class="color_6">万份收益</span>&nbsp;<span class="color_red">¥00.00</span></p>
+						<p class="color_9 m_top10px">交易时间&nbsp;&nbsp;2017-05-19</p>
+						<div class="mynoticearrow_right"></div>
+					</div>-->
+			<!--	</div>	
+			</div>-->
+		 </div>   		
+		</div>
+		<div class="content_box5px m_top130px" id="showMsgDiv" style="display: none;"></div>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script src="../../js/common/smart.poppicker.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('fund/myFundProductList');
+		</script>
+	</body>
+</html>

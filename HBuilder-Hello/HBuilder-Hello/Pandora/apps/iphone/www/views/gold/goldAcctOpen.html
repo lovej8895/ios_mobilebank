@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+		<title>黄金定投</title>
+		<link rel="stylesheet" href="../../css/mui.min.css"/>
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+			<h1 class="mui-title hb-title">黄金定投开户</h1>
+		</header>
+		<div class="content_BOXall hb_cont">
+			<div class="backbox_fo">
+			    <p class="backbox_tit2">开户信息</p>
+			    <ul class="p_lr30px">
+		    	    <li>
+		    	    	<span class="detail_left">姓名</span>
+		    	    	<span class="detail_right" id="custName"></span>
+		    	    </li>
+		    	    <li>
+		    	    	<span class="detail_left">手机号</span>
+		    	    	<span class="detail_right" id="mobile"></span>
+		    	    </li>
+		       	</ul>
+		   	</div>
+		   	<div class="content_box5px">
+		   	    <div class="backbox_tit_bg">
+				    <p class="backbox_tit_ico"></p>
+				    <p class="backbox_tit">开户信息录入</p>
+			    </div>
+			    <div class="backbox_th p_lr10px">
+				    <ul>
+					    <li id="changeAccount">
+					    	<span class="input_lbg">签约账号</span>
+					    	<span class="input_m12px" id="accountNo"></span>
+					    	<a class="link_rbg"></a>
+					    </li>
+					    <li>
+					    	<span class="input_lbg">推荐人工号</span>
+					    	<input class="input_m14px" type="text" id="managerNo" placeholder="请输入推荐人工号" maxlength="10"></input>
+					    </li>
+					    <li>
+					    	<span class="input_lbg">所属机构号</span>
+					    	<input class="input_m14px" type="text" id="branchNo" placeholder="请输入推荐人所属机构号" maxlength="10"></input>
+					    </li>
+				    </ul>
+			    </div>
+		   	</div>
+		   	<!--<div class="agreement_bg">
+				<label>
+					<input type="checkbox" id="agreeCheck" checked/>
+				</label>
+				<a class="fz_12 color_b" id="goldAgree">本人已阅读《黄金定投业务协议书》</a>
+		   	</div>-->
+		   	
+		   	<p class="m_top10px">
+		    	<label><input type="checkbox" id="agreeCheck" checked/></label>
+		    	        	本人已阅读
+		    	<a class="fz_12 color_b" id="goldAgree">《黄金定投产品业务协议》</a>
+				<a class="fz_12 color_b" id="goldRule">《黄金定投业务规则》</a>
+				<a class="fz_12 color_b" id="goldRisk">《风险揭示书》</a>
+		   	</p>
+		   	<div class="btn_bg_f2">
+				<button class="but_315px but_red" id="nextBtn">下一步</button>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/smart.poppicker.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('gold/goldAcctOpen');
+		</script>
+	</body>
+</html>

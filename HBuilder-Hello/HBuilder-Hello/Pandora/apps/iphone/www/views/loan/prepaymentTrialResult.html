@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>提前还款试算结果</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+	
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+		     	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">提前还款试算结果</h1>
+		    </div>
+		</header>
+		<div class="content_BOXall hb_cont">
+			<div class="backbox_fo">
+				<ul class="p_lr30px">
+					<li>
+			    	    <span class="detail_left">本次需支付本息</span>
+			    	    <span class="detail_right" id="rcvAmt"></span>
+				    </li>
+				    <li>
+			    	    <span class="detail_left">本次需支付利息</span>
+			    	    <span class="detail_right" id="shouldBackFuLi"></span>
+				    </li>
+				    <li>
+			    	    <span class="detail_left">下期应还本金</span>
+			    	    <span class="detail_right" id="shouldBackPrincipal"></span>
+				    </li>
+				    <li>
+			    	    <span class="detail_left">下期应还利息</span>
+			    	    <span class="detail_right" id="shouldBackInterest"></span>
+				    </li>
+				    <li>
+			    	    <span class="detail_left">下期应还本息</span>
+			    	    <span class="detail_right" id="shouldBackAmount"></span>
+				    </li>
+				</ul>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('loan/prepaymentTrialResult');
+		</script>
+	</body>
+</html>

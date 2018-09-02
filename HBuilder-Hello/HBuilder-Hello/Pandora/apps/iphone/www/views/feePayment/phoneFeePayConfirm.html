@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+		<title>手机话费</title>
+		<link rel="stylesheet" href="../../css/mui.min.css"/>
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+			<h1 class="mui-title hb-title">手机话费</h1>
+		</header>
+		<div class="content_BOXall hb_cont">
+			<div class="backbox_fo">
+			    <p class="backbox_tit2">手机话费缴费信息</p>
+			    <ul class="p_lr30px">
+		    	    <li>
+		    	    	<span class="detail_left">号码类型</span>
+		    	    	<span class="detail_right" id="areaId"></span>
+		    	    </li>
+		    	    <li>
+		    	    	<span class="detail_left">手机号码</span>
+		    	    	<span class="detail_right" id="userNo"></span>
+		    	    </li>
+		    	    <li>
+		    	    	<span class="detail_left">缴费金额</span>
+		    	    	<span class="detail_right" id="amountRealCharged"></span>
+		    	    </li>
+		       	</ul>
+		   	</div>
+		   	<div class="content_box5px">
+		   	    <div class="backbox_tit_bg">
+				    <p class="backbox_tit_ico"></p>
+				    <p class="backbox_tit">信息录入</p>
+			    </div>
+			    <div class="backbox_th p_lr10px" data-security="needPassword|needAuth">
+				    <ul>
+					    <li id="changeAccount">
+					    	<span class="input_lbg">付款账号</span>
+					    	<span class="input_m12px" id="accountNo"></span>
+					    	<a class="link_rbg"></a>
+					    </li>
+					    <li>
+					    	<span class="input_lbg">账户余额</span>
+					    	<span class="input_m12px" id="balance"></span>
+					    	<input type="hidden" id="openNode" value=""/>
+					    </li>
+				    </ul>
+			    </div>
+		   	</div>
+		    <div class="but_m20px">
+				<button class="but_150px but_w" id="preBtn">上一步</button>
+				<button class="but_150px but_red" id="nextBtn" data-checkAuth='true'>确&nbsp;&nbsp;定</button>
+		   </div>
+		</div>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/smart.poppicker.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script type="text/javascript" src="../../js/core/param.js"></script> 
+		<script type="text/javascript" src="../../js/core/utils.js"></script>   
+		<script type="text/javascript" src="../../js/core/initSecurityContent.js"></script>
+		<script type="text/javascript" src="../../js/common/keyboard/plugin-wtxc-keyboard.js"></script> 
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('feePayment/phoneFeePayConfirm');
+		</script>
+	</body>
+</html>

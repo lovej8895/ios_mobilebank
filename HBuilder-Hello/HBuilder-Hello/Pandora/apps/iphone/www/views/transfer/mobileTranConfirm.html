@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>转账汇款</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">手机号转账</h1>
+		    </div>
+		</header>
+		<div class="content_BOXall hb_cont">
+			<div class="backbox_fo">
+			    <p class="backbox_tit2">确认转账信息</p>
+			    <ul class="p_lr30px">
+		    	        <li>
+		    	    	        <span class="detail_left">付款账号</span><span class="detail_right" id="payAccount"></span>
+		    	        </li>
+		    	        <li>
+		    	    	        <span class="detail_left">收款账号</span><span class="detail_right" id="recAccount"></span>
+		    	        </li>
+		    	        <li>
+		    	    	        <span class="detail_left">收款人</span><span class="detail_right" id="recAccountName"></span>
+		    	        </li>
+		    	        <li>
+		    	    	        <span class="detail_left">转账金额</span><span class="detail_right"><span id="payAmount"></span>元</span>
+		    	        </li>
+		       </ul>
+		   </div>
+		   <div class="content_box5px p_down66px">
+		   	    <div class="backbox_tit_bg">
+				    <p class="backbox_tit_ico"></p>
+				    <p class="backbox_tit">密码及验证码</p>
+			    </div>
+			    <div class="backbox_th p_lr10px" data-security="needPassword|needAuth">
+				    <ul>
+					   
+				    </ul>
+			    </div>
+		   </div>
+		   <div class="btn_bg_f2">
+				<button class="but_315px but_red" id="confirmButton" data-checkAuth='true'>确&nbsp;&nbsp;定</button>
+		   </div>
+		</div>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script src="../../js/core/param.js"></script> 
+		<script src="../../js/core/utils.js"></script>   
+		<script type="text/javascript" src="../../js/core/initSecurityContent.js"></script>
+		<script type="text/javascript" src="../../js/common/keyboard/plugin-wtxc-keyboard.js"></script> 		
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('transfer/mobileTranConfirm');
+		</script>			
+	</body>
+</html>

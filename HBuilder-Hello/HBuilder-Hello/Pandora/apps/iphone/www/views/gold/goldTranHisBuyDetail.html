@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+		<title>黄金定投</title>
+		<link rel="stylesheet" href="../../css/mui.min.css"/>
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+			<h1 class="mui-title hb-title">买金详情</h1>
+		</header>
+		<div class="content_BOXall hb_cont">
+			<div class="backbox_fo">
+			    <p class="backbox_tit2">买金详情</p>
+			    <ul class="p_lr30px">
+			    	<li>
+		    	    	<span class="detail_left">类型</span>
+		    	    	<span class="detail_right" id="goldBuyType"></span>
+		    	    </li>
+		    	    <li>
+		    	    	<span class="detail_left">状态</span>
+		    	    	<span class="detail_right" id="orderState"></span>
+		    	    </li>
+		    	    <li>
+		    	    	<span class="detail_left">定投账号</span>
+		    	    	<span class="detail_right" id="goldAipNo"></span>
+		    	    </li>
+		    	    <li id="planNoDiv" style="display: none;">
+		    	    	<span class="detail_left">计划编号</span>
+		    	    	<span class="detail_right" id="planNo"></span>
+		    	    </li>
+			    	<li>
+		    	    	<span class="detail_left">申请编号</span>
+		    	    	<span class="detail_right" id="orderNo"></span>
+		    	    </li>
+		    	    <li>
+		    	    	<span class="detail_left">申请时间</span>
+		    	    	<span class="detail_right" id="orderSubmitTime"></span>
+		    	    </li>
+		    	    <li id="goldDealTimeDiv" style="display: none;">
+		    	    	<span class="detail_left">处理日期</span>
+		    	    	<span class="detail_right" id="goldDealTime"></span>
+		    	    </li>
+		    	    <li>
+		    	    	<span class="detail_left">买金金额</span>
+		    	    	<span class="detail_right" id="tranAmt"></span>
+		    	    </li>
+		    	    <li id="priceDiv" style="display: none;">
+		    	    	<span class="detail_left">成交价</span>
+		    	    	<span class="detail_right" id="price"></span>
+		    	    </li>
+		    	    <li id="goldDealWeightDiv" style="display: none;">
+		    	    	<span class="detail_left">成交克重</span>
+		    	    	<span class="detail_right" id="goldDealWeight"></span>
+		    	    </li>
+		    	    <li id="remarkDiv" style="display: none;">
+		    	    	<span class="detail_left">备注</span>
+		    	    	<span class="detail_right" id="remark"></span>
+		    	    </li>
+		       	</ul>
+		   	</div>
+		</div>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/core/param.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script type="text/javascript">
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('gold/goldTranHisBuyDetail');
+		</script>
+	</body>
+</html>

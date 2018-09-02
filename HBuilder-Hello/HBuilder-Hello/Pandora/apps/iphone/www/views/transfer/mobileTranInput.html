@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>手机号转账</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />	
+		<link rel="stylesheet" type="text/css" href="../../css/app.css" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+	</head>
+	
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">手机号转账</h1>
+		    </div>
+		</header>
+  
+		<div class="content_BOXall hb_cont">
+			<div class="content_box5px">
+				<div class="backbox_tit_bg">
+				    <p class="backbox_tit_ico"></p>
+				    <p class="backbox_tit">付款信息</p>
+			    </div>
+				<div class="backbox_th p_lr10px bg_br2px">
+				    <ul>
+					    <li class="b_das" id="changeAccount">
+					    	    <span class="input_lbg">付款账号</span>
+					    	    <span class="input_m14px" id="accountNo"></span>
+					    	    <a class="link_rbg"></a>
+					    </li>
+					    <li>
+					    	    <p>
+					    	    	<span class="input_lbg">可用余额</span>
+					    	        <span class="input_m12px" id="balance"></span>元
+					    	    </p>  					    	    
+					    </li>
+					    <li style="display:none;" id="creditUseLimitLi">
+					    	    <p>
+					    	    	<span class="input_lbg">授信可用余额</span>
+					    	        <span class="input_m12px" id="creditUseLimit"></span>元
+					    	    </p>  
+					    </li>					    
+				    </ul>
+			    </div>
+			</div>
+			<div class="content_box5px">
+				<div class="backbox_tit_bg">
+					<!--<button class="but_rh28px btn_top8px" id="phoneBook">通讯录</button>-->
+				    <p class="backbox_tit_ico"></p>
+				    <p class="backbox_tit">收款信息</p>
+				    
+			    </div>
+				<div class="backbox_th p_lr10px">
+				    <ul>
+					    <li>
+					    	    <span class="input_lbg">收款人手机</span>
+					    	    <input class="input_m14px" type="tel" id="recMobile" placeholder="请输入收款人手机号"></input>
+					    	    <a class="contacts_ico" id="phoneBook"><img src="../../img/p_icon.png"/><a/>
+					    </li>
+					    <li class="recAccountLi" style="display:none;">
+					    	    <span class="input_lbg">收款人账号</span>
+					    	    <span class="input_m14px" id="recAccNo"></span>
+					    	    
+					    </li>
+					    <li class="recAccountLi" style="display:none;">
+					    	    <span class="input_lbg">收款人姓名</span>
+					    	    <span class="input_m14px" id="recName"></span>
+					    	    
+					    </li>					    
+				    </ul>
+			    </div>
+			</div>
+			<div class="content_box5px">
+				<div class="backbox_tit_bg">
+				    <p class="backbox_tit_ico"></p>
+				    <p class="backbox_tit">金额及其他</p>
+			    </div>
+				<div class="backbox_th p_lr10px ove_hid">
+				    <ul>
+					    <li>
+				    	    <span class="input_lbg">转账金额</span>
+				    	    <input class="input_m14px" type="text" id="tranAmt" placeholder="请输入转账金额"></input>
+				    	    <p class="input_rmb">元</p>
+					    </li>  
+					    <li id="bookSwitchLi">
+					    	<span class="input_lbg">预约转账</span>
+					    	<div class="mui-switch mui-switch-blue mui-switch-mini flo_rihgt" id="bookSwitch">
+						        <div class="mui-switch-handle"></div>
+					        </div>
+				        
+					    </li>
+					    <li style="display: none;" class="bookLi">
+					    	<span class="input_lbg left_fl">预约种类</span>
+					    	    <div class="radio_box">
+					    	    	<div class="mui-input-row mui-radio mui-left radio_f_left">
+						                <label>一次性</label>
+						                <input name="specifyType" value="0" type="radio" checked>						           
+					                </div>
+					    	    	<div class="mui-input-row mui-radio mui-left radio_f_left">
+						                <label>周期性</label>
+						                <input name="specifyType" value="1" type="radio">						           
+					                </div>
+					           </div>
+					    </li>
+					    <li style="display: none;" class="bookLi"  id="pickDate">
+					    	    <span class="input_lbg">预约转账日期</span>
+					    	    <span class="input_m14px" id="bookDate">请选择日期</span>
+					    	    <p class="link_rbg"></p>	    	    
+					    </li>
+					    <li style="display: none;" class="bookLi" id="notPeriodLi">
+					    	<span class="input_lbg">预约转账时间</span>
+					    		<select id="specifyDateTime">
+						            <option value="AM" >上午10:00</option>
+						            <option value="PM">下午14:00</option>
+					          	</select>
+					    </li>
+					    <li style="display: none;" id="periodLi">
+					    	<span class="input_lbg">预约转账时间</span>
+			                   <select id="transPeriod">
+								<option value="0" >每天</option>
+								<option value="1" >每周</option>
+								<option value="2" >每月</option>
+		                       </select>
+			                   <select id="transweekDay"  style="display: none;">
+									<option value="2" >周一</option>
+									<option value="3" >周二</option>
+									<option value="4" >周三</option>
+									<option value="5" >周四</option>
+									<option value="6" >周五</option>
+									<option value="7" >周六</option>
+									<option value="1" >周日</option>
+			                   </select>	
+			                   <select id="transMonthDay"  style="display: none;">
+									<option value="1" >1</option><option value="2" >2</option><option value="3" >3</option><option value="4" >4</option>
+									<option value="5" >5</option><option value="6" >6</option><option value="7" >7</option><option value="8" >8</option>
+									<option value="9" >9</option><option value="10" >10</option><option value="11" >11</option><option value="12" >12</option>
+									<option value="13" >13</option><option value="14" >14</option><option value="15" >15</option><option value="16" >16</option>
+									<option value="17" >17</option><option value="18" >18</option><option value="19" >19</option><option value="20" >20</option>
+									<option value="21" >21</option><option value="22" >22</option><option value="23" >23</option><option value="24" >24</option>
+									<option value="25" >25</option><option value="26" >26</option><option value="27" >27</option><option value="28" >28</option>
+				             	</select>
+			                   <select id="specifyCycleTime">
+						            <option value="AM" >上午10:00</option>
+						            <option value="PM">下午14:00</option>
+					          	</select>
+					    </li>
+					    <li style="display: none;" id="transTimesLi">
+					    	<span class="input_lbg">转账次数</span>
+					    	<input class="input_m14px" type="number" id="transTimes" placeholder="请输入转账次数" value="1"/>
+					    </li>
+					    <li>
+					    	<span class="input_lbg_w">短信通知收款人</span>
+					    	<div class="mui-switch mui-switch-blue mui-switch-mini flo_rihgt" id="smsNoticeSwitch">
+						        <div class="mui-switch-handle"></div>
+					        </div>  
+					    </li>
+					    <li>
+					    	    <span class="input_lbg">附言</span>
+					    	    <input class="input_m14px" type="text" placeholder="请输入附言0~20个字符" id="payRem"></input>
+					    	    
+					    </li>
+				    </ul>
+			    </div>
+			</div>
+			<div class="content_box5px p_lr10px box_top15px p_down66px">
+				<p class="hint">温馨提示</p>
+				<p class="hint_con fz_12">支持手机号为湖北银行手机银行注册号码。</p>
+			</div>
+			<div class="btn_bg_f2">
+				<button class="but_315px but_red" id="nextButton">下一步</button>
+			</div>	
+		</div>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script src="../../js/common/smart.poppicker.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script type="text/javascript" src="../../js/core/utils.js"></script>
+		<script src="../../js/core/param.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('transfer/mobileTranInput');
+		</script>			
+	</body>
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>提醒添加页面</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../../js/mui.min.js"></script>
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/global.css" />
+		<link rel="stylesheet" href="../../css/style_zhr.css" />
+		<link rel="stylesheet" href="../../css/style_user.css" />
+		<link rel="stylesheet" href="../../css/style_my.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">添加提醒</h1>
+		    </div>
+		</header>
+		<div class="content_BOXall hb_cont">
+		<div class="content_box5px m_top10px">
+				<div class="backbox_th p_lr10px">
+				    <ul>
+				    	<li >
+						    <span class="input_lbg">主 题</span>
+						    <input type="text" placeholder="请输入主题" name="" class="input_m14px" id="topic" maxlength="10">
+						  
+						</li>
+					    <li id="changecardNo">
+					    	<span class="input_lbg">类别</span>
+					    	<span class="input_m14px" id="typeShow"></span>
+					    	<a class="link_rbg"></a>
+					    	<input type="hidden" id="typeValue" value=""/>
+					    </li>
+					    <li id="endDate">
+						    <span class="input_lbg">日期</span>
+						    <span class="input_m14px" id="affairDate"></span>
+						     <a class="link_rbg"></a>
+						</li>
+						<li >
+						    <span class="input_lbg">备 注</span>						   
+						    <input type="text" placeholder="请输入备注"  class="input_m12px" id="remark" maxlength="16">						    
+						</li>
+				    </ul>
+				</div>    
+			</div>	
+			
+			<div class="but_m20px" >
+				<button class="but_315px but_red" path="addRemind_success.html"  id="confirm" noCheck="true">确认添加</button>
+			</div>
+		</div>	
+			
+			
+			
+			
+			
+		
+		
+		<script src="../../js/common/jquery-1.12.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/core/support.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/core/param.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/core/utils.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/mui.min.js"></script>
+		<script src="../../js/common/keyboard/plugin-keyboard.js"></script>
+		<script src="../../js/common/smart.poppicker.js"></script>
+		<script src="../../js/common/sea.js"></script>
+		<script type="text/javascript">
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('lifeAssistant/addRemind');
+		</script>
+	</body>
+
+</html>

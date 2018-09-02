@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>理财产品详情</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+	</head>
+	<style>
+	.mui-segmented-control.mui-scroll-wrapper{
+		height: 42px;
+	}
+	.mui-segmented-control.mui-segmented-control-inverted{
+		padding-top: 0;
+	}
+	.mui-segmented-control.mui-scroll-wrapper .mui-scroll{
+		height: 40px;
+		margin-top: 2px;
+	}
+	.mui-segmented-control .mui-control-item{
+		line-height: 38px;
+	}
+	.mui-segmented-control-inverted .mui-scroll .mui-control-item{
+		/*border-left: 1px solid #ddd;*/
+	}
+	.mui-segmented-control-inverted .mui-scroll .mui-control-item:first-child{
+		border: none;
+	}
+	.mui-scroll-wrapper.mui-slider-indicator.mui-segmented-control.mui-segmented-control-inverted .mui-scroll .mui-control-item.mui-active{
+		border-bottom: 2px solid #CF155C;
+	}
+	.mui-slider-item{
+		background: none;
+	}
+	.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item{
+		border-top:0;
+		border-bottom:0;
+	}
+	.mui-table-view:after {
+		height: 0px;
+	}
+	.mui-table-view:before {
+		height: 0px;
+	}
+	.lineheight20{
+		line-height: 20px;
+	}
+	</style>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+		    	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">产品详情</h1>
+		    </div>
+		</header>
+		<!-- 未签约 -->
+		<div id="noRisk" style="display: none;">
+			<div class="content_BOXall hb_cont">
+				<div style="width:80%;padding: 30px 0 30px 0;margin: 0 auto;text-align: center;">
+					<p class="m_top5px color_6">尊敬的客户，您尚未进行过理财风险评估，请到柜台进行首次风险评估！</p>
+				</div>
+			</div>
+			<div class="but_m20px but_t16">
+				<button class="but_315px but_red but_d10px" id="turnBack1">返&nbsp;&nbsp;回</button>
+			</div>
+		</div>
+		 <!-- 风险评估过期 -->
+		<div id="obsolete" style="display: none;">
+			<div class="content_BOXall hb_cont">
+				<div style="width:80%;padding: 30px 0 30px 0;margin: 0 auto;text-align: center;">
+					<p class="fz_16">您的风险评估等级已过期</p>
+					<p class="m_top5px color_6">根据相关规定，再次购买理财产品时，应当在我行网点或网上银行重新进行风险承受能力评估。谢谢！</p>
+				</div>
+				<div class="backbox_fo">
+				    <ul class="p_lr20px">
+		    	        <li>
+	    	    	        <span class="detail_left">客户风险等级</span>
+	    	    	        <span class="detail_right" id="failcusriskLevel"></span>
+		    	        </li>
+		    	        <li>
+	    	    	        <span class="detail_left">风险评估到期日</span>
+	    	    	        <span class="detail_right" id="failriskendDate"></span>
+		    	        </li>
+			       </ul>
+			   </div>
+			</div>
+			<div class="but_m20px but_t16">
+				<button class="but_315px but_red but_d10px" id="turnBack2">返&nbsp;&nbsp;回</button>
+				<button class="but_315px but_w" id="gotoRisk1">重新评估</button>
+			</div>
+		</div>
+		<!-- 产品风险比客户风险大 -->
+		<div id="higherRisk" style="display: none;">
+			<div class="content_BOXall hb_cont">
+				<div style="width:80%;padding: 30px 0 30px 0;margin: 0 auto;text-align: center;">
+					<p class="m_top5px color_6">尊敬的客户，经我行风险偏好评估，您的风险偏好评估不适宜购买本产品！</p>
+				</div>
+				<div class="backbox_fo">
+				    <ul class="p_lr20px">
+		    	        <li>
+	    	    	        <span class="detail_left">客户风险等级</span>
+	    	    	        <span class="detail_right" id="highercusriskLevel"></span>
+		    	        </li>
+		    	        <li>
+	    	    	        <span class="detail_left">风险评估到期日</span>
+	    	    	        <span class="detail_right" id="higherriskendDate"></span>
+		    	        </li>
+		    	        <li>
+	    	    	        <span class="detail_left">产品风险等级</span>
+	    	    	        <span class="detail_right" id="higherproRiskLevel"></span>
+		    	        </li>
+			       </ul>
+			   </div>
+			</div>
+			<div class="but_m20px but_t16">
+				<button class="but_315px but_red but_d10px" id="turnBack3">返&nbsp;&nbsp;回</button>
+				<button class="but_315px but_w" id="gotoRisk2">重新评估</button>
+			</div>
+		</div>
+		<!--理财产品详情-->
+		<div class="content_BOXall p_down66px hb_cont" id="productList">
+			<div class="finpro_topbg">
+				<p class="p_top20px fz_16">
+					<span id="productName" class="color_6"></span>
+				</p>
+				<p class="m_top10px">
+					<span class="fz_28" id="profitRate"></span>
+				</p>	
+				<div class="fz_14 color_6">预期收益</div>
+				<div class="finpro_topbox">
+				    <ul>
+				    	<li>
+				    		<span class="fz_16" id="projDeadLine"></span><br/>
+				    		<span class="fz_14 color_6">投资期限</span>
+				    	<li>
+				    		<span class="fz_17" id="startAmount"></span><br/>
+				    		<span class="fz_14 color_6">起购金额</span>
+				    	</li>
+				    </ul>
+		     	</div>
+			</div>
+	        	<!--<ul class="sum_bg_open">
+	        		<li>
+	        			<p class="fin_tit_detail_open" id="productName"></p>
+	        		</li>
+	        		<li style="text-align: center;">
+	        			<p  id="profitRate" class="fz_30"></p>
+	        			<p style="line-height: 30px;">预期收益</p>
+	        		</li>
+	        		<li class="detail_day_open">
+	        			<p id="projDeadLine"></p>
+	        			<p class="color_6 fz_12">投资期限</p>
+	        		</li>
+	        		<li class="detail_money_open">
+	        			<p id="startAmount"></p>
+	        			<p class="color_6 fz_12">起购金额</p>
+	        		</li>
+	        	</ul>-->
+	        	<div class="m_top10px">
+					<div class="fin_progress">
+						<div class="fin_progress_all">
+							<ul class="fin_progress_step">
+								<li class="fin_progress_part">
+									<div style="width: 100%;padding-right: 9px;">
+										<div class="fin_progress_img"></div>
+									</div>
+									<p class="fz_14 color_6 lineheight20">起售日期</p>
+									<p class="fz_12 color_6 lineheight20" id="startSellDate"></p>
+								</li>
+								<li class="fin_progress_part">
+									<div style="width: 100%;padding-right: 9px;">
+										<div class="fin_progress_img"></div>
+									</div>
+									<p class="fz_14 color_6 lineheight20">开始计息</p>
+									<p class="fz_12 color_6 lineheight20">靠档计息</p>
+								</li>
+								<li class="fin_progress_part">
+									<div style="width: 100%;padding-right: 9px;">
+										<div class="fin_progress_img1"></div>
+									</div>
+									<p class="fz_14 color_6 lineheight20">产品赎回</p>
+									<p class="fz_12 color_6 lineheight20">支持小额快赎</p>
+								</li>
+							</ul>
+							<p class="fin_progress_active"></p>
+							<p class="fin_progress_noactive"></p>
+						</div>
+					</div>
+				</div>
+	        <div class="m_top10px" id="chartDiv">
+				<div class="backbox_th">
+					<div class="fin_zst_tab">
+						<p>当前利率(%)</p>
+					</div>
+					<div class="fund_zst_picbg">
+						<div id="productChart">
+						</div>
+					</div>
+					<div id="sliderTitle" class="fin_zst_tab" style="display: none;">
+						<p>历史变更</p>
+					</div>
+					<div id="slider" class="mui-slider p_down10px" style="display: none;">
+						<div class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted" style="border: none;">
+							<div class="mui-scroll" id="tranDateTitle">	
+								<a class="mui-control-item" href="#item0"></a>
+								<a class="mui-control-item" href="#item1"></a>
+							</div>
+						</div>
+						<div class="mui-slider-group"  id="tranDateContent">
+							<div id="item0" class="mui-slider-item mui-control-content"></div>
+							<div id="item1" class="mui-slider-item mui-control-content"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			
+			<div class="m_top10px p_down20px">
+		   		<ul class="mui-table-view ">
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right fin_navigate_right" style="border-top: none;" href="#">产品详情</a>
+						<div class="mui-collapse-content">
+							<ul class="p_lr30px">
+								<li>
+								    <span class="detail_left">产品代码</span>
+								    <span class="detail_right" id="productNo"></span>
+								</li>
+								<li>
+								    <span class="detail_left">产品起息日</span>
+								    <span class="detail_right" id="interestBeginDate"></span>
+								</li>
+								<li>
+								    <span class="detail_left">产品到期日</span>
+								    <span class="detail_right" id="interestEndDate"></span>
+								</li>
+								<li>
+								    <span class="detail_left">风险等级</span>
+								    <span class="detail_right" id="proRiskLevel"></span>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right fin_navigate_right" href="#">购买规则</a>
+						<div class="mui-collapse-content">
+							<ul class="p_lr30px">
+								<li>
+								    <span class="detail_left">起购金额</span>
+								    <span class="detail_right" id="startAmountR"></span>
+								</li>
+								<li>
+								   	<span class="detail_left">追加金额</span>
+								    <span class="detail_right" id="minAppendAmt"></span>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right fin_navigate_right" href="#">申购规则</a>
+						<div class="mui-collapse-content">
+							<div style="line-height: 25px;" >
+								<p class="hint_con fz_12 color_6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;T日申购，T+1日确认，T+1日扣款并开始计算理财收益；若遇节假日，确认扣款日顺延至下一交易日。（详情见购买页产品说明书）</p>
+								<p class="hint_con fz_12" >
+									<table border="1" width="100%">
+										<tr>
+											<td class="hint_con fz_12 p_td5px" align="center" ><font color="#000000">申购时间</font></td>
+											<td class="hint_con fz_12 p_td5px" align="center"><font color="#000000">申购确认时间</font></td>							
+										</tr>
+										<tr>
+											<td class="hint_con fz_12 color_6 p_td5px" width="60%">星期一17:00～星期二17:00</td>
+											<td class="hint_con fz_12 color_6 p_td5px" width="40%">星期三</td>
+										
+										</tr>
+										<tr>
+											<td class="hint_con fz_12 color_6 p_td5px">星期二17:00～星期三17:00</td>
+											<td class="hint_con fz_12 color_6 p_td5px">星期四</td>
+										
+										</tr>
+										<tr>
+											<td class="hint_con fz_12 color_6 p_td5px">星期三17:00～星期四17:00</td>
+											<td class="hint_con fz_12 color_6 p_td5px">星期五</td>
+										
+										</tr>
+										<tr>
+											<td class="hint_con fz_12 color_6 p_td5px" >星期四17:00～星期五17:00</td>
+											<td class="hint_con fz_12 color_6 p_td5px">下星期一</td>
+										
+										</tr>
+										<tr>
+											<td class="hint_con fz_12 color_6 p_td5px" >星期五17:00~下星期一17:00</td>
+											<td class="hint_con fz_12 color_6 p_td5px" >下星期二</td>
+										</tr>
+									</table>	
+								</p>	
+							</div>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right fin_navigate_right"href="#">赎回规则</a>
+						<div class="mui-collapse-content">
+							<div style="line-height: 25px;">
+								<p class="hint_con fz_14 color_3">普通赎回：</p>	
+								<p class="hint_con fz_12 color_6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1）T日赎回，T+1日确认；本金及收益T+1日日终前到账。若遇节假日，确认日及到账日期顺延至下一交易日。</p>
+								<p class="hint_con fz_12">
+									<table border="1" width="100%">
+										<tr>
+											<td class="hint_con fz_12 p_td5px" align="center"><font color="#000000">普通赎回时间</font></td>
+											<td class="hint_con fz_12 p_td5px" align="center"><font color="#000000">赎回确认时间</font></td>							
+										</tr>
+										<tr>
+											<td class="hint_con fz_12 color_6 p_td5px" width="60%">星期一17:00～星期二17:00</td>
+											<td class="hint_con fz_12 color_6 p_td5px" width="40%">星期三</td>
+										
+										</tr>
+										<tr>
+											<td class="hint_con fz_12 color_6 p_td5px">星期二17:00～星期三17:00</td>
+											<td class="hint_con fz_12 color_6 p_td5px">星期四</td>
+										
+										</tr>
+										<tr>
+											<td class="hint_con fz_12 color_6 p_td5px">星期三17:00～星期四17:00</td>
+											<td class="hint_con fz_12 color_6 p_td5px">星期五</td>
+										
+										</tr>
+										<tr>
+											<td class="hint_con fz_12 color_6 p_td5px" >星期四17:00～星期五17:00</td>
+											<td class="hint_con fz_12 color_6 p_td5px">下星期一</td>
+										
+										</tr>
+										<tr>
+											<td class="hint_con fz_12 color_6 p_td5px" >星期五17:00~下星期一17:00</td>
+											<td class="hint_con fz_12 color_6 p_td5px" >下星期二</td>
+										
+										</tr>
+									</table>
+								</p>
+								<p class="hint_con fz_12 color_6">
+									&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2）部分赎回时，采取“后进先出”原则，即优先赎回最近持有的申购份额。
+								</p>
+								<p class="hint_con fz_14 color_3 p_top10px">快速赎回：</p>	
+								<p class="hint_con fz_12 color_6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1）可实现快速赎回，单日可赎回上限5万元；收益与本金同时到账。</p>
+								<p class="hint_con fz_12 color_6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2）快速赎回时间：交易日9:00至15:00。</p>
+								<p class="hint_con fz_14 color_3 p_top10px">大额赎回限制：</p>	
+								<p class="hint_con fz_12 color_6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（1）若理财计划净赎回额超过本理财计划上一交易日余额20%时，即为发生大额赎回，此时湖北银行系统有权拒绝赎回申请。</p>
+								<!--<p class="hint_con fz_12 color_6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;（2）快速赎回申请不受大额赎回限制的约束。</p>-->
+							</div>
+						</div>
+					</li>
+					<li class="mui-table-view-cell mui-collapse">
+						<a class="mui-navigate-right fin_navigate_right"href="#">收益分配日</a>
+						<div class="mui-collapse-content">
+							<div style="color: #666666;line-height: 25px;">
+								<p class="hint_con fz_14 color_6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每年7月19日\10月19日\1月19日\4月19日为收益分配日，遇节假日顺延至下一工作日。持有本金对应收益将会在收益分配日发放给客户，赎回时到账收益不再重复计算。</p>	
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="btn_bg_f2">
+				<button class="but_315px but_red" id="nextButton">预&nbsp;&nbsp;约</button>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/echarts.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('productList/productDetailOpen');
+		</script>
+	</body>
+</html>

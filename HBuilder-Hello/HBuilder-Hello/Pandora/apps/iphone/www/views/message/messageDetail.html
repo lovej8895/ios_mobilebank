@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>交易详情</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+	
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+		     	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">系统消息详情</h1>
+		    </div>
+		</header>
+		<div class="content_BOXall hb_cont p_down20px">
+			<div class="backbox_fo p_lr20px p_top10px p_down20px word_bg">
+				<div class="w_title fz_16" id="messageTitle"></div>
+					<p class="m_top5px" id="messageContent" style="margin: 0 0 12px 0;">
+					</p>
+					<p>
+						<div class="fz_20" style="text-align:right;margin: 0 30px 10px 0;" id="autograph"></div>
+					</p>
+					<p>
+						<div class="fz_20" style="text-align:right;margin: 0 30px 0 0;" id="messageTime"></div>
+					</p>
+					<!--<div id="messageAutograph">
+						<p>
+							<div class="fz_20" style="text-align:right;margin: 0 30px 10px 0;" id="autograph"></div>
+						</p>
+					</div>-->
+					<!--<p>
+						<div class="fz_20" style="text-align:right;margin: 0 30px 0 0;" id="messageTime"></div>
+					</p>-->
+			</div>
+		</div>
+		<script src="../../js/core/support.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('message/messageDetail');
+		</script>
+	</body>
+</html>

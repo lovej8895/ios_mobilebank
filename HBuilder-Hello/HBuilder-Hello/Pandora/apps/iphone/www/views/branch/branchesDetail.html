@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>网点详情页面</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+	<head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+		    	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">网点</h1>
+		    </div>
+		</header>
+		<div class="content_BOXall hb_cont">
+			<div class="backbox_fo">
+				<p class="backbox_tit2">网点详情</p>
+				<ul class="p_lr30px">
+					<li>
+			    	    <span class="detail_left_b1 fz_18" id="ibwBranchName">安宝璞园</span>
+			    	    <!--<span class="detail_right" id="loanVariety"></span>-->
+				    </li>
+					<li>
+			    	    <span class="detail_left_b2 fz_14">营业时间：</span>
+			    	    <span class="detail_left_b3 fz_14 color_6" id="businessTime">周一至周五: 9:00-17:00 </span>
+				    </li>
+				    <li>
+			    	    <span class="detail_left_b2 fz_14">地址：</span>
+			    	    <a class="color_g" id="branchesGps" path="../branch/branchesGps.html" onCheck="true" ><span class="detail_left_b3 fz_14 color_6" style="color: #539BFF;" id="ibwBranchAddress">金融港A18</span></a>
+				    </li>
+				    <li>
+			    	    <span class="detail_left_b2 fz_14">电话：</span>
+			    	    <a class="color_g" onclick="dail()" onCheck="true" ><span class="detail_left_b3 fz_14 color_6" style="margin-top: 1%;color: #539BFF;" id="ibwBranchPhone">10086</span></a>
+				    </li>
+				    <!--<li>
+			    	    <span class="detail_left fz_14">公交路线：</span>
+			    	    <span class="detail_left fz_14 color_6" id="routes">78路</span>
+				    </li>-->
+				    <!--<li id="drawWithoutCard_li">
+				    	<a><span class="main_icon icon-bill"></span><p class="color_6">无卡取款</p></a>
+				    	<button class="but_315px_branches but_red but_t16" id="drawWithoutCard" path="../drawWithoutCard/drawWithoutCard.html" noCheck="false">预约取款</button>
+				    </li>-->
+				</ul>
+			</div>
+		</div>
+		<script src="../../js/core/support.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/core/utils.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/jquery-1.12.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/mui.min.js"></script>
+		<script src="../../js/common/sea.js"></script>
+		<script type="text/javascript">
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('branch/branchesDetail');
+		</script>
+	</body>
+</html>

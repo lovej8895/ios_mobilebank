@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>我的账户</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<!--<link href="../../css/mui.picker.css" rel="stylesheet" />
+		<link href="../../css/mui.poppicker.css" rel="stylesheet" />
+		<link href="../../css/mui.listpicker.css" rel="stylesheet" />	-->
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">我的账户</h1>
+		    </div>
+		</header>
+		<div class="content_BOXall hb_cont">
+			<div class="content_box5px">
+				<div class="backbox_tit_bg">
+				    <p class="backbox_tit_ico"></p>
+				    <p class="backbox_tit">账户明细查询</p>
+			    </div>
+			    <div class="backbox_th p_lr10px">
+					<ul>
+						<li id="">
+					    	<span class="input_lbg">账号</span>
+					    	<span class="input_m12px" id="accountNo"></span>
+					    	<!--<a class="link_rbg"></a>-->
+						</li>
+						<!--<li id="changeSonAccount" hidden>
+					    	<span class="input_lbg">选择子账户</span>
+					    	<span class="input_m12px" id="sonAccountNo"></span>
+					    	<a class="link_rbg"></a>
+						</li>-->
+						<!--<li>
+					    	<p>
+					    	   	<span class="input_lbg left_fl">时间跨度</span>
+					    	    <div>
+					    	        <div class="mui-input-row mui-radio mui-left radio_f_left" class="radio">
+						                <label>近一周</label>
+						                <input name="radio1" type="radio" checked value="0">						           
+					                </div>
+					                <div class="mui-input-row mui-radio mui-left radio_f_left" class="radio">
+						                <label>近一月</label>
+						                <input name="radio1" type="radio" value="1">						           
+					                </div>
+					                <div class="mui-input-row mui-radio mui-left " class="radio">
+						                <label>自定义</label>
+						                <input name="radio1" type="radio" value="2">						           
+					                </div>
+					    	    <div>
+					    	</p>
+					    </li>-->
+					    <li id="changeTime">
+							<span class="input_lbg">时间跨度</span>
+					    	<span class="input_m14px" id="timeType">近一周</span>
+					    	<a class="link_rbg"></a>
+						</li>
+					    
+						
+						<li id="beginDate" class="chooseDate" hidden>
+					    	<span class="input_lbg">起始日期</span>
+					    	<span class="input_m12px" id="chooseBeginDate">请选择开始时间</span>
+					    	<!--<input class="input_m12px" type="text" value="请选择开始时间" id="beginDate"></input>-->
+						</li>
+						<li id="endDate" class="chooseDate" hidden>
+					    	<span class="input_lbg">终止日期</span>
+					    	<span class="input_m12px" id="chooseEndDate">请选择结束时间</span>
+					    	<!--<input class="input_m12px" type="text" value="请选择结束时间" id="endDate"></input>-->
+						</li>
+					</ul>
+				</div>
+			</div>
+			
+			<div class="content_box5px p_lr10px box_top15px p_down66px">
+				<p class="hint">温馨提示</p>
+				<p class="hint_con fz_12">单次查询起止日期的跨度不超过180天，您可以查询最近一年的交易记录。</p>
+			</div>
+			<!--<div class="but_m20px">
+				<button class="but_315px but_red" id="submit">确定</button>
+			</div>-->
+			
+			<div class="btn_bg_f2">
+				<button class="but_315px but_red" id="submit" noCheck="false">确&nbsp;&nbsp;定</button>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/core/param.js"></script>
+		<script src="../../js/common/smart.poppicker.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script type="text/javascript">
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('myOwn/accountDetail');
+		</script>
+	</body>
+</html>

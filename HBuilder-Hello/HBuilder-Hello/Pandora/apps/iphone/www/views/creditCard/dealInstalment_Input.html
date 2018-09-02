@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>信用卡-消费分期</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css"  />
+	</head>
+	<body>
+		<div class="bg_screen content_box5px">
+			<div style="width: 100%; background: #f1f5f8;z-index: 50; position: relative; overflow: hidden;">
+			<div class="backbox_th p_lr10px">
+				<ul>
+					<li class="b_das" id="changecardNo">
+					    <span class="input_lbg">信用卡卡号</span>
+					    <span class="input_m14px" id="cardNoShow"></span>
+					    <a class="link_rbg"></a>
+					    <input type="hidden" name="cardNo" id="cardNo" value=""/>
+					</li>
+				</ul>
+			</div>
+			</div>
+			<div style="width: 100%; background: #f1f5f8;z-index: 50; position: relative; overflow: hidden;">
+			<div class="backbox_tit_bg">
+				<p class="backbox_tit_ico"></p>
+				<p class="backbox_tit">人民币账单</p>
+			</div>
+			</div>
+			<div class="backbox_th p_top1px">
+			    <div class="bg_gray p_lr10px">
+			    	<div class="arrow_mid"></div>
+			    	<p><span class="color_6">申请分期金额</span><span class="fz_16_r flo_rihgt" id="totalAmountTD"></span></p>
+			    	<p><span class="color_6">申请分期笔数</span><span class="fz_15 flo_rihgt" id="totalNumberTD"></span></p>
+			    </div>
+			</div>
+		</div>
+		<div class="content_box5px p_down66px">
+			<div id="pullrefresh" class="mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<div style="padding-top: 209px;">
+					<div class="backbox_th p_lr10px">
+			    	   	<div id="applyTbody"></div>
+			    	</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div class="btn_bg_f2">
+			<button class="but_315px but_red" id="nextButton">下一步</button>
+		</div>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script src="../../js/common/smart.poppicker.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('creditCard/dealInstalment_Input');
+		</script>
+	</body>
+</html>

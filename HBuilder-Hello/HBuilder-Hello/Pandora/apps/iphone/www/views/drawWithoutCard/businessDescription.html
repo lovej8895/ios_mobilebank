@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>无卡预约取款业务说明</title>
+		<link rel="stylesheet" href="../../css/mui.min.css" />
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">无卡预约取款业务说明</h1>
+				<!--<a class="nav_code"></a>-->
+		    </div>
+		</header>
+		<div class="content_BOXall hb_cont">		
+			
+			<div class="backbox_fo p_lr20px p_top10px p_down20px word_bg">
+				<h5 class="fz_15 text_m color_3">无卡预约取款</h5>
+				<p class="m_top10px">1、通过手机银行的无卡预约取款功能，选定账户、设置取款金额以及预约码，
+				成功预约后，凭银行短信发送的预约信息在约定的时间内通过我行的自助取款机和
+				自助存取款机即可进行无卡预约取款。</p>
+				<p class="m_top5px">2、取款金额应不高于预约金额，单次预约金额不高于2000元。一次预约使用
+				后预约码当即失效。</p>
+				<p class="m_top5px">3、预约号为手机银行的注册号码。</p>
+				<p class="m_top5px">4、同一客户当日无卡预约取款不能超过三次。</p>	
+			</div>
+			
+			<div class="but_bottom20px" >
+				<button class="but_315px but_red"  id="back" noCheck="false">返回 </button>
+			</div>
+		
+		</div>
+			
+		<script src="../../js/core/support.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/mui.min.js"></script>
+		<script src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script src="../../js/core/utils.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('drawWithoutCard/description');
+		</script>
+		
+		
+	</body>
+</html>

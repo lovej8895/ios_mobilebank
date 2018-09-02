@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>预约明细查询结果</title>	
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css"  />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">预约明细查询</h1>
+		    </div>
+		</header>
+		
+		<div id="pullrefresh" class="mui-scroll-wrapper">
+			<div class="mui-scroll">
+				<div class="content_BOXall hb_cont" id="">
+					<div class="content_box5px m_top10px" id="details">
+					       <!-- <ul class="bg_h113px m_top5px bg_br2px">
+						    	<li>
+						    	   	<p class="sav_tit">收款账号：3010 **** 2375</p>
+							    	<a class="link_rbg link_t30px"></a>
+							    </li>
+							    <li class="money_box">
+							    	<p class="pub_li_left m_left10px">转账金额&nbsp;&nbsp;<span class="color_red">¥880,435.56</span></p>
+							    	<p class="pub_li_right m_left10px">预约状态&nbsp;&nbsp;3.08%</p>
+							    </li>
+							    <li class="pub_btnbox">
+					    	    	<a class="sav_a"><img src="../../img/icon19.png" /><span>定转活</span></a>
+					    	    	<a class="sav_a"><img src="../../img/icon10_2.png" /><span class="color_ddd">账户明细</span></a>
+					   			 </li>
+						    </ul>
+					        <ul class="bg_h113px m_top5px bg_br2px">
+						    	    <li>
+						    	    	    <p class="sav_tit"><span>账户</span>3010 **** 2375</p>
+							    	    <a class="link_rbg link_t30px"></a>
+							    </li>
+							    <li class="money_box">
+							    	    <p class="pub_li_left m_left10px">金额&nbsp;&nbsp;<span class="color_red">¥880,435.56</span></p>
+							    	    <p class="pub_li_right m_left10px">利率&nbsp;&nbsp;<span>3.08%</span></p>
+							    </li>
+							    <li class="pub_btnbox">
+							    	    <a>定转活</a>
+							    	    <a>预约支取</a>
+							    	    <a>立即支取</a>
+							    </li>
+						    </ul>-->
+					</div>
+	      		</div>
+			</div>
+		</div>
+		<div class="content_box5px m_top5px" id="showMsgDiv" hidden>
+			<div class="fail_icon1 suc_top7px"></div>
+			<p class="fz_15 text_m">未查询到预约信息！</p>
+		</div>
+		
+		
+		
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script type="text/javascript">
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('transfer/scheduleDetailQuery');
+		</script>
+	</body>
+</html>

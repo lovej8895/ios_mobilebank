@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>我的奖品</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<style>
+			.backbox_prize{
+             	width: 100%;
+	            background: #FFFFFF;
+             	
+             	box-shadow: 0 0px 1px #ddd;
+             	-webkit-box-shadow: 0 0px 1px #ddd;
+}
+			.myprizes{
+				overflow: hidden;
+				position: relative;
+			}
+			.myprizes{
+				width: 96%;
+				margin: 0 auto;
+				padding: 15px 0;
+				border-bottom: 1px solid #ddd;
+				position: relative;
+			}
+			.myprizes:last-child{
+				border-bottom: none;
+			}
+			.myprize_pic{
+				float: left;
+				width: 24%;
+			}
+			.myprize_pic img{
+				width: 100%;
+			}
+			.myprize_right{
+				float: left;
+				margin-left: 10px;
+			}
+			.prize_delete{
+				position: absolute;
+				width: 40px;
+				height: 60px;
+				background: url(../../img/icon13_1.png) no-repeat center;
+				background-size: 30%;
+				right: 0;
+				top: 5px;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">我的奖品</h1>
+		    </div>
+		</header>
+		<div id="pullrefresh" class="mui-scroll-wrapper">
+		<div class="mui-scroll">
+		<div class="content_BOXall p_down20 hb_cont">
+			<div class="backbox_prize">
+<!--			    <ul class="myprizes">
+			        <li class="myprize_pic"><img src="../../img/pd2.png" /></li>
+			        <li class="myprize_right">
+				        <p class="shop_name fz_15">奖品名称</p>
+				        <p class="color_9">一等奖</p>   
+		         	</li>
+		         	<li class="prize_delete"></li>
+	         	</ul>  
+	         	<ul class="myprizes">
+			        <li class="myprize_pic"><img src="../../img/pd2.png" /></li>
+			        <li class="myprize_right">
+				        <p class="shop_name fz_15">奖品名称</p>
+				        <p class="color_9">一等奖</p>   
+		         	</li>
+		         	<li class="prize_delete"></li>
+	         	</ul> --> 
+		  </div>	
+		</div>
+		</div>
+		</div>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/core/param.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script type="text/javascript" src="../../js/core/utils.js"></script>
+		<script src="../../js/core/param.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('lottery/myPrizes');
+		</script>			
+	</body>
+</html>

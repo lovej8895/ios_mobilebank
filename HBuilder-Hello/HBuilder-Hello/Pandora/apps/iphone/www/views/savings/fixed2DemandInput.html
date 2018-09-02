@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>定期转活期</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">定转活</h1>
+		    </div>
+		</header>	
+		<div class="content_BOXall hb_cont">
+			<div class="backbox_fo">
+			    <p class="backbox_tit2">账户信息</p>
+			    <ul class="p_lr30px">
+		    	        <li>
+		    	    	    <span class="detail_left">子账户</span><span class="detail_right" id="subAccountNo"></span>
+		    	        </li>
+		    	        <li>
+		    	    	    <span class="detail_left">币种</span><span class="detail_right" id="currencyType"></span>
+		    	        </li>
+		    	        <li>
+		    	    	    <span class="detail_left">储种</span><span class="detail_right" id="depositType"></span>
+		    	        </li>
+		    	        <li>
+		    	    	    <span class="detail_left">存期</span><span class="detail_right" id="savingPeriod"></span>
+		    	        </li>
+		    	        <li>
+		    	    	    <span class="detail_left">利率</span><span class="detail_right" id="interestRate"></span>
+		    	        </li>	
+		    	        <li>
+		    	    	    <span class="detail_left">起息日</span><span class="detail_right" id="interestBeginDate"></span>
+		    	        </li>	
+		    	        <li>
+		    	    	    <span class="detail_left">到期日</span><span class="detail_right" id="interestEndDate"></span>
+		    	        </li>	
+		    	        <li>
+		    	    	    <span class="detail_left">金额</span><span class="detail_right"><span id="balance"></span>元</span>
+		    	        </li>	
+		    	        <li>
+		    	    	    <span class="detail_left">是否转存</span><span class="detail_right" id="transferSaveType"></span>
+		    	        </li>	
+		    	        <li id="transferSaveDaysLi" style="display:none;">
+		    	    	    <span class="detail_left">自动转存存期</span><span class="detail_right" id="transferSaveDays"></span>
+		    	        </li>			    	        
+		       </ul>
+		   </div>
+		   <div class="content_box5px">
+		   	    <div class="backbox_tit_bg">
+				    <p class="backbox_tit_ico"></p>
+				    <p class="backbox_tit">支取方式及金额</p>
+			    </div>
+			    <div class="backbox_th p_lr10px ove_hid">
+				    <ul>
+					    <li>
+					    	<span class="input_lbg left_fl">支取方式</span>
+				    	    <div class="radio_box">
+				    	    	<div class="mui-input-row mui-radio mui-left radio_f_left">
+					                <label>销户支取</label>
+					                <input name="drawType" value="0" type="radio" checked>						           
+				                </div>
+				    	    	<div class="mui-input-row mui-radio mui-left radio_f_left">
+					                <label>部分支取</label>
+					                <input name="drawType" value="1" type="radio">						           
+				                </div>
+				           </div>
+					    </li>
+					    <li id="drawAmountLi" style="display:none;">
+					    	<span class="input_lbg">支取金额</span>
+                            <input class="input_m14px" type="text" id="drawAmount" placeholder="请输入支取金额"></input>
+                            <p class="input_rmb">元</p>
+					    </li>
+				    </ul>
+			    </div>
+		   </div>
+		   <div class="content_box5px p_lr10px box_top15px p_down66px">
+				<p class="hint">温馨提示</p>
+				<p class="hint_con fz_12">1、支取方式分为" 销户支取 "和" 部分支取 "，若选择" 部分支取 "，支取后剩余金额不得低于50元；若选择" 销户支取 "，则不需要输入支取金额。</p>
+				<p class="hint_con fz_12">2、对于提前支取的定期存款金额，将按活期利率计息。</p>
+		   </div>
+		   <div class="btn_bg_f2">
+				<button class="but_315px but_red" id="confirmButton">确&nbsp;&nbsp;定</button>
+		   </div>
+		</div>	
+	<body>  
+
+			
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/core/param.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('savings/fixed2DemandInput');
+		</script>			
+	</body>
+</html>

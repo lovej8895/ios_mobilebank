@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>定期转活期</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">通知存款支取</h1>
+		    </div>
+		</header>	
+		<div class="content_BOXall hb_cont">
+			<div class="backbox_fo">
+			    <p class="backbox_tit2">账户信息</p>
+			    <ul class="p_lr30px">
+		    	        <li>
+		    	    	    <span class="detail_left">子账户</span><span class="detail_right" id="subAccountNo"></span>
+		    	        </li>
+		    	        <li>
+		    	    	    <span class="detail_left">币种</span><span class="detail_right" id="currencyType"></span>
+		    	        </li>
+		    	        <li>
+		    	    	    <span class="detail_left">通知存款类型</span><span class="detail_right" id="savingPeriod"></span>
+		    	        </li>
+		    	        <li>
+		    	    	    <span class="detail_left">开户日期</span><span class="detail_right" id="openDate"></span>
+		    	        </li>
+		    	        <li>
+		    	    	    <span class="detail_left">金额</span><span class="detail_right"><span id="balance"></span>元</span>
+		    	        </li>
+
+		    	        
+		       </ul>
+		   </div>
+		   <div class="content_box5px">
+		   	    <div class="backbox_tit_bg">
+				    <p class="backbox_tit_ico"></p>
+				    <p class="backbox_tit">支取信息</p>
+			    </div>
+			    <div class="backbox_th p_lr10px ove_hid">
+				    <ul>
+					    <li>
+					    	<span class="input_lbg left_fl">支取类型</span>
+				    	    <div class="radio_box">
+				    	    	<div class="mui-input-row mui-radio mui-left radio_f_left">
+					                <label>预约支取</label>
+					                <input name="drawType" value="2" type="radio" checked>						           
+				                </div>
+				    	    	<div class="mui-input-row mui-radio mui-left radio_f_left">
+					                <label>立即支取</label>
+					                <input name="drawType" value="1" type="radio">						           
+				                </div>
+				           </div>
+					    </li>				    	
+					    <li>
+					    	<span class="input_lbg left_fl">支取方式</span>
+				    	    <div class="radio_box">
+				    	    	<div class="mui-input-row mui-radio mui-left radio_f_left">
+					                <label>部分支取</label>
+					                <input name="drawFlag" value="1" type="radio">						           
+				                </div>
+				    	    	<div class="mui-input-row mui-radio mui-left radio_f_left">
+					                <label>销户支取</label>
+					                <input name="drawFlag" value="0" type="radio" checked>						           
+				                </div>				                
+				           </div>
+					    </li>
+					    <li  id="pickDate">
+					    	    <span class="input_lbg">预约支取日期</span>
+					    	    <span class="input_m14px" id="reserveDate"></span>
+					    	    <a class="link_rbg"></a>	    	    
+					    </li>					    
+					    <li id="drawAmountLi" style="display:none;">
+					    	<span class="input_lbg">支取金额</span>
+                            <input class="input_m14px" type="text" id="drawAmount" placeholder="请输入支取金额"></input>
+                            <p class="input_rmb">元</p>
+					    </li>
+				    </ul>
+			    </div>
+		   </div>
+		   <div class="content_box5px p_lr10px box_top15px p_down66px">
+				<p class="hint">温馨提示</p>
+				<p class="hint_con fz_12">1、通知存款种类分为7天通知和1天通知，表示您在支取通知存款时需提前通知银行的天数。</p>
+				<p class="hint_con fz_12">2、如果您要支取通知存款，请选择" 预约支取 "类型，向银行发出支取通知。银行将在约定日将支取的通知存款转入相应卡号的活期账户。</p>
+				<p class="hint_con fz_12">3、如果您没有向银行发出支取通知而要进行直接支取，请您选择" 立即支取 "方式，支取部分将按活期存款利率计息。</p>
+				<p class="hint_con fz_12">4、通知存款可以一次或多次支取，最低支取金额为5万元，最低留存金额为5万元。</p>
+				<p class="hint_con fz_12">5、未提前通知而支取通知存款或已办理通知手续而提前支取通知存款，支取部分按活期存款利率计息。</p>
+		   </div>
+		   <div class="btn_bg_f2">
+				<button class="but_315px but_red" id="confirmButton">确&nbsp;&nbsp;定</button>
+		   </div>
+		</div>	
+	<body>  
+
+			
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/core/param.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('savings/notify2DemandInput');
+		</script>			
+	</body>
+</html>

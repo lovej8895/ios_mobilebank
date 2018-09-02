@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+		<title>黄金定投</title>
+		<link rel="stylesheet" href="../../css/mui.min.css"/>
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+			<h1 class="mui-title hb-title">我的</h1>
+		</header>
+		<div class="content_BOXall hb_cont">
+			<div class="fundpro_topbg">
+				<p class="p_top20px fz_16">
+					<span style="color: #fff;">总价值</span>
+					<br/>
+					<span class="fz_28" id="goldTotalVal">0.00</span>
+				</p>
+				<div class="fundpro_topbox">
+				    <ul>
+				    	<li class="fundpro_toptwo">
+				    		<span class="fz_17 color_fff" id="goldProfigLoss">0.00</span>元<br/>
+				    		<span class="color_ddd">浮动盈亏</span>
+				    	</li>
+				    	<li class="fundpro_toptwo">
+				    		<span class="fz_17 color_fff" id="goldTotalWeight">0.00</span>克<br/>
+				    		<span class="color_ddd">持有黄金</span>
+				    	</li>
+				    </ul>
+		     	</div>
+			</div>
+			<div class="content_box5px m_top10px p_down66px">
+				<div class="backbox_th p_lr10px m_top10px">
+				    <ul>
+				    	<li style="text-align: center;display: none;" class="color_9" id='currentMsg'>
+					    	买金2笔1000.00元处理中、卖金2笔3.1234克处理中
+					    </li>
+					    <li>
+					    	<span class="input_lbg">可用余额</span>
+					    	<span class="input_lbg" id="goldAmtCanUseBal">0.00元</span>
+					    </li>
+					    <li>
+					    	<span class="input_lbg">累计买金</span>
+					    	<span class="input_lbg" id="goldTotalBuyWeight">0.00克</span>
+					    </li>
+					    <li>
+					    	<span class="input_lbg">买金冻结</span>
+					    	<span class="input_lbg" id="goldBuyAmtFroze">0.00元</span>
+					    </li>
+					    <li>
+					    	<span class="input_lbg">卖金冻结</span>
+					    	<span class="input_lbg" id="goldSaleAmtFoze">0.00元</span>
+					    </li>
+					    <li>
+					    	<span class="input_lbg">提现冻结</span>
+					    	<span class="input_lbg" id="goldWithdrawalFroze">0.00元</span>
+					    </li>
+					    <li id="goldBuyPlanList">
+					    	<span class="input_lbg">我的定投</span>
+					    	<a class="link_rbg"></a>
+					    </li>
+					    <li id="goldWithdraw" style="display: none;">
+					    	<span class="input_lbg">提现</span>
+					    	<a class="link_rbg"></a>
+					    </li>
+					    <li id="goldChangeAcct">
+					    	<span class="input_lbg">签约账户变更</span>
+					    	<a class="link_rbg"></a>
+					    </li>
+					    <li id="goldTranHis">
+					    	<span class="input_lbg">交易记录</span>
+					    	<a class="link_rbg"></a>
+					    </li>
+					    <li id="goldAcctClose" style="display: none;">
+					    	<span class="input_lbg">销户</span>
+					    	<a class="link_rbg"></a>
+					    </li>
+					</ul>    
+			    </div>	
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('gold/myGold');
+		</script>
+	</body>
+</html>

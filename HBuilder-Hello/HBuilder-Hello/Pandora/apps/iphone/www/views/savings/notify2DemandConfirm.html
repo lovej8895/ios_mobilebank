@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>通知存款支取</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/app.css" />
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">通知存款支取</h1>
+		    </div>
+		</header>	
+		<div class="content_BOXall p_down66px hb_cont">
+			<div class="backbox_fo">
+			    <p class="backbox_tit2">确认账户信息</p>
+			    <ul class="p_lr30px">
+		    	        <li>
+		    	    	    <span class="detail_left">子账户</span><span class="detail_right" id="subAccountNo"></span>
+		    	        </li>
+		    	        <li>
+		    	    	    <span class="detail_left">币种</span><span class="detail_right" id="currencyType"></span>
+		    	        </li>		    	        
+		    	        <li>
+		    	    	    <span class="detail_left">通知存款类型</span><span class="detail_right" id="savingPeriod"></span>
+		    	        </li>
+                        <li>
+		    	    	    <span class="detail_left">金额</span><span class="detail_right"><span id="balance"></span>元</span>
+		    	        </li>	
+		    	        <li>
+		    	    	    <span class="detail_left">开户日期</span><span class="detail_right" id="openDate"></span>
+		    	        </li>	
+		    	        <li>
+		    	    	    <span class="detail_left">支取类型</span><span class="detail_right" id="drawType"></span>
+		    	        </li>
+		    	        <li>
+		    	    	    <span class="detail_left">支取方式</span><span class="detail_right" id="drawFlag"></span>
+		    	        </li>	
+		    	        <li id="reserveDateLi" style="display:none;">
+		    	    	    <span class="detail_left">预约支取日期</span><span class="detail_right" id="reserveDate"></span>
+		    	        </li>			    	        
+                        <li id="drawAmountLi" style="display:none;">
+		    	    	    <span class="detail_left">支取金额</span><span class="detail_right"><span id="drawAmount"></span>元</span>
+		    	        </li>	
+	    	        
+		       </ul>
+		   </div>
+	   
+		   <div class="btn_bg_f2">
+		     	<button class="but_150px but_w" id="preStep">上一步</button>&nbsp;&nbsp;
+				<button class="but_150px but_red" id="confirmButton">确&nbsp;&nbsp;定</button>
+		   </div>
+		</div>	
+	<body>  
+
+			
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/core/param.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('savings/notify2DemandConfirm');
+		</script>			
+	</body>
+</html>

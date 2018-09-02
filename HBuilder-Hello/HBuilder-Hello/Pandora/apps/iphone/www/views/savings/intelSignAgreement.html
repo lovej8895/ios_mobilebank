@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>智能通知存款</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">智能通知存款</h1>
+		    </div>
+		</header>	
+		<div class="content_BOXall hb_cont">
+			<p class="backbox_tit2">签约信息</p>
+			<div class="backbox_fo p_lr20px p_top10px word_bg p_down20px">
+			    
+		    	        <p class="m_top10px">
+                                                        一、智能通知存款业务是客户指定借记卡开通" 智能通知存款 "功能后，我行根据该借记卡人民币活期结算账户的余额变动情况，对满足通知存款起存金额的余额按通知存款利率进行计息的业务。
+		    	        </p>
+		    	       
+		    	        <p class="m_top10px">		    	   
+                                                        二、智能通知存款采用活期存款账户管理模式，卡内活期存款、智能通知存款共用一个账户。
+		    	        </p>
+		    	        
+		    	        <p class="m_top10px">
+		    	        	三、智能通知存款计息周期为自然月，月底根据客户每天的实际余额，自动为客户在每个时间段（以余额超过五万元（含）为分界）选择"一天"或者" 七天 "计息。利息于次月一日入客户账。
+		    	        </p>
+		    	       
+		    	        <p class="m_top10px">
+		    	        	四、智能通知存款无需存款保底，在客户开通智能通知存款后，系统将自动记录每日人民币"智能通知存款"账户余额，如连续七天以上余额超过5万元（含）则全额按照七天通知存款利率计息，不足七天则按一天通知存款利率计息。
+		    	        </p>
+		    	       
+		    	        <p class="m_top10px">
+		    	        	五、客户可以通过我行营业网点、电子银行办理智能通知存款业务的签约和解约业务。
+		    	        </p>
+		    	        
+		    	        <p class="m_top10px">
+		    	        	六、借记卡销户前应先办理智能通知存款业务的解约，解约成功后方可进行借记卡销户。
+		    	        </p>
+		    	       
+		    	        <p class="m_top10px">
+		    	        	<label><input type="checkbox" id="agreeCheck"/>阅读并同意该协议</label>
+		    	        </p>
+		       
+		   </div>
+	   
+		   <div class="but_m20px">
+		     	<button class="but_150px but_w" id="backButton">返&nbsp;&nbsp;回</button>&nbsp;&nbsp;
+				<button class="but_150px but_red" id="confirmButton">确&nbsp;&nbsp;定</button>
+		   </div>
+		</div>	
+	<body>  
+
+			
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/core/param.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('savings/intelSignAgreement');
+		</script>			
+	</body>
+</html>

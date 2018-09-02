@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>账号别名维护</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../../js/mui.min.js"></script>
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+			<h1 class="mui-title hb-title">设置账户别名</h1>
+		</header>		
+			
+		<!-- 内容 -->
+		<div class="content_BOXall m_top10px hb_cont">
+			<div class="content_box5px">
+				<div class="backbox_th p_lr10px">
+				    <ul>
+					    <li id="changeDiv">
+					    	    <span class="input_lbg" style="width: 25%;">账号</span>
+					    	    <span class="input_m14px fz_16" id="accountNo"></span>
+					    	    
+					    </li>
+					    <li>
+					    	    <span class="input_lbg" style="width:  25%;">别名</span>
+					    	    <input class="input_m10px fz_16" type="text" id="alais" maxlength="10" />
+					    	    
+					    </li>
+				    </ul>
+			    </div>
+			</div>
+			<!--<div class="selector">
+				<ul class='selector-group'>
+					<li class='selector-item' id="changeDiv">
+						<div class="col-xs-5">
+							<span class='selector-key'>帐号：</span>
+						</div>
+						<div class="col-xs-7">
+							<p class='selector-control-static' id="accountNo"></p>
+						</div>
+					</li>
+					
+
+					<li	class='selector-item' >
+						<div class="col-xs-5">
+							<span class='label'>别名：</span>
+						</div>
+						<div class="col-xs-7">		
+							<input type="text" class="form-control" id="alais" maxlength="10"/>
+												
+						</div>
+					</li>
+				</ul>
+			</div>-->
+			<div class="content_box5px p_lr10px box_top15px p_down66px">
+				<p class="hint">温馨提示</p>
+				<p class="hint_con fz_12">设置银行卡账户的别名，方便您区分不同的银行卡；可输入数字、汉字、字母，最多输入10字节或10个汉字 。</p>
+			</div>
+			
+			
+			<!--<div class="tip">
+				<div class="tip-title">
+					温馨提示：
+				</div>
+				<ul class='tip-group'>
+					<li class='tip-item'>设置银行卡账户的别名，方便您区分不同的银行卡；可输入
+						数字、汉子、字母，最多输入10字节或10个汉字 。</li>
+				</ul>
+			</div>-->
+			<div class="btn_bg_f2" id="abc">
+				<button class="but_315px but_red" path="aliasSetting_Success.html"  id="aliasSetting_Success" noCheck="false">确&nbsp;&nbsp;认</button>
+			</div>	
+		</div>
+		
+		<script src="../../js/common/jquery-1.12.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/core/support.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/core/param.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/core/utils.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/Address.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/mui.min.js"></script>
+		<script src="../../js/common/keyboard/plugin-keyboard.js"></script>
+		<script src="../../js/common/sea.js"></script>
+		<script type="text/javascript">
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('customerSetting/aliasConfirm');
+		</script>
+	</body>
+
+</html>

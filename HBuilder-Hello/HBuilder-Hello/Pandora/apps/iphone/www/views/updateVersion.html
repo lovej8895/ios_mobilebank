@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="../css/mui.min.css">
+		<link rel="stylesheet" href="../css/public.css" />
+		<link rel="stylesheet" href="../css/styleCanves.css"/> 
+		<script type="text/javascript" src="../js/common/zcircleMove.js"></script>
+		<style>
+			.progressBar{width:100%;height:12px;border:1px solid #ECECEC;border-radius:5px;margin-top:10px;background: #EEEEEE;text-align: center;}
+ 			#bar{width:0px;height:10px;border-radius:5px;background:#CF155C;}
+		</style>
+	</head>
+	<body style="background: transparent;">
+		<div class="pickernew_bg" id="maskLayer" style="z-index: 998;"></div> 
+		<div style="z-index: 999; position: absolute; width: 100%">
+			<div id="doc"></div>
+		</div>
+		<script src="../js/common/mui.min.js"></script>
+		<script src="../js/core/support.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="../js/common/jquery-1.12.0.min.js"></script>
+		<script src="../js/common/jquery-1.12.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script> 
+			mui.back = function() {};
+			var options = {
+				method:"GET",
+				filename:"_doc/download/"//,//下载文件保存的路径
+				//timeout:60,//下载任务超时时间,默认120s
+				//retry:1//下载任务重试次数,默认为重试3次
+			};
+			var forceUpdate = '';
+			var totalSize = '';
+			var timer = '';
+			mui.plusReady(function() {
+				var self = plus.webview.currentWebview();
+				var data = self.params;
+				if(mui.os.ios){
+					var url = self.url;
+					var forceUpdate = data.forceUpdate;
+					var doc = document.getElementById('doc');
+					var html='<div class="update_box" style="visibility: hidden;" id="box"><div class="update_tit_bg"><p class="update_tit fz_16">手机银行有新版本啦</p>'
+							+'<p class="fz_12 color_9">更新版本：'+self.version+'</p></div>'
+							+'<p class="m_top5px">'+self.dec+'</p>'
+							+'<div class="update_btnbox">';
+					html+='<button class="update_btn" id="update">立即前往</button>';
+					if(forceUpdate=='0'){
+						html+='<br/><div id="cancel" class="color_9" style="font-size: 12px;text-decoration:underline;margin-top: 10px;">稍后更新</div></div></div>';
+					}else{
+						html+='</div></div>';
+					}
+					doc.innerHTML = html;
+					var divHeight = document.getElementById("box").offsetHeight;
+					var height = plus.display.resolutionHeight;
+					document.getElementById("box").style.cssText = 'margin-top:'+(height-divHeight)/2+'px;visibility: "";';
+					document.getElementById("update").addEventListener('tap', function(event) {
+						plus.runtime.openURL(url);
+					}, false);
+					if(forceUpdate=='0'){
+						document.getElementById("cancel").addEventListener('tap', function(event) {
+							plus.webview.close(self);
+						}, false);
+					}
+				}else if (mui.os.android) {
+					forceUpdate = data.forceUpdate;
+					var doc = document.getElementById('doc');
+					totalSize = data.fileSize;
+					var decribe = data.dec.replaceAll('&lt;','<').replaceAll('&gt;','>').replace(/ /g,'&nbsp;&nbsp;');
+					var html='<div class="update_box" style="visibility: hidden;" id="box"><div class="update_tit_bg"><p class="update_tit fz_16">手机银行有新版本啦</p>'
+							+'<p class="fz_12 color_9">更新版本：'+data.version+'</p>';
+					if(forceUpdate=='1'){
+						html+='<a id="close"></a>';
+					}
+					html+='</div><p class="m_top5px">'+decribe+'</p><div class="update_btnbox"><button class="update_btn" id="update">立即更新</button>';
+					if(forceUpdate=='0'){
+						html+='<br/><div id="cancel" class="color_9" style="font-size: 12px;text-decoration:underline;margin-top: 10px;">稍后更新</div></div></div>';
+					}else{
+						html+='</div></div>';
+					}
+					doc.innerHTML = html;
+					var divHeight = document.getElementById("box").offsetHeight;
+					var height = plus.display.resolutionHeight;
+					document.getElementById("box").style.cssText = 'margin-top:'+(height-divHeight)/2+'px;visibility: "";';
+					//立即更新按钮点击事件
+					if(forceUpdate=='1'){
+						document.getElementById("close").addEventListener('tap', function(event) {
+							plus.runtime.quit();
+						}, false);
+					}else{
+						document.getElementById("cancel").addEventListener('tap', function(event) {
+							plus.webview.close(self);
+						}, false);
+					}
+					document.getElementById("update").addEventListener('tap', function(event) {
+						document.getElementById('update').disabled="disabled";
+						downloadApp(data.url,totalSize);
+					}, false);
+				}else{
+					plus.webview.close(self);
+				}
+			
+			/**
+			 * 下载App
+			 */
+			
+			function downloadApp(downUrl,totalSize) {
+				var downloadedPersent=0;
+//				plus.nativeUI.showWaiting("更新进行中...");
+				var dtask = plus.downloader.createDownload(downUrl, options,function(d, status) {
+					if (status == 200) {
+						installApp(d.filename);
+					} else {
+						plus.webview.close(self);
+						plus.nativeUI.alert("下载失败！");
+						forceUpdate = 0;
+					}
+				});
+				
+				dtask.addEventListener( "statechanged", function(task,status){
+			    	var progress2 = document.getElementById('doc');
+			    	if(!dtask){return;}
+			    	switch(task.state) {
+			    		case 1: // 开始
+			    			console.log( "开始下载..." );
+			    		break;
+			    		case 2: // 已连接到服务器
+			    			console.log( "链接到服务器..." );
+			    		break;
+			    		case 3:// 已接收到数据
+			    		if(totalSize&&downloadedPersent!=parseInt((parseFloat(task.downloadedSize/totalSize).toFixed(2))*100)){
+			    			downloadedPersent=parseInt((parseFloat(task.downloadedSize/totalSize).toFixed(2))*100);
+							progress2.innerHTML = '<div class="surePass"><canvas class="circleRun update_progress" data-run="0" id="canvasThree3" amout="'+task.downloadedSize+'" nowData="'+totalSize+'"></canvas></div>';
+			    			var findCanvas=$("#canvasThree3");
+							percents=parseInt((parseFloat(task.downloadedSize/totalSize).toFixed(2)));
+							runCircle(
+							   { 
+							   	loading:downloadedPersent,
+								obj:'canvasThree3', 
+								percent:1,
+								url:'../img/fire.png',   //飞机小图地址
+								imgWidth:30,
+								imgHeight:50,
+								circleBottomColor:"#e6eaed",//圆环底色
+								outerColorStart:'#f2fafe',  //外部圆环 渐变色
+								outerColorMid:'#009def',
+								outerColorEnd:'#7fcef7',
+								innerColorStart:'#6fbef0',  //内部圆环 渐变色
+								innerColorEnd:'#058ee4',
+							   }
+							);
+			    		}
+			    		break;
+			    		case 4:	// 下载完成
+			    	
+			    		break;
+			    	}
+			    });
+			    dtask.start();
+			}
+			
+			/**
+			 * 安装App
+			 */
+			function installApp(path) {
+				plus.runtime.openFile(path);
+				plus.runtime.quit();
+			}
+		});
+			
+		</script>
+	</body>
+</html>

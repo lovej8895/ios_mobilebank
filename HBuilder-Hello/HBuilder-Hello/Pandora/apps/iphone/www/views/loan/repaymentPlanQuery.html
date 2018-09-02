@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>还款计划查询</title>
+		<link rel="stylesheet" href="../../css/mui.min.css" />
+		<link rel="stylesheet" href="../../css/mui.picker.css" />
+		<link rel="stylesheet" href="../../css/mui.poppicker.css" />
+		<link rel="stylesheet" href="../../css/mui.listpicker.css" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav top_z_index hb-header">
+		    <div class="header_wraper">
+		     	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">我的贷款</h1>
+		    </div>
+		</header>
+		<div class="content_BOXall hb_cont">
+        	<div class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-primary" id="menuDiv">
+				<a id="oneYear" class="mui-control-item fz_15 mui-active">近一年</a>
+				<a id="threeYear" class="mui-control-item fz_15">近三年</a>
+				<a id="all" class="mui-control-item fz_15">全部</a>
+				<a id="other" class="mui-control-item fz_15">其他</a>
+			</div>
+			<div id="dateArea" style="display: none;">
+				<div class="other_timebg">
+					<ul class="">
+						<li id="changeBeginDate" style="position: relative;">
+							<p id="beginDate"><input type="text" placeholder="请选择日期" /></p>
+							<p class="fz_12 color_6">起始日期</p>
+							<a class="link_rbg link_r10px"></a>
+						</li>
+						<li id="changeEndDate" style="position: relative;">
+							<p id="endDate"><input type="text" placeholder="请选择日期" /></p>
+							<p class="fz_12 color_6">截止日期</p>
+							<a class="link_rbg link_r10px"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+	   	</div>
+		<script src="../../js/core/support.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/mui.min.js"></script>
+		<script src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script src="../../js/common/sea.js"></script>
+		<script src="../../js/common/mui.picker.js"></script>
+		<script src="../../js/common/mui.poppicker.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('loan/repaymentPlanQuery');
+		</script>
+	</body>
+</html>

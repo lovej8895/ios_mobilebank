@@ -1,0 +1,46 @@
+<!--
+	作者：苏星
+	时间：2017-03-10
+	描述：信用卡二级菜单本行还款(本行主动还款、本行约定还款)
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>本行还款</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css"  />
+	</head>
+	
+	<body>  
+		<header class="mui-bar mui-bar-nav">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<h1 class="mui-title">本行还款</h1>
+				<!--<a class="nav_code"></a>-->
+		    </div>		    
+       </div>
+		</header>
+		<div class="content_BOXall p_down66px">
+			<div id="headMenu" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-primary">
+					<a class="mui-control-item mui-active fz_15" id="thisInitiativeRefund_Input" path="../creditCard/thisInitiativeRefund_Input.html" noCheck="false">主动还款</a>
+					<a class="mui-control-item fz_15" id="thisAppointRefund_Input" path="../creditCard/thisAppointRefund_Input.html" noCheck="false">约定还款</a>					
+			</div>
+       </div>
+			
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script src="../../js/common/mui.poppicker.js"></script>
+		<script src="../../js/common/mui.listpicker.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('creditCard/ownRefund');
+		</script>			
+	</body>
+</html>
+

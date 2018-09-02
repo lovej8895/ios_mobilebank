@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>提前还款</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<!--<link href="../../css/mui.picker.css" rel="stylesheet" />
+		<link href="../../css/mui.poppicker.css" rel="stylesheet" />
+		<link href="../../css/mui.listpicker.css" rel="stylesheet" />-->
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">提前还款</h1>
+		    </div>
+		</header>
+		<div class="content_BOXall m_top10px hb_cont">
+			<div class="content_box5px">
+				<div class="backbox_th p_lr10px">
+					<ul>
+						<li id="changeAccount">
+				    	        <span class="input_lbg">还款账户</span>
+				    	        <span class="input_m14px" id="accountNo"></span>
+					    </li>
+					    <li>
+				    	        <p>
+				    	          	<span class="input_lbg">可用余额</span>
+				    	            <span class="input_m12px" id="balance"></span>元
+				    	        </p>
+					    </li>
+					    <li id="changePlanDate">
+						    <span class="input_lbg">贷款余额</span>
+						    <span class="input_m12px" id="loanBalance"></span>元
+						</li>
+						<li id="changeAccount">
+						    <span class="input_lbg">提前还款本金</span>
+						    <input class="input_m12px" type="number" id="principal" placeholder="必输项"></input>
+						    <p class="input_rmb">元</p>
+						</li>
+						<!--<li class="b_das" id="changeTransType">
+						    <span class="input_lbg">大 写 金 额</span>
+						    <span class="input_m14px" id="chineseAmt"></span>
+						</li>
+						<li class="b_das" id="changePlanDate">
+						    <span class="input_lbg">应付利息</span>
+						    <span class="input_m14px" id="payRate"></span>
+						</li>
+						<li class="b_das" id="changePlanDate">
+						    <span class="input_lbg">应付本息</span>
+						    <span class="input_m14px" id="payAmount"></span>
+						</li>-->
+					</ul>
+				</div>
+			</div>
+			<div class="but_bottom20px">
+				<button class="but_150px but_red" id="nextButton">下一步</button>
+				<button class="but_150px but_w" id="resetButton">重&nbsp;&nbsp;置</button>
+			</div>
+		</div>
+		<script src="../../js/core/support.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/mui.min.js"></script>
+		<script src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script src="../../js/core/utils.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/sea.js"></script>
+		<script src="../../js/common/mui.picker.js"></script>
+		<script src="../../js/common/mui.poppicker.js"></script>
+		<script src="../../js/common/mui.listpicker.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('loan/loanBackInput');
+		</script>
+	</body>
+</html>

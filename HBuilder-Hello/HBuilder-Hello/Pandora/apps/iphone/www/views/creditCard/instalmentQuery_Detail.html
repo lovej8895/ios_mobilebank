@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>信用卡-分期信贷</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">分期查询</h1>
+				<!--<a class="nav_code"></a>-->
+		    </div>
+		</header>
+		<div class="content_BOXall hb_cont">
+			<div class="backbox_fo">
+			    <p class="backbox_tit2">分期查询明细</p>
+					<ul class="p_lr30px">
+						<li>
+							<span class="detail_left">分期借据号</span><span class="detail_right" id="instTrxnSeqShow"></span>
+						</li>
+						<li>
+							<span class="detail_left">申请时间</span><span class="detail_right" id="instalmentDateShow"></span>
+						</li>
+						<li>
+							<span class="detail_left">申请金额</span><span class="detail_right" id="instalmentAmtShow"></span>
+						</li>
+						<li>
+							<span class="detail_left">分期期数</span><span class="detail_right" id="instalmentTimesShow"></span>
+						</li>
+						<li>
+							<span class="detail_left">分期总手续费</span><span class="detail_right" id="chargeFeeShow"></span>
+						</li>
+						<li>
+							<span class="detail_left">分期总利息</span><span class="detail_right" id="interestShow"></span>
+						</li>
+						<li>
+							<span class="detail_left">剩余金额</span><span class="detail_right" id="amountRealChargedShow"></span>
+						</li>
+						<li>
+							<span class="detail_left">剩余期数</span><span class="detail_right" id="unReturnTimesShow"></span>
+						</li>
+						<li>
+							<span class="detail_left">状态</span><span class="detail_right" id="trxn_settl_statusShow"></span>
+						</li>
+					</ul>
+			</div>
+		</div>
+		<div class="but_m20px">
+			<button class="but_315px but_red but_d10px" id="backBtn"> 返回</button>
+		</div>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/core/param.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('creditCard/instalmentQuery_Detail');
+		</script>
+	</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>黄金定投</title>
+		<link rel="stylesheet" href="../../css/mui.min.css" />
+		<link rel="stylesheet" href="../../css/public.css"/>
+		<link rel="stylesheet" href="../../css/style.css"/>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<h1 class="mui-title hb-title">黄金定投开户</h1>
+		    </div>
+		</header>
+		<div class="content_BOXall p_down20px hb_cont">
+			<div class="backbox_fo suc_ptop7px">
+			    <div class="success_icon1 suc_top0px"></div>
+			    <p class="fz_18 text_m">
+			    	<p class="text_mf" id="resultMsg">黄金定投开户成功</p>
+			    </p>
+			    <div class="p_lr30px">
+		         	<ul>
+	    	            <li>
+					        <span class="detail_left">定投账号</span>
+	    		            <span class="detail_right" id="goldAipNo"></span>
+    		            </li>
+    		            <li>
+			         		<span class="detail_left">签约账户</span>
+	    		            <span class="detail_right" id="accountNo"></span>
+    		            </li>
+		         	</ul>
+	         	</div>
+			</div>		
+		</div>
+		<div class="but_m20px"  id="backBtn">
+			<button class="but_315px but_w">返回</button>
+		</div>
+		<div class="but_m20px" id="nextBtn" style="display: none;">
+			<button class="but_315px but_red " >继续购买</button>
+		</div>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('gold/goldAcctOpenResult');
+		</script>		
+	</body>
+</html>

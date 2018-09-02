@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>提醒查询页面</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+			<h1 class="mui-title hb-title">日历</h1>
+		</header>
+		<div class="content_BOXall p_down66px hb_cont">
+			<div class="calendar_yearbg">
+                <div class="dl_icon" id="preMonth"></div>
+                <p><span class="fz_15" id="month"></span>&nbsp;&nbsp;<span class="fz_15" id="year"></span></p>
+                <div class="dr_icon" id="nextMonth"></div>
+            </div>
+            <div class="calendar_monthbg">
+                <div class="calendar_monthbox">
+                	    <a class="color_9">一</a>
+                	    <a class="color_9">二</a>
+                	    <a class="color_9">三</a>
+                	    <a class="color_9">四</a>
+                	    <a class="color_9">五</a>
+                	    <a class="color_9">六</a>
+                	    <a class="color_9">日</a>
+                </div>
+            </div>
+            <div class="backbox_fo" id="backbox_fo">
+<!--            	    <div class="calendar_daybox p_top10px">
+            	    	    <a class="color_9"></a>
+            	    	    <a class="color_9"></a>
+            	    	    <a class="color_9"></a>
+                	        <a class="color_9"></a>
+                	        <a class="color_9">1</a>
+                	        <a class="color_9">2</a>
+                	        <a class="color_9">3</a>
+            	    </div>
+            	     <div class="calendar_daybox">
+            	    	    <a class="color_9">4</a>
+            	    	    <a class="color_9">5</a>
+            	    	    <a class="color_9">6</a>
+                	        <a class="color_9">7</a>
+                	        <a class="color_9">8</a>
+                	        <a class="color_9">9<span class="round_y"></span></a>
+                	        <a class="color_9">10</a>
+            	    </div>
+            	    <div class="calendar_daybox">
+            	    	    <a class="color_9">11</a>
+            	    	    <a class="color_9">12</a>
+            	    	    <a class="color_9">13</a>
+                	        <a class="color_9"><span class="today_on"></span>14<span class="round_y"></span></a>
+                	        <a class="color_9"><span class="today_choose">15</a>
+                	        <a class="color_9">16</a><a class="color_9">17</a>
+            	    </div>
+            	    <div class="calendar_daybox">
+            	    	<a class="color_9">18</a>
+            	    	<a class="color_9">19</a>
+            	    	<a class="color_9">20</a>
+                	    <a class="color_9">21</a>
+                	    <a class="color_9">22</a>
+                	    <a class="color_9">23</a>
+                	    <a class="color_9">24</a>
+            	    </div>
+            	    <div class="calendar_daybox">
+            	    	<a class="color_9">25<span class="round_y"></span></a>
+            	    	<a class="color_9">26<span class="round_y"></span></a>
+            	    	<a class="color_9">27</a>
+                	    <a class="color_9">28</a>
+                	    <a class="color_9">29</a>
+                	    <a class="color_9">30</a>
+                	    <a class="color_9">31</a>
+            	    </div>-->
+            </div>
+            
+            <div class="content_box5px">
+            	    <div class="backbox_th p_lr10px m_top10px ove_hid" id="affair">
+<!--            	    	    <ul class="help_conbox ove_hid">
+            	    	    	    <li class="con_round_y"></li>
+            	    	    	    <li class="color_9 m_left10px">06-15</li>
+            	    	    	    <li class="help_con m_left10px">提醒内容提醒内容提醒内容提醒内容提醒内容</li>
+            	    	    </ul>
+            	    	    <ul class="help_conbox ove_hid">
+            	    	    	    <li class="con_round_y"></li>
+            	    	    	    <li class="color_9 m_left10px">06-15</li>
+            	    	    	    <li class="help_con m_left10px">提醒内容</li>
+            	    	    </ul>-->
+            	    </div>
+            </div>
+		</div>
+		
+		<div class="btn_bg_f2">
+			          
+			<button class="but_315px but_w" id="add"><img class="btn_ico" src="../../img/btn_ico1.png" />添加提醒</button>
+			
+		</div>
+		
+		<script src="../../js/core/support.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/core/utils.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/jquery-1.12.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/mui.min.js"></script>
+		
+		<script src="../../js/common/calendar.js"></script>
+		<script src="../../js/common/sea.js"></script>
+		<script type="text/javascript">
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('lifeAssistant/affairRemind');
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+		<title>我的基金详情</title>
+		<link rel="stylesheet" href="../../css/mui.min.css"/>
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+			<h1 class="mui-title hb-title">我的基金详情</h1>
+		</header>
+		<div class="content_BOXall hb_cont">
+			<div class="fundpro_topbg">
+				<p class="notice_btn" id="collectBtn" style="display: none;">
+					<span class="notice_btnico" style="display: none;">关注</span>
+					<span class="notice_btndelico">取消</span>
+				</p>
+				<p class="p_top20px fz_16"><span style="color: #fff;" id="f_prodname"></span><br/><span id="productCode"></span></p>
+				<p class="m_top5px"><span style="color: #fff;" class="fz_28" id="f_profit_rate"></span><span class="fz_17">%</span></p>	
+				<div class="color_ddd fz_15">收益率</div>
+				<div class="fundpro_topbox_my">
+				    <ul>
+				     	<li class="fundpro_toptwo"><span class="fz_17 color_fff" id="f_fundvol"></span><br/><span class="color_ddd">总份额</span></li>
+				     	<li class="fundpro_toptwo"><span class="fz_17 color_fff" id="f_avdilvol"></span><br/><span class="color_ddd">可用份额</span></li>
+				     	<li class="fundpro_toptwo"><span class="fz_17 color_fff" id="f_marketval"></span><br/><span class="color_ddd">当前市值</span></li>
+				    </ul>
+		     	</div>
+			</div>
+			<div class="fundpro_modbg2 banner_bg_boxshw">
+				<ul>
+					<li>
+						<p class="color_6 m_left25px">浮动盈亏&nbsp;&nbsp;<span id="f_profit_loss"></span></p>
+					</li>
+					<li>
+						<p class="color_6 m_left25px"><span class="color_6" id="incomeTitle"></span>&nbsp;&nbsp;<span id="income"></span></p>
+					</li>
+				</ul>
+			</div>
+			<div class="fundpro_modbg banner_bg_boxshw m_top10px">
+				<p class="fundpro_modicon"></p>
+				<ul>
+					<li>
+						<p class="color_6 m_left25px">基金风险等级</p>
+						<p class="fz_14 m_left25px m_top5px" id="risklevelShow"></p>
+						<p class="" id="risklevelIcon"></p>
+					</li>
+					<li>
+						<p class="color_6 m_left25px">基金类型</p>
+						<p class="fz_14 m_left25px m_top5px" id="propTypeShow"></p>
+						<p class="fundpro_lxicon fund_phbico" id="propTypeIcon"></p>
+					</li>
+				</ul>
+			</div>
+			<div class="content_box5px m_top10px p_down66px">
+				<div class="backbox_th">
+					<div class="fund_zst_tab">
+						<a class="fund_zst_tab_l fund_tab_onbox" id="chartType1"><p class="fund_tab_onpicl" id="chartTypeIcon1"></p><span class="fund_tab_on" id="chartTypeShow1">单位净值</span></a><a class="fund_zst_tab_r" id="chartType2"><p class="fund_tab_onpicr" style="display: none;" id="chartTypeIcon2"></p><span class="" id="chartTypeShow2">累计净值</span></a>
+					</div>
+					<!--走势图区域-->
+					<div class="fund_zst_picbg">
+						<div id="productChart">
+							
+						</div>
+					</div>
+					<div class="fund_zst_tad2">
+						<a id="chartBtn1"><span class="zst_tab tab_on" id="chartBtnShow1">一个月</span></a>
+						<a id="chartBtn2"><span class="zst_tab" id="chartBtnShow2">三个月</span></a>
+						<a id="chartBtn3"><span class="zst_tab" id="chartBtnShow3">半年</span></a>
+						<a id="chartBtn4"><span class="zst_tab" id="chartBtnShow4">一年</span></a>
+					</div>
+				</div>
+				<div class="backbox_th p_lr10px m_top10px">
+				    <ul>
+					    <li id="transRule">
+					    	<span class="input_lbg">交易规则</span>
+					    	<a class="link_rbg"></a>
+					    </li>
+					    <li id="dividChangeBtn" style="display: none;">
+					    	<span class="input_lbg">分红方式</span>
+					    	<span class="input_m12px" id="nowDivid">分红方式</span>
+					    	<a class="link_rbg"></a>
+					    </li>
+					</ul>    
+			    </div>	
+			</div>
+			<div class="btn_bg_f">
+				<div class="fund_btnbox">
+					<p><button  id="buyBtn" disabled="disabled" class="fund_btn but_red fz_15">追加购买</button></p>
+					<p><button  id="sellBtn" disabled="disabled" class="fund_btn but_red fz_15">赎回</button></p>
+					<p><button  id="buyPlanBtn" disabled="disabled" class="fund_btn but_red fz_15">定投</button></p>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/core/param.js"></script>
+		<!--<script type="text/javascript" src="../../js/common/echarts-all.js"></script>-->
+		<script type="text/javascript" src="../../js/common/echarts.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('fund/myHoldFundDetail');
+		</script>
+	</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>智能通知存款</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />	
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css"  />
+	</head>
+	
+	<body>  
+		<div class="p_down66px">
+			<div class="content_box5px m_top10px">
+				<div id="accountList">
+			        
+			   </div>
+		    
+			</div>
+        </div>
+		
+        <nav class="btn_bg_f2">	
+           <div class="but_bg_f">
+       	       <button class="but_315px but_red" id="queryButton">签约、解约记录查询</button>
+           </div>
+        </nav>
+        
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/core/param.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('savings/intelligentNotifyDeposit');
+		</script>			
+	</body>
+</html>

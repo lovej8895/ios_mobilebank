@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>黄金定投</title>
+		<link rel="stylesheet" href="../../css/mui.min.css" />
+		<link rel="stylesheet" href="../../css/public.css"/>
+		<link rel="stylesheet" href="../../css/style.css"/>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<h1 class="mui-title hb-title">签约账户变更</h1>
+		    </div>
+		</header>
+		<div class="content_BOXall p_down20px hb_cont">
+			<div class="backbox_fo suc_ptop7px">
+			    <div class="success_icon1 suc_top0px"></div>
+			    <p class="fz_18 text_m">
+			    	<p class="text_mf" id="resultMsg">签约账户变更成功</p>
+			    </p>
+			    <div class="p_lr30px">
+		         	<ul>
+	    	            <li>
+					        <span class="detail_left">原签约账号</span>
+	    		            <span class="detail_right" id="goldSignAcct"></span>
+    		            </li>
+    		            <li>
+			         		<span class="detail_left">新签约账号</span>
+	    		            <span class="detail_right" id="accountNo"></span>
+    		            </li>
+		         	</ul>
+	         	</div>
+			</div>		
+		</div>
+		<div class="but_m20px">
+			<button class="but_315px but_w" id="backBtn">返回</button>
+		</div>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('gold/goldChangeAcctResult');
+		</script>		
+	</body>
+</html>

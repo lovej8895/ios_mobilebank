@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>黄金定投</title>
+		<link rel="stylesheet" href="../../css/mui.min.css" />
+		<link rel="stylesheet" href="../../css/public.css"/>
+		<link rel="stylesheet" href="../../css/style.css"/>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<h1 class="mui-title hb-title">计划买</h1>
+		    </div>
+		</header>
+		
+		<div class="content_BOXall p_down20px hb_cont">
+			<div class="backbox_fo suc_ptop7px">
+			    <div class="success_icon1 suc_top0px" id="resultImg"></div>
+			    <p class="fz_18 text_m">
+			    	<p class="text_mf" id="resultMsg"></p>
+			    </p>
+			    <div class="p_lr30px">
+		         	<ul>
+	    	            <li>
+					        <span class="detail_left">计划号</span>
+	    		            <span class="detail_right" id="planNo"></span>
+    		            </li>
+    		            <li>
+			         		<span class="detail_left">定投周期</span>
+	    		            <span class="detail_right" id="investPeriod"></span>
+    		            </li>
+    		            <li id="liInvestDate">
+			         		<span class="detail_left">定投日期</span>
+	    		            <span class="detail_right" id="investDate"></span>
+    		            </li>
+    		            <li>
+		         			<span class="detail_left">定投金额</span>
+	    	             	<span class="detail_right" id="payAmount"></span>
+    		            </li>
+		         	</ul>
+	         	</div>
+			</div>		
+		</div>
+    	<div class="but_m20px">
+			<button class="but_315px but_red but_d10px" id="nextBtn">我的定投</button>
+			<button class="but_315px but_w" id="backBtn">返回</button>
+		</div>
+		
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script type="text/javascript" src="../../js/core/param.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('gold/goldBuyPlanResult');
+		</script>		
+	</body>
+</html>

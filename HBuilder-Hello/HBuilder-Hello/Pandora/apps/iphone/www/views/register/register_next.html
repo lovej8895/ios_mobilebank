@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>注册</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/app.css" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+			<h1 class="mui-title hb-title">注册</h1>
+				<!--<a class="nav_code"></a>-->
+		</header>
+		<div class="content_BOXall reg_stepbox hb_cont">
+			<ul>
+				<li>  
+					<span><img src="../../img/sing1_1.png" /></span>					
+				</li>
+				<li class="step_line"></li>
+				<li>
+					<span><img src="../../img/sing2_2.png" /></span>
+				</li>
+				<li class="step_line"></li>
+				<li>
+					<span><img src="../../img/sing3_2.png" /></span>
+				</li>
+				<li class="step_line"></li>
+				<li>
+					<span><img src="../../img/sing4_1.png" /></span>
+				</li>
+			</ul>
+		</div>
+		<div class="content_box5px">
+			<p class="teg_tit color_9 fz_12"><span class="reg_dot"></span>正确输入用户真实信息</p>
+		    <div class="backbox_th p_lr10px m_top5px">
+			    <ul>
+				    <li>
+					    <span class="input_lbg">用户姓名</span>
+					    <input class="input_m12px" type="text" placeholder="请输入姓名" id="userName"></input>	    	    
+				    </li>
+				    <li id="queryCertType">
+				    	   <span class="input_lbg">证件类型</span>
+				    	   <span id="showCert">二代身份证</span>   
+				    	   <input type="hidden" id="certType" value="0" />
+				    	   <a class="link_rbg"></a> 
+				    </li>
+				    <li>
+					    <span class="input_lbg">证件号码</span> 
+				        <input class="input_m12px" type="text" placeholder="请输入证件号" id="certNo" maxlength="18"></input> 
+				    </li>
+			    </ul>
+		    </div> 
+		</div>		 
+		<div class="but_bottom20px">
+			<button class="but_315px but_red" id="next_Btn">下一步</button>
+		</div>
+		<script src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script src="../../js/common/mui.min.js"></script>
+		<script src="../../js/common/mui.enterfocus.js"></script>
+		<script src="../../js/common/smart.poppicker.js"></script>
+		<script src="../../js/common/sea.js"></script>
+		<script src="../../js/core/support.js"></script>
+		<script src="../../js/core/utils.js"></script>    
+		<script src="../../js/core/param.js"></script>     
+		<script>    
+			seajs.config({ 
+				base:"../../js/controllers/"
+			}) 
+			seajs.use('register/register_next.js');
+		</script>
+	</body>
+</html>

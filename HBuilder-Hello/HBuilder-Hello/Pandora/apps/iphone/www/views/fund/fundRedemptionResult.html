@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>基金赎回</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+	<body>
+		
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<h1 class="mui-title hb-title">基金赎回</h1>
+		    </div>
+		</header>
+		
+		<div class="content_BOXall hb_cont p_down20px">
+			<div class="backbox_fo suc_ptop7px">
+			    <div class="success_icon1 suc_top0px"></div>
+			    <p class="fz_18 text_m"><p class="text_mf" id="resultDes"></p></p>				    
+			    <div class="p_lr30px">
+		         	<ul>
+	    	             	<li>
+					        <span class="detail_left">基金名称</span>
+	    		              	<span class="detail_right" id="productName"></span>
+    		             	</li>
+    		             	<li>
+			         		<span class="detail_left">交易账号</span>
+	    		             	<span class="detail_right" id="accountNo"></span>
+    		              	</li>
+    		             	<li>
+		         			<span class="detail_left">赎回份额</span>
+	    	             		<span class="detail_right" id="applicationvol"></span>
+    		             	</li>
+    		              	<li>
+			          		<span class="detail_left">赎回日期</span>
+	    		             	<span class="detail_right" id="ta_ack_date"></span>
+    		             	</li>
+		         	</ul>
+	         	</div>
+			</div>		
+		</div>
+		<div class="p_lr30px suc_top40px suc_lc">
+			<p class="suc_lc1">
+				<span class="suc_lcicon1"></span>
+				<span>基金份额冻结，赎回申请将提交至基金公司。</span><br />
+			</p>
+			<p class="suc_lc1">
+				<span class="suc_lcicon2"></span>
+				<span>基金公司确认赎回，扣减基金份额。</span><br />
+			</p>
+			<p class="suc_lc1">
+				<span class="suc_lcicon2"></span>
+				<span>赎回资金到账。</span><br />
+			</p>		
+		</div>
+		<div class="but_m20px">
+			<button class="but_315px but_w" id="fundReturn" style="margin: 0px 0px 10px 0px;">返回</button>
+			<button class="but_315px but_red" id="fundTradeQuery">当日委托查询</button>
+		</div>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('fund/fundRedemptionResult');
+		</script>		
+	</body>
+</html>
+

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<!--<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">-->
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>设备绑定</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+	<div class="content_box5px" id="deviceList">
+			
+	</div>
+	<!--<div class="tip">
+			<div class="tip-title">
+				温馨提示：
+			</div>
+			<ul class='tip-group'>
+				<li class='tip-item'>您可以查询本账号绑定所有设备信息，但只可以解绑此设备。</li>
+			</ul>
+	</div>-->
+	
+	 <div class="content_box5px p_lr10px box_top15px p_down66px">
+			
+	</div>
+	<div class="btn_bg_f2" id="delDeviceBound">
+		<button class="but_315px but_red">解除绑定</button>
+	</div>
+	
+	
+	
+	<script src="../../js/common/jquery-1.12.0.min.js"></script>
+	<script src="../../js/common/mui.min.js"></script>
+	<script src="../../js/common/sea.js"></script>
+	<script type="text/javascript">
+		seajs.config({
+			base: "../../js/controllers/"
+		});
+		seajs.use('user/deviceBound');
+	</script>
+</html>

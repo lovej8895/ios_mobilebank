@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>金融</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+		<!--<link rel="stylesheet" href="../../css/myDragsort.css" />-->
+		<style type="text/css">
+			
+			/*.mui-android .hb-header{
+				
+			}
+			.mui-android .hb-title{
+				top:0px;
+			}*/
+			.mui-android .hb-icon{
+				padding-top:10px;
+			}
+			
+			#tap-menu-operation{
+				width: 60px;
+			    height: 40px;
+			    position: absolute;
+			    right: 0px;
+			    bottom: 0px;
+			}
+			.menu-active{
+				display: block;
+			}
+			
+			.user-menu-edit span{
+				display: block;
+				position: absolute;
+				right: 10px;
+				bottom: 5px;
+			}
+			.cust_titbox{
+			padding: 10px 0 0 0;
+			overflow: hidden;
+			line-height: 20px;
+		}
+		
+		.cust_titico{
+  			width: 5px;
+			height: 20px;
+			background: #d50818;
+			float: left;
+			margin: 0px 6px 0 0;
+			border-radius: 0;
+			-webkit-border-radius: 0;
+		}
+		.div_b_m {
+				background-color: #fff;
+				margin-bottom: 8px;
+			}
+				
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+			<div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb-icon"></a>
+				<h1 class="mui-title hb-title">自定义功能</h1>
+				<div id="tap-menu-operation">    
+					<div class="user-menu-edit menu-active"><span>编辑</span></div>
+				</div>
+			</div>
+		</header>
+							
+		<div class="content_BOXall p_down20px hb_cont">
+			<!--已设置菜单列表-->
+			<div id="customMenuArea" class="mui-slider-item p_down20px">
+				<!--<div class="cust_iconbox">
+					<ul class="custommenuset_ul cust_w25"> 
+						<li>  
+							<a class="customer_myOwn">
+								<p class="color_6 fz_12">我的账户</p>
+							</a><span class="delete_ico menu-active"></span>                     
+						</li> 
+						<li>
+							<a class="customer_transfer">
+								<p class="color_6 fz_12">转账汇款</p>
+							</a><span class="delete_ico"></span> 
+						</li>   
+						<li>
+							<a class="customer_map">
+								<p class="color_6 fz_12">网点查询</p>
+							</a><span class="delete_ico"></span> 
+						</li>        
+						<li>
+							<a class="customer_productmarket">
+								<p class="color_6 fz_12">投资理财</p>
+							</a><span class="delete_ico"></span> 
+						</li>
+						<li>
+							<a class="customer_transfer_pho">
+								<p class="color_6 fz_12">手机转账</p>
+							</a><span class="delete_ico"></span></li>
+						<li> 
+							<a class="customer_pay_w">
+								<p class="color_6 fz_12">缴水费</p>
+							</a><span class="delete_ico"></span> 
+						</li>
+						<li>
+							<a class="customer_transfer_inter">
+								<p class="color_6 fz_12">跨行转账</p>
+							</a><span class="delete_ico"></span> 
+						</li>
+						<li><a class="customer_addto"></a></li>
+					</ul>  
+				</div> -->
+			</div>
+			<div class="cust_titbg">点击右上角”编辑“按钮定义您的菜单</div>
+			<!--手机银行所有菜单-->
+			<div id="allMenuArea">
+				<!--转账汇款--> 
+				<!--<div class="cust_iconbox">
+					<div class="cust_titbox">
+						<p class="cust_titico"></p>
+						<p class="cust_tit">转账汇款</p>
+					</div>
+					<ul class="custommenuset_ul cust_w25">
+						<li>
+							<a class="customer_transfer_inner">
+								<p class="color_6 fz_12">行内转账</p>
+							</a><span class="add_ico menu-active"></span> 
+						</li>
+						<li>
+							<a class="customer_transfer_name">
+								<p class="color_6 fz_12">收款人名册</p>
+							</a><span class="add_ico menu-active"></span> 
+						</li>
+						<li>
+							<a class="customer_transfer_eachother">
+								<p class="color_6 fz_12">账户互转</p>
+							</a><span class="add_ico menu-active"></span> 
+						</li>
+						<li>
+							<a class="customer_transfer_appo">
+								<p class="color_6 fz_12">预约转账</p>
+							</a><span class="add_ico"></span> 
+						</li>
+						<li>
+							<a class="customer_transfer_soso">
+								<p class="color_6 fz_12">转账明细</p>
+							</a><span class="add_ico"></span> 
+						</li>
+					</ul>
+				</div>-->
+				<!--信用卡-->
+				<!--<div class="cust_iconbox"> 
+					<div class="cust_titbox">
+						<p class="cust_titico"></p>
+						<p class="cust_tit">信用卡</p>
+					</div>
+					<ul class="custommenuset_ul cust_w25">
+						<li>
+							<a class="customer_card_inter">
+								<p class="color_6 fz_12">信用卡还款</p>
+							</a>
+						</li>
+						<li>
+							<a class="customer_card_bill">
+								<p class="color_6 fz_12">账单管理</p>
+							</a>
+						</li>
+						<li>    
+							<a class="customer_card_adjust">
+								<p class="color_6 fz_12">额度调整</p>
+							</a>
+						</li>
+						<li>
+							<a class="customer_card_credit">
+								<p class="color_6 fz_12">分期信贷</p>
+							</a>
+						</li>
+					</ul>
+				</div>-->
+			</div>
+
+		</div>          
+		<script src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script src="../../js/common/mui.min.js"></script>
+		<script src="../../js/core/support.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/jquery.dragsort-0.5.2.min.js"></script>
+		<script src="../../js/core/utils.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/core/param.js"></script>
+		<script src="../../js/common/sea.js"></script>
+		
+		<script>             
+			seajs.config({                   
+				base: "../../js/controllers/"
+			});
+		seajs.use('customMenu/customMenuSet'); 
+		</script>
+	</body>
+
+</html>                      

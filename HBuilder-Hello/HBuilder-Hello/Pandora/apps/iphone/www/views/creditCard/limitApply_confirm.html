@@ -1,0 +1,67 @@
+<!--
+	作者：suxing
+	时间：2017-03-06
+	描述：显示用户上一页面修改的信息，确认后修改
+-->
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>调额申请确认</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../../js/mui.min.js"></script>
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+			<h1 class="mui-title hb-title">调额申请确认</h1>
+		</header>		<!-- 内容 -->
+		<div class="main mui-content hb_cont">	
+			<div class="backbox_fo">
+				<ul class="p_lr30px">
+					<li>
+						<span class="detail_left">信用卡卡号</span>
+						<span class="detail_right" id="accountNo"></p>
+					</li>
+					<li>
+
+							<span class="detail_left">调额类型</span>
+							<span class="detail_right" id="limitType"></p>
+					</li>					
+					<li>
+						<span class="detail_left">期望额度</span>	
+						<span class="detail_right" id="expectedLimit">&nbsp;</p>
+					</li>
+				</ul>
+			</div>
+		
+			<div class="but_bottom20px" >
+				<!--<button class="but_315px but_w but_d10px" id="limitApply_confirmBack" noCheck="true">上一步</button>-->
+				<button class="but_315px but_red" path="creditAction_success.html"  id="creditAction_success" noCheck="true">确认</button>
+			</div>
+			
+			
+			
+		</div>
+		
+		<script src="../../js/common/jquery-1.12.0.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/core/support.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/core/param.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/core/utils.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/Address.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/mui.min.js"></script>
+		<script src="../../js/common/keyboard/plugin-keyboard.js"></script>
+		<script src="../../js/common/sea.js"></script>
+		<script type="text/javascript">
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('creditCard/limitApply_confirm');
+		</script>
+	</body>
+
+</html>

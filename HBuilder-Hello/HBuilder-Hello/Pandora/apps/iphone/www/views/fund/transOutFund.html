@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>快速赎回</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />	
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css"  />
+	</head>
+	
+	<body>  
+		<div class="mui-scroll-wrapper p_down66px" id="pullrefresh">
+			 <div  class="mui-scroll">
+			    <div class="backbox_th p_lr10px lineheight_0px m_top10px">
+					<ul id="transTrustQuery">
+						 <!-- <li>
+						  	<p class="m_left15px">
+						  		<span class="fz_16">转出</span><br />
+						  		<span class="color_9">2017-04-12</span>
+						  	</p>
+						  	<p class="fund_detail_amt">
+					    		<span class="color_red fz_16">123333.33</span>
+						  		<span >元</span>
+						  	</p>
+						  </li>-->
+					</ul>
+				</div>
+			</div>
+        </div>
+	  	<div class="content_box5px m_top130px" id="showMsgDiv" style="display: none;"></div>
+    	<div class="btn_bg_f2">
+			<button class="but_315px but_red" id="submit">返&nbsp;&nbsp;回</button>
+	    </div>
+        
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/core/param.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('fund/transOutFund');
+		</script>			
+	</body>
+</html>

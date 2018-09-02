@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>还款方式变更</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<!--<link href="../../css/mui.picker.css" rel="stylesheet" />
+		<link href="../../css/mui.poppicker.css" rel="stylesheet" />
+		<link href="../../css/mui.listpicker.css" rel="stylesheet" />-->
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">还款方式变更</h1>
+		    </div>
+		</header>
+		<div class="content_BOXall m_top10px hb_cont">
+			<div class="content_box5px">
+				<div class="backbox_th p_lr10px">
+					<ul>
+						<li>
+						    <span class="input_lbg">原还款方式</span>
+						    <span class="input_m14px" id="oldType"></span>
+						</li>
+						<li>
+						    <span class="input_lbg">新还款方式</span>
+						    <span class="input_m14px" id="newType"></span>
+						</li>
+						<li id="changeEffectDate">
+						    <span class="input_lbg">生效日期</span>
+						    <span class="input_m14px" id="effectDate"></span>
+						    <a class="link_rbg"></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="but_bottom20px">
+				<button class="but_315px but_red" id="nextButton">下一步</button>
+			</div>
+		</div>
+		<script src="../../js/core/support.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/mui.min.js"></script>
+		<script src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script src="../../js/core/utils.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/sea.js"></script>
+		<script src="../../js/common/mui.picker.js"></script>
+		<script src="../../js/common/mui.poppicker.js"></script>
+		<script src="../../js/common/mui.listpicker.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('loan/loanChangeInput');
+		</script>
+	</body>
+</html>

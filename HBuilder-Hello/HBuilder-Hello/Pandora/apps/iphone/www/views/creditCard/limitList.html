@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>已出账单列表</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+		     	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">已出账单</h1>
+		    </div>
+		</header>
+		<div class="content_BOXall hb_cont">
+			<div class="backbox_fo">	
+					<p class="backbox_tit2">账单信息</p>
+					<ul class="p_lr30px">
+						<li>
+				    	    <span class="detail_left">卡号</span>
+				    	    <span class="detail_right" id="cardNo"></span>
+					    </li>
+					    <li>
+				    	    <span class="detail_left">本期应还总额(元)</span>
+				    	    <span class="detail_right" id="pay"></span>
+					    </li>
+					    <li>
+				    	    <span class="detail_left">本期最低还款额(元)</span>
+				    	    <span class="detail_right" id="lowest"></span>
+					    </li>
+					    <li>
+				    	    <span class="detail_left">到期还款日</span>
+				    	    <span class="detail_right" id="deadLine"></span>
+					    </li>
+					</ul>
+			</div>
+			<div class="but_bottom20px" id="limitDetail" noCheck="true" path="limitDetail.html">
+				<button class="but_315px but_red">交易明细</button>
+			</div>
+		</div>
+		
+		
+		
+		<script src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script src="../../js/common/mui.min.js"></script>
+		<script src="../../js/common/sea.js"></script>
+		<script type="text/javascript">
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('creditCard/limitList');
+		</script>
+	</body>
+</html>

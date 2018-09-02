@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>基金投资</title>
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/public.css"/>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+			<h1 class="mui-title hb-title">搜索</h1>
+		</header>
+		<div class="mui-scroll">
+			<div class="content_BOXall hb_cont">
+                <div class="searchDiv content_box5px m_top10px">
+                	    <p><input class="fz_12" type="text" placeholder="请输入基金名称或代码" id="searchKey"/></p>
+                  	<a id="searchButton"><img src="../../img/soso.png" /></a>
+                </div>
+                <div class="content_box5px m_top10px">
+                 	<div class="backbox_th2 p_lr10px">
+                	        <ul id="infoList">
+								
+                	        </ul>
+                	   </div>
+                </div>
+			</div>
+		</div>
+		<script src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js" ></script>
+		<script src="../../js/common/sea.js"></script>
+		<script type="text/javascript">
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			
+			seajs.use('fund/searchProductInfo');
+		</script>
+	</body>
+
+</html>

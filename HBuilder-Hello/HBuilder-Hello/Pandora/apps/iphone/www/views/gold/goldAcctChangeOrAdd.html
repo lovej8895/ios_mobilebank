@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>黄金定投</title>
+		<link rel="stylesheet" href="../../css/mui.min.css"/>
+		<link rel="stylesheet" href="../../css/public.css"/>
+		<link rel="stylesheet" href="../../css/style.css"/>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">黄金定投</h1>
+		    </div>
+		</header>
+		<div class="content_BOXall p_down20px hb_cont">
+			<div class="backbox_fo p_lr20px p_top20px p_down20px word_bg">
+				<p class="hint_con color_6 fz_14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;您的黄金定投签约账户并未加挂在手机银行。</p>
+				<p class="hint_con color_6 fz_14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果您的黄金定投签约账户不是通过手机银行进行签约，则请加挂您的签约账户到手机银行，请点击"账户加挂"按钮。</p>
+				<p class="hint_con color_6 fz_14">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;如果您的黄金定投签约账户是通过手机银行进行的签约，但是您进行了换卡，则请变更您的黄金定投签约账户为新的账户，请点击“签约账户变更”按钮。</p>
+			</div>
+			<div class="btn_bg_f">
+		       <button class="but_150px but_red" id="addAccount">账户加挂</button>
+			   <button class="but_150px but_red" id="goldAcctChange">签约账户变更</button>
+		    </div>
+		</div>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script type="text/javascript">
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('gold/goldAcctChangeOrAdd');
+		</script>
+	</body>
+</html>

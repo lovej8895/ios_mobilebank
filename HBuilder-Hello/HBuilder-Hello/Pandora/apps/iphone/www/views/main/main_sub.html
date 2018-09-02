@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>湖北银行首页</title>
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/index.css" />
+		<style type="text/css">
+			/*android: position:absolute; overflow: hidden;页面无法滑动*/
+			/*ios: position:absolute;overflow: hidden;正常滑动*/
+			/*IOS与Android 主要区别在于overflow: hidden;*/
+			
+			#main_sub_container {
+				padding: 0px;
+				margin: 0px;
+				position: absolute;
+				top: 0px;
+				bottom: 0px;
+				left: 0px;
+				overflow: hidden;
+				width: 100%;
+				height: 100%;
+				z-index: 1;
+			}
+			/*.mui-android .hb-header{ 
+				height: 44px;
+			}
+			
+			.mui-android .logo.hb-body{ 
+				margin-top: -10px;
+			}
+			.mui-android .nav_code.hb-nav{ 
+				top: 0px;
+			}
+			
+			.mui-android .hb-adv{ 
+				margin-top: 44px;
+			}
+			.mui-ios .hb-adv{ 
+				margin-top: 64px;
+			}*/
+			.plus-menu-ico{
+				margin-top: 15px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="main_sub_container">
+			<div class="mui-bar mui-bar-nav hb-header" style="background: #FFFFFF; box-shadow: none;" id="upperLeftLinkDiv">
+				<a class="nav_saoma hb-nav" id="barcode_scan" path="../qrcodePay/barcode_scan.html" noCheck="false"></a>
+				<div class="main_user_logo" id="test">
+					<a class="logo hb-body" ></a>
+				</div>
+				<a class="nav_code hb-nav" id="messagelist" path="../message/messageList.html" noCheck="true"></a>
+				<a class=""></a>
+			</div>
+			
+			<div id="main_scroll" class="mui-scroll-wrapper">
+				<!--<div style="width: 100%; height: 64px;"></div>-->
+				<!--广告图片src需要配置为访问WEB服务器图片资源路径:http/https:xxxx/xx.png-->
+				<div class="mui-scroll p_down66px">
+					<!--		<iframe id="frameBlock" src="main_sub_ad.html" marginheight="0" marginwidth="0" frameborder="0" scrolling="no" name="iframepage" height="100%" onload="iframeHeight()" style="width: 100%; vertical-align: middle;"></iframe>
+			-->
+					<div id="frameBlockC" class="hb-adv">
+						<div id="frameBlock" style="visibility:hidden">
+							<div id="slider" class="banner_bg mui-slider" style="visibility:hidden">
+								<div class="mui-slider-group mui-slider-loop">
+									<div class="mui-slider-item mui-slider-item-duplicate">
+										<a href="#"><img src="../../img/h_banner1_1.png"></a>
+									</div>
+									<div class="mui-slider-item">
+										<a href="#"><img src="../../img/h_banner1_1.png"></a>
+									</div>
+									<div class="mui-slider-item">
+										<a href="#"><img src="../../img/h_banner2.png"></a>
+									</div>
+									<div class="mui-slider-item">
+										<a href="#"><img src="../../img/h_banner3.png"></a>
+									</div>
+									<div class="mui-slider-item mui-slider-item-duplicate">
+										<a href="#"><img src="../../img/h_banner1_1.png"></a>
+									</div>
+								</div>
+								<div class="mui-slider-indicator rollbox">
+									<div class="mui-indicator rollone mui-active"></div>
+									<div class="mui-indicator rollone"></div>
+									<div class="mui-indicator rollone"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="short_hiconbox ovf_had p_td5px" id="main_menu_area">
+						<ul>
+							<li> 
+								<a id="definedMenu" path="../customMenu/customMenuSet_new.html" noCheck="true"><span class="short_ico2 plus-menu-ico" ></span><br/></a>
+							</li>
+						</ul>
+					</div> 
+					<div class="spread_bg" style="display: none;"><a class="spread_off" style="display: none;"></a><a class="spread_on" ></a></div>
+					<div class="contentbox m_top10px p_down20px">
+						<ul class="home_hotbg">
+							<li class="home_hot_box banner_bg_boxshw">
+								<a id="onlineAgent"><img src="../../img/h_onlineservices.png" /></a>
+							</li>
+							<!--一期屏蔽-->
+							<li class="home_hot_box m_top10px" path="../lifeAssistant/affairRemind.html" noCheck="false" id="affairRemind" style="display: none;">
+								<a style="display: none;" id="loginAffair">
+									<img src="../../img/helper2.png" />
+									<p class="help_tit fz_15">生活小助手 ~ <span class="color_6">您的贴心小管家</span></p>
+									<div>
+										<div class="hbday_l">
+											<span class="hbicon1" id="birth"></span>
+											<span class="home_lifeico"></span>
+											<p class="hbcontent">
+												<span class="color_6">亲爱的用户</span><br/>
+												<span id="affairTime">祝您</span><span id="affairTopic">生日快乐！</span>
+
+											</p>
+										</div>
+										<p class="help_rbox">
+											<span class="help_icon1"></span><br />
+											<span id="liveTime"></span>
+										</p>
+									</div>
+								</a>
+								<a id="unLoginAffair">
+									<img src="../../img/helper1.png" />
+									<p class="help_tit fz_15">生活小助手 ~ <span class="color_6">您的贴心小管家</span></p>
+									<div>
+										<button class="pay_bnt">个人提醒</button>
+										<p class="h_livedate" id="liveTime"></p>
+									</div>      
+								</a>       
+							</li>
+						</ul>
+						<div class="backbox_tit_homebg m_top10px">
+							<div class="backbox_tit_homeline">
+								<p class="backbox_tit_homeico"></p>
+							    <p class="backbox_hometit">快速转账</p>
+							</div>
+						</div>
+						<!--快速转账-->
+						<div class="backbox_one_homebg banner_bg_boxshw">
+							<p class="home_banking_bg"></p>
+							<div class="home_transfer" id="noTransfer">
+								<!--为登录或未转账状态-->
+								<p class="th_word">
+									<a class="th_wordbox">
+										<span class="th_word1 fz_16_r">自动添加</span>
+									    <span class="th_word2 fz_15">最近转账记录</span>
+									    <span class="th_word3 m_top5px color_6">转账就要简单快！</span>
+									    <span class="th_icon3"></span>
+									</a>
+								</p>
+								<!--有转账记录状态-->
+<!--							    <p >
+									<span class="ht_icon"></span>
+									<a class="fz_17 color_3">8888 *** 8888<span class="ht_arow"></span></a>
+									<span class="fz_15 color_6">湖北银行</span>
+									<span class="color_9">张 **</span>
+								</p>-->
+								<p>
+									<span class="ht_icon2"></span>
+									<span class="fz_17 color_ddd">8888 *** 8888</span>
+									<span class="fz_15 color_ddd">开户行</span>
+									<span class="color_ddd">账户名</span>
+								</p>	
+						    </div>
+						    <div class="home_transfer" style="display:none;" id="hasTransfer"></div>
+						</div>
+						    
+						<div id="hotShow">
+							
+						</div>
+						<div id="fiancingProduct"></div>
+						<div id="fundProduct"></div>
+					</div>
+				</div>
+
+			</div>
+			<img id="cake" src="" width="9.4%" style="display: none;" />
+		</div>
+		<script src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script src="../../js/common/mui.min.js"></script>
+		<script src="../../js/common/maskLayer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/core/param.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/sea.js"></script>
+		<script src="../../js/controllers/adView/ad_load_html.js"></script>
+		<script type="text/javascript">
+			
+			mui('.mui-scroll-wrapper').scroll({
+				deceleration:0.005,
+				indicators:false
+			})
+			
+		</script>
+		<script>  
+			seajs.config({ 
+				base: "../../js/controllers/"
+			}); 
+			seajs.use('main/main_sub');
+		</script>
+
+	</body>
+
+</html>

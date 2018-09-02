@@ -1,0 +1,6 @@
+<HBuilder version="1.9.9.32573">
+	<!--应用节点-->
+	<apps>
+		<app appid='iphone' appver='1.6.0'/>
+	</apps>
+</HBuilder> 

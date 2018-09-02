@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+		<title>手机充值</title>
+		<link rel="stylesheet" href="../../css/mui.min.css">
+		<link rel="stylesheet" href="../../css/mui.indexedlist.css"/>
+		<link rel="stylesheet" href="../../css/public.css"/>
+		<link rel="stylesheet" href="../../css/style.css"/>
+	</head>
+	<body >
+		<header class="mui-bar mui-bar-nav header top_z_index hb-header">
+			<div class="header_wraper">
+			    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+			    <h1 class="mui-title hb-title">手机通讯录 </h1>
+			</div>
+		</header>
+		<div class="content_BOXall hb_cont">
+			<div id="list" class="mui-group-list">
+            <div class="mui-group-list-search mui-input-row mui-search">
+				<input id="searchText" type="search" class="mui-input-clear mui-group-list-search-input" placeholder="搜索联系人">
+			</div>
+			<div class="mui-group-list-bar">
+					<a>A</a>
+					<a>B</a>
+					<a>C</a>
+					<a>D</a>
+					<a>E</a>
+					<a>F</a>
+					<a>G</a>
+					<a>H</a>
+					<a>I</a>
+					<a>J</a>
+					<a>K</a>
+					<a>L</a>
+					<a>M</a>
+					<a>N</a>
+					<a>O</a>
+					<a>P</a>
+					<a>Q</a>
+					<a>R</a>
+					<a>S</a>
+					<a>T</a>
+					<a>U</a>
+					<a>V</a>
+					<a>W</a>
+					<a>X</a>
+					<a>Y</a>
+					<a>Z</a>
+				</div>
+	
+				<div class="mui-group-list-alert"></div>
+				<div class="mui-group-list-inner" style="padding-top: 46px;">
+					<div class="mui-group-list-empty-alert">没有数据</div>
+					<ul class="mui-table-view" id="showDiv">
+					</ul>
+				</div>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.indexedlist.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script type="text/javascript">
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('transfer/phoneBook');
+		</script>
+	</body>
+</html>

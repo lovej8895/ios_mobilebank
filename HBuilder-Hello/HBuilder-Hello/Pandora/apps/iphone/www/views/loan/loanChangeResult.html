@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>还款方式变更结果</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<h1 class="mui-title hb-title">还款方式变更结果</h1>
+		    </div>
+		</header>
+		<div class="content_BOXall p_down66px hb_cont">
+			<div class="success_icon1 suc_top7px"></div>
+			<p class="fz_18 text_m">还款方式变更成功！</p>
+			<div class="backbox_fo m_top20px">
+			    <ul class="p_lr30px">
+					<li>
+			    	    <span class="detail_left">原还款方式</span>
+			    	    <span class="detail_right" id="oldType"></span>
+				    </li>
+				    <li>
+			    	    <span class="detail_left">新还款方式</span>
+			    	    <span class="detail_right" id="newType"></span>
+				    </li>
+				    <li>
+			    	    <span class="detail_left">生效日期</span>
+			    	    <span class="detail_right" id="effectDate"></span>
+				    </li>
+		       </ul>
+		   </div>
+		</div>
+		<div class="btn_bg_f2">
+			<button class="but_315px but_red" id="backButton">返&nbsp;&nbsp;回</button>
+		</div>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('loan/loanChangeResult');
+		</script>		
+	</body>
+</html>

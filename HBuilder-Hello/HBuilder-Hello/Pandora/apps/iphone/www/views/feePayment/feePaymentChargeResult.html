@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+		<title>自助缴费</title>
+		<link rel="stylesheet" href="../../css/mui.min.css"/>
+		<link rel="stylesheet" href="../../css/public.css"/>
+		<link rel="stylesheet" href="../../css/style.css"/>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+			<h1 class="mui-title hb-title" id="titleSpan"></h1>
+		</header>
+		<div class="content_BOXall hb_cont">
+			<div id="resultImg"></div>
+			<p class="fz_18 text_m" id="resultMsg"></p>
+		</div>
+		<div class="but_bottom20px">
+			<button class="but_315px but_w but_d10px" id="goBack">返回</button>
+			<button class="but_315px but_red" id="goHistory">查看缴费明细</button>
+		</div>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('feePayment/feePaymentChargeResult');
+		</script>
+	</body>
+</html>

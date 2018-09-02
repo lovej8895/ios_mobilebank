@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html class="ui-page-login" style="background: #65a5ce;">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>收款</title>
+		<link rel="stylesheet" href="../../css/mui.min.css" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+		<style>
+			.qrc2c_bg {
+				width: 100%;
+				height: 100%;
+				background: linear-gradient(#7ecefe, #65a5ce);
+				background: -webkit-linear-gradient(#7ecefe, #65a5ce);
+			}
+			
+			.qrcode_c2cbox {
+				width: 88%;
+				min-height: 390px;
+				background: #fff;
+				border-radius: 4px;
+				-webkit-border-radius: 4px;
+				position: relative;
+			}
+			
+			.showQrcode {
+				background: #fff;
+			}
+			
+			.ctoc_setsum {
+				display: inline-block;
+				width: 100%;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				color: #006CC8;
+				font-size: 13px;
+			}
+			
+			.ctoc_sum {
+				display: inline-block;
+				width: 100%;
+				height: 40px;
+				line-height: 40px;
+				text-align: center;
+				font-size: 26px;
+			}
+			
+			.ctoc_sum2 {
+				display: inline-block;
+				width: 100%;
+				text-align: center;
+				color: #006CC8;
+				font-size: 12px;
+			}
+			
+			.qrcode_c2c {
+				width: 68%;
+				margin: 0 auto;
+				text-align: center;
+				position: relative;
+			}
+			
+			.payicon1 {
+				position: absolute;
+				width: 70px;
+				height: 70px;
+				background: url(../../img/payicon.png);
+				background-size: 100%;
+				left: 50%;
+				margin-left: -35px;
+				top: 50%;
+				margin-top: -35px;
+			}
+			
+			.payicon11 {
+				position: relative;
+				width: 70px;
+				height: 70px;
+				background: url(../../img/payicon.png);
+				background-size: 100%;
+				left: 50%;
+				margin-left: -35px;
+				top: 50%;
+				margin-top: -35px;
+			}
+			
+			.qrcode_c2c img {
+				width: 100%;
+			}
+			
+			.payicon2 {
+				width: 180px;
+				height: 19px;
+				background: url(../../img/payicon2.png) no-repeat;
+				background-size: 100%;
+				margin: 10px auto 0 auto;
+			}
+			
+			.zhqhbg_c2c {
+				width: 100%;
+				text-align: center;
+				line-height: 60px;
+				font-size: 12px;
+				color: #666;
+			}
+			
+			.fkjg {
+				width: 100%;
+				text-align: center;
+				color: #fff;
+				font-size: 15px;
+				line-height: 20px;
+				padding-left: 80px;
+			}
+			
+			.scanned_c2clink1 span {
+				display: inline-block;
+				height: 30px;
+				padding-top: 36px;
+				background: url(../../img/qr_save.png) no-repeat center;
+				background-size: 40%;
+				color: #DDDDDD;
+			}
+			
+			.scanned_c2clink2 span {
+				display: inline-block;
+				height: 30px;
+				padding-top: 36px;
+				background: url(../../img/qr_lie.png) no-repeat center;
+				background-size: 50%;
+				color: #DDDDDD;
+			}
+			/*未开启*/
+			
+			.qrcode_c2cbg {
+				padding: 15% 0;
+				text-align: center;
+			}
+			
+			.qr_paylogoc2c {
+				background: url(../../img/qr_logo3.png);
+				background-size: 100%;
+				margin: 0 auto 20px auto;
+				width: 46%;
+				padding-bottom: 46%;
+			}
+			
+			.qr_c2cbtnbg {
+				width: 100%;
+				text-align: center;
+				margin-top: 60px;
+			}
+			
+			.qr_c2cbtnbg a {
+				line-height: 40px;
+			}
+		</style>
+	</head>
+
+	<body class="qrc2c_bg">
+		<header class="mui-bar mui-bar-nav hb-header">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+			<h1 class="mui-title hb-title">我要收款</h1>
+		</header>
+		<div class="content_BOXall p_down20px hb_cont">
+			<div class="qrcode_c2cbox">
+				<!--未开启-->
+				<div style="text-align: center;display: none;" id="initShow">
+					<div class="qr_paylogo3"></div>
+					<p class="qrlogoword fz_15 color_9">二维码功能全新上线，欢迎体验</p>
+					<div class="qr_posbottom60 m_top20px">
+						<button class="qr_but60 but_red" id="open">立即开启</button>
+						<a class="color_b" href="../qrcodePay/qrCommonProblem.html">使用说明</a>
+					</div>
+				</div>
+
+				<!--开启后-->
+				<div style="visibility: hidden;" id="showQrcode" class="showQrcode">
+					<div style="display: none;" id="showQrsum">
+						<p class="ctoc_sum" id="p_txnAmt" style="display: none;">
+							<span>¥</span>&nbsp;<b><span id="txnAmt"></span></b>
+						</p>
+						<p class="ctoc_sum2" id="p_payeeComments" style="display: none;">
+							<span id="payeeComments"></span>
+						</p>
+					</div>
+					<a class="ctoc_setsum" id="qrsumSet">设置金额</a>
+					<div class="qrcode_c2c" id="qrcode"></div>
+					<div class="payicon2"></div>
+					<div class="zhqhbg_c2c" id="switch">收款账户
+						<span class="fz_14 m_left10px" id="accountNo"></span>
+						<a class="zhqhbg_arrow m_left10px" id="a_switch">切换</a>
+					</div>
+				</div>
+			</div>
+			<div class="qrcode_boxshw"></div>
+			<div id="recResultDIV" align="center"></div>
+			<div class="scanned_linkbox">
+				<a class="scanned_c2clink1" id="saveRecQrcode"><span>保存收款码</span></a>
+				<a class="scanned_c2clink2" id="recRecord"><span>收款记录</span></a>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/core/param.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script type="text/javascript" src="../../js/common/jquery.qrcode.min.js"></script>
+		<script type="text/javascript" src="../../js/common/JsBarcode.all.js"></script>
+		<script type="text/javascript" src="../../js/common/html2canvas.js"></script>
+		<script src="../../js/common/smart.poppicker.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('qrcodePay/scannedQRc2c');
+		</script>
+	</body>
+
+</html>

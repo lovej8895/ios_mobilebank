@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+		<title>交易帐号变更</title>
+		<link rel="stylesheet" href="../../css/mui.min.css"/>
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+			<h1 class="mui-title hb-title">交易帐号变更</h1>
+		</header>
+		<div class="content_BOXall hb_cont">
+			<div class="content_box5px">
+				<div class="backbox_tit_bg">
+			    	<p class="backbox_tit_ico"></p>
+				    <p class="backbox_tit">变更信息</p>
+				</div>
+				
+				<div class="backbox_th p_lr10px" data-security="needPassword">
+				    <ul>
+					    <li class="b_das" id="changeRecAccount">
+					    	<span class="input_lbg" style="width: 36.5%;">新交易账号</span>
+					    	<span class="input_m14px" id="recAccountShow"></span>
+					     	<a class="link_rbg"></a>
+					    	<input type="hidden" name="recAccount" id="recAccount" value=""/>
+						</li>
+					    <li>
+				    	    <span class="input_lbg" style="width: 36.5%;">原交易账号</span>
+				    	    <span class="input_m14px"  id="oldBankCard"></span>
+					    </li>
+					</ul>
+				</div>
+			</div>
+			<div class="btn_bg_f2" id="abc">
+				<button class="but_315px but_red" data-checkAuth='true'  noCheck="false" id="changeBankCard_Success">下一步</button>
+		   </div>
+		</div>
+	<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+	<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+	<script type="text/javascript" src="../../js/common/smart.poppicker.js"></script>
+	<script type="text/javascript" src="../../js/common/sea.js"></script>
+	<script type="text/javascript" src="../../js/core/param.js"></script> 
+	<script type="text/javascript" src="../../js/core/utils.js"></script>   
+	<script type="text/javascript" src="../../js/core/initSecurityContent.js"></script>
+	<script type="text/javascript" src="../../js/common/keyboard/plugin-wtxc-keyboard.js"></script> 
+	<script>
+		seajs.config({
+			base: "../../js/controllers/"
+		});
+		seajs.use('fund/changeBankCardSubmit');
+	</script>
+	</body>
+</html>

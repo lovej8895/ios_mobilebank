@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>基金</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">	
+		        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+		        <h1 class="mui-title hb-title">基金</h1>
+		</header>
+		<div class="content_BOXall p_down20px hb_cont">
+			<div class="fundpic_bg">
+				<div class="fund_searchDiv content_box5px p_top10px ove_hid">
+                 	<p id="searchDiv"><input type="text" placeholder="按代码或关键字搜索" /><a><img src="../../img/soso.png" /></a></p>
+                    <button id="fundMarketBtn" class="fund_soso_btn">基金超市</button>
+                </div>	
+			
+			
+			    <div class="fundpic_cont" id="totalFundDiv">
+			     	<span class="totalfund_tit fz_17 color_fff" id="totalFundMsg">
+			    	       <!-- <span class="totalfund_ico2"></span>-->
+			     	</span>
+			     	<p class="totalfund_cont color_fff">总市值<span class="fz_16 color_fff m_left25px" id="totalFundvalSpan"></span></p>
+			     	<p class="color_fff">总盈亏<span class="fz_16 color_fff m_left25px" id="totalProfitLossSpan"></span></p>
+			    </div>
+			</div>
+			<!--<div class="mui-slider-item p_td5px banner_bg_boxshw" style="position: relative;">
+				<ul class="main_menu_ul main_w25">
+				    <li><a class="fund_icon_dt"><p class="color_6">我的定投</p></a></li>
+					<li><a class="fund_icon_dt"><p class="color_6">已持仓基金</p></a></li>
+					<li><a class="fund_icon_dt"><p class="color_6">交易中基金</p></a></li>
+					<li><a class="fund_icon_dt"><p class="color_6">成交查询</p></a></li>					
+				</ul>
+				<ul class="main_menu_ul main_w25">
+					<li><a class="fund_icon_dt"><p class="color_6">历史交易查询</p></a></li>
+					<li><a class="fund_icon_dt"><p class="color_6">历史持仓</p></a></li>
+					<li><a class="fund_icon_dt"><p class="color_6">分红记录</p></a></li>
+					<li><a class="fund_icon_dt"><p class="color_6">分红方式设置</p></a></li>
+				</ul>
+				<div class="fund_indicatorbg">
+					<div class="fund_indicator fund_indicator_red"></div>
+					<div class="fund_indicator"></div>
+				</div>
+	        </div>-->
+	        <div class="mui-slider p_td5px banner_bg_boxshw" style="position: relative; background: #fff;">
+				<div class="mui-slider-group" id="functionDiv">
+					<div class="mui-slider-item">
+						<ul class="main_menu_ul main_w25">
+							<li id="cashFundProductList" path="../fund/cashFundProductList.html" noCheck="true"><a class="fund_xjb1"><p class="color_6 fz_12">臻心宝</p></a></li>
+						    <li id="myInvestment" path="../fund/myInvestment.html" noCheck="false"><a class="fund_mydt1"><p class="color_6 fz_12">我的定投</p></a></li>
+							<li id="myFund" path="../fund/myFund.html" noCheck="false"><a class="fund_ycc1"><p class="color_6 fz_12">我的持仓</p></a></li>
+						    <li id="myRoboAdvisor" path="../fund/myRoboAdvisor.html" noCheck="false"><a class="fund_zntg1"><p class="color_6 fz_12">我的智能投顾</p></a></li>
+						</ul>
+						<ul class="main_menu_ul main_w25">
+							<li id="fundTradeQuery" path="../fund/fundTradeQuery.html" noCheck="false"><a class="fund_wtcx"><p class="color_6 fz_12">当前申请</p></a></li>
+							<li id="successTranQuery" path="../fund/successTranQuery.html" noCheck="false"><a class="fund_cjcx"><p class="color_6 fz_12">成交查询</p></a></li>
+							<li id="historyTranQuery" path="../fund/historyTranQuery.html" noCheck="false"><a class="fund_lsjy"><p class="color_6 fz_12">历史交易查询</p></a></li>
+							<li id="divideBonusQuery" path="../fund/divideBonusQuery.html" noCheck="false"><a class="fund_fh"><p class="color_6 fz_12">分红记录</p></a></li>
+						</ul>
+					</div>
+					<div class="mui-slider-item">
+						<ul class="main_menu_ul main_w25">
+							<li id="historyHoldStore" path="../fund/historyHoldStore.html" noCheck="false"><a class="fund_lscc"><p class="color_6 fz_12">历史持仓</p></a></li>
+							<li id="signInfoChange_List" path="../fund/signInfoChange_List.html" noCheck="false"><a class="fund_qybg"><p class="color_6 fz_12">签约信息变更</p></a></li>
+						    <li id="changeBankCard" path="../fund/changeBankCard.html" noCheck="false"><a class="fund_zhbg"><p class="color_6 fz_12">交易账号变更</p></a></li>
+						    <li><a><p class="color_6 fz_12"></p></a></li>
+						</ul>
+						<ul class="main_menu_ul main_w25">
+							<li><a><p class="color_6 fz_12"></p></a></li>
+							<li><a><p class="color_6 fz_12"></p></a></li>
+							<li><a><p class="color_6 fz_12"></p></a></li>
+							<li><a><p class="color_6 fz_12"></p></a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="mui-slider-indicator" style="bottom: 0;">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+				</div>
+			</div>
+	        <!--<div class="banner_bg m_top10px banner_bg_boxshw">
+				<div class="banner_imgbox"><a><img src="../../img/fund_banner1.png"/></a></div>
+			</div>-->
+			<div id="frameBlockC" class="banner_bg banner_bg_boxshw">
+				<div id="frameBlock">
+					<div id="slider" class="banner_bg mui-slider">
+						<div class="mui-slider-group mui-slider-loop">
+							<div class="mui-slider-item mui-slider-item-duplicate">
+								<a href="#"><img src="../../img/h_banner1_1.png"></a>
+							</div>
+							<div class="mui-slider-item">
+								<a href="#"><img src="../../img/h_banner1_1.png"></a>
+							</div>
+							<div class="mui-slider-item">
+								<a href="#"><img src="../../img/h_banner2.png"></a>
+							</div>
+							<div class="mui-slider-item">
+								<a href="#"><img src="../../img/h_banner3.png"></a>
+							</div>
+							<div class="mui-slider-item mui-slider-item-duplicate">
+								<a href="#"><img src="../../img/h_banner1_1.png"></a>
+							</div>
+						</div>
+						<div class="mui-slider-indicator rollbox">
+							<div class="mui-indicator rollone mui-active"></div>
+							<div class="mui-indicator rollone"></div>
+							<div class="mui-indicator rollone"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content_box5px">
+				<div id="myCollectDiv" style="display: none;">
+					<div class="backbox_tit_homebg m_top10px" id="noticemore">
+						<div class="backbox_tit_homeline">
+							<p class="backbox_tit_homeico"></p>
+							<p class="backbox_hometit">我的关注</p>
+							<p class="fund_more" >更多</p>
+						</div>
+					</div>
+					<div class="fund_bg p_lr10px banner_bg_boxshw" id="myCollectDetailDiv">
+						<!--<ul class="ove_hid">
+							<li class="fund_gz_left">
+								<span class="fund_gz_icon fundarrow1"></span>
+								<p><span class="fz_22 color_red">2.80</span><span>%</span><br /></rb><span>月涨跌幅</span></p>
+							</li>
+							<li>
+								<p class="fund_gz_leftline"><span></span></p>
+							</li>
+							<li class="fund_gz_r m_left15px">
+								<p class="m_top14px fz_15">基金名称<span class="color_6">(006999)</span></p>
+								<p class="color_9">最新净值&nbsp;&nbsp;<span class="color_red">¥00.00</span></p>
+								<span class="fundarrow_right"></span>
+							</li>
+						</ul>
+						<ul class="ove_hid">
+							<li class="fund_gz_left">
+								<span class="fund_gz_icon fundarrow2"></span>
+								<p><span class="fz_22 color_red">2.80</span><span>%</span><br /></rb><span>月涨跌幅</span></p>
+							</li>
+							<li>
+								<p class="fund_gz_leftline"><span></span></p>
+							</li>
+							<li class="fund_gz_r m_left15px">
+								<p class="m_top14px fz_15">基金名称<span class="color_6">(006999)</span></p>
+								<p class="color_9">最新净值&nbsp;&nbsp;<span class="color_red">¥00.00</span></p>
+								<span class="fundarrow_right"></span>
+							</li>
+						</ul>-->
+					</div>
+				</div>
+				<div id="fundListDiv">
+					<!--<div class="backbox_tit_homebg m_top10px">
+						<div class="backbox_tit_homeline">
+							<p class="backbox_tit_homeico"></p>
+							<p class="backbox_hometit">排行榜</p>
+							<p class="fund_more">更多</p>
+						</div>
+					</div>
+					<div class="fund_phb_bg p_lr10px">
+						<p class="fund_phbtop_icon"></p>
+						<p class="fund_phbtop fz_15">TOP<span class="fz_17">1</span></p>
+						<p class="fz_15 p_top10px">基金名称&nbsp;&nbsp;<span class="color_6">(006999)</span></p>
+						<p class="m_top5px ove_hid"><span class="fund_phb_ico1"></span><span class="color_6">股票基金</span></p>
+						<p class="m_top14px color_9"><span class="color_6">最新净值</span>&nbsp;&nbsp;<span class="color_red">¥00.00</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="color_9">2017-05-19</span></p>
+						<div class="fund_phb_pbox">
+							<span class="fund_phb_icon fundarrow1"></span>
+							<p><span class="fz_22 color_red">2.80<span>%</span></span><br /><span>月涨跌幅</span></p>
+						</div>
+						<span class="fundarrow_right2"></span>
+					</div>
+					<div class="fund_phb_bg2 p_lr10px m_top10px">
+						<p class="fund_phbtop_icon"></p>
+						<p class="fund_phbtop fz_15">TOP<span class="fz_17">2</span></p>
+						<p class="fz_15 p_top10px">基金名称&nbsp;&nbsp;<span class="color_6">(006999)</span></p>
+						<p class="m_top5px ove_hid"><span class="fund_phb_ico2"></span><span class="color_6">货币基金</span></p>
+						<p class="m_top14px color_9"><span class="color_6">万份收益</span>&nbsp;&nbsp;<span class="color_red">¥00.00</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="color_9">2017-05-19</span></p>
+						<div class="fund_phb_pbox">
+							<p><span class="fz_22 color_red">2.80<span>%</span></span><br /><span>七日年化收益</span></p>
+						</div>
+						<span class="fundarrow_right2"></span>
+					</div>-->
+				</div>
+			</div>	
+		</div>
+			
+		<div class="mui-content" style="display: none;"> 
+			<div style="width: 80%;height: 0px; padding-bottom: 55%;margin: 25% auto 0 auto;">
+			    <img src="../../img/waiting_pic2.png" style="width: 100%;" />
+			</div>  
+		
+		</div>
+		<script type="text/javascript" charset="utf-8" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" charset="utf-8" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<!--<script type="text/javascript" charset="utf-8" src="../../js/core/support.js"></script>-->
+		<script type="text/javascript" charset="utf-8" src="../../js/core/param.js"></script>
+		<!--<script type="text/javascript" charset="utf-8" src="../../js/core/utils.js"></script>-->
+		<script type="text/javascript" charset="utf-8" src="../../js/common/sea.js"></script>
+		<!--<script type="text/javascript" charset="utf-8" src="../../js/controllers/adView/ad_load_html.js"></script>-->
+		<script src="../../js/controllers/adView/ad_load_html.js"></script>
+		<script src="../../js/core/param.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('fund/fundHome');
+		</script>
+	</body>
+</html>

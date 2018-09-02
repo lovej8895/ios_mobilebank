@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>成交查询</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">成交查询</h1>
+		    </div>
+		</header>	
+		<div class="content_BOXall p_down66px hb_cont">
+			<div class="backbox_fo">
+			    <ul class="p_lr30px">
+		    	        <li>
+		    	    	    <span class="detail_left">基金名称</span><span class="detail_right"><a class="color_g" id="fundName"></a></span>
+		    	        </li>
+		    	        <li>
+		    	    	    <span class="detail_left">交易账号</span><span class="detail_right" id="transAcc"></span>
+		    	        </li>
+		    	        <li>
+		    	    	    <span class="detail_left">申请日期</span><span class="detail_right" id="applyDate"></span>
+		    	        </li>
+		    	        <li>
+		    	    	    <span class="detail_left">确认日期</span><span class="detail_right" id="confirmDate"></span>
+		    	        </li>	
+		    	        <li>
+		    	    	    <span class="detail_left">申请金额</span><span class="detail_right" ><span id="applyMoney"></span>元</span>
+		    	        </li>	
+		    	        <li>
+		    	    	    <span class="detail_left">申请份额</span><span class="detail_right" id="applyNum"></span>
+		    	        </li>	
+		    	        <li>
+		    	    	    <span class="detail_left">确认金额</span><span class="detail_right"><span id="confirmMoney"></span>元</span>
+		    	        </li>
+		    	        <li>
+		    	    	    <span class="detail_left">确认份额</span><span class="detail_right" id="confirmNum"></span>
+		    	        </li>	
+		    	        <li>
+		    	    	    <span class="detail_left">成交净值</span><span class="detail_right" id="successTransValue"></span>
+		    	        </li>	
+		    	        <li>
+		    	    	    <span class="detail_left">手续费</span><span class="detail_right"><span id="procedureMoney"></span>元</span>
+		    	        </li>	
+		    	        <li>
+		    	    	    <span class="detail_left">币种</span><span class="detail_right" id="moneyType"></span>
+		    	        </li>	
+		    	        <li>
+		    	    	    <span class="detail_left">交易状态</span><span class="detail_right" id="transState"></span>
+		    	        </li>	
+		    	        <li>
+		    	    	    <span class="detail_left">交易类型</span><span class="detail_right" id="transType"></span>
+		    	        </li>	
+		    	        <li>
+		    	    	    <span class="detail_left">交易渠道</span><span class="detail_right" id="transMethod"></span>
+		    	        </li>	
+		       </ul>
+		   </div>
+		   <div class="btn_bg_f2">
+				<button class="but_315px but_red" id="submit">返回基金首页</button>
+		   </div>
+		</div>	
+	<body>  
+
+			
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/core/param.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('fund/successTranQueryDetail');
+		</script>			
+	</body>
+</html>

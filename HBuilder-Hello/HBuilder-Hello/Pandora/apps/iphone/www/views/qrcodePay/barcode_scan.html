@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="ui-page-login" style="position: relative;">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>扫码</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+		<style>
+			body{
+				background: #000000;
+			}
+			.mui-bar-nav{
+				box-shadow:none;
+				-webkit-box-shadow: none;
+			}
+			.mui-bar-nav{
+				background: #000000;
+			}
+			.mui-title,.nav_qrcode,.mui-pull-left{
+				color: #fff;
+			}
+			.mui-ios .scan-div{
+				width: 100%; 
+				background: #000000; 
+				position: absolute; 
+				top: 64px;
+				bottom: 94px;
+			}
+			.mui-android .scan-div{
+				width: 100%; 
+				background: #000000; 
+				position: absolute; 
+				top: 44px;
+				bottom: 74px;
+			}
+			.scan_bottom{
+				position: fixed;
+				width: 100%;
+				height: 64px;
+				bottom: 0;
+				left: 0; 
+				background: #000000;
+				z-index: 100;
+				text-align: center; 
+			}
+			.scan_bottom a{
+				
+			}
+			.scanned_link1 span{
+				background: url(../../img/qr_icon1-2.png) no-repeat;
+				background-size: 100%;
+				color: #DDDDDD;
+			}
+			.scanned_link2 span{
+				background: url(../../img/qr_icon2.png) no-repeat;
+				background-size: 100%;
+				color: #fff;
+			}
+			.scanned_link3 span{
+				background: url(../../img/qr_icon4-2.png) no-repeat;
+				background-size: 100%;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+			<h1 class="mui-title hb-title"></h1>
+			<a class="nav_qrcode hb-nav" id="scanPictureId">相册</a>
+		</header>
+		<div id="bcid" class="scan-div"></div>
+		<div class="scan_bottom">
+			<div class="scanned_linkbox2">
+				<a class="scanned_link1" id="scannedQRCode"><span>付款</span></a>
+				<a class="scanned_link2" id="barcScan"><span>扫码</span></a>
+				<a class="scanned_link3" id="openLight"><span id="light">手电筒</span></a>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/core/param.js" ></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('qrcodePay/barcode_scan');
+		</script>		
+	</body>
+</html>

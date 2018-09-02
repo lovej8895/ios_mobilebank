@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>信用卡</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">本行约定还款</h1>
+				<!--<a class="nav_code"></a>-->
+		    </div>
+		</header>
+		<div class="content_BOXall m_top10px hb_cont">
+		<div class="content_box5px">
+			<div class="backbox_th p_lr10px">
+				<ul>
+					<li>
+						<span class="input_lbg">信用卡卡号</span><span class="form-control" id="recAccount"></span>
+					</li>
+					<li>
+						<span class="input_lbg">约定还款类型</span><span class="form-control" id="transferType">本行约定还款</span>
+					</li>
+					<li id="changeRecAccount">
+					    <span class="input_lbg">借记卡卡号</span>
+					    <span class="input_m14px" id="payAccountShow"></span>
+					     <a class="link_rbg"></a>
+					    <input type="hidden" name="payAccount" id="payAccount" value=""/>
+					</li>
+					<li id="changePayAmountType">
+					    <span class="input_lbg">还款金额类型</span>
+					    <span class="input_m14px" id="payAmountTypeShow"></span>
+					    <a class="link_rbg"></a>
+					    <input type="hidden" name="payAmountType" id="payAmountType" value=""/>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="content_box5px p_lr10px box_top15px p_down66px">
+			<p class="hint">温馨提示</p>
+			<p class="hint_con fz_12">1、绑定约定还款成功后，将于每月还款日从您绑定账户予以扣款，请保证资金充足。</p>			
+			<p class="hint_con fz_12">2、如您填写账户信息有误，导致还款不成功造成逾期，由您本人承担相关费用。</p>
+			<p class="hint_con fz_12">3、如需新增还款账号，可以点击“添加账号”进行添加。添加完毕之后，需重新点击信用卡还款-本行约定还款处进行约定还款账户签约。</p>
+		</div>
+		<div class="btn_bg_f2">
+			<button class="but_315px but_red" id="nextStep">下一步</button>
+		</div>
+		</div>
+		<script src="../../js/core/support.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/mui.min.js"></script>
+		<script src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script src="../../js/core/utils.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/sea.js"></script>
+		<script src="../../js/common/smart.poppicker.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('creditCard/thisAppointRefund_Signing_Input');
+		</script>
+	</body>
+</html>

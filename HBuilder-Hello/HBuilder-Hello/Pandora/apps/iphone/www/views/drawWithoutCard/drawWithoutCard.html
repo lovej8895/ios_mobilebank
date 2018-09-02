@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>行内转账</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<!--<link rel="stylesheet" href="../../css/style.css"/>-->
+	</head>
+	
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">无卡预约取款</h1>
+		    </div>
+		</header>
+  
+		<div class="content_BOXall hb_cont">
+			<div class="content_box5px">
+				<div class="backbox_tit_bg">
+				    <p class="backbox_tit_ico"></p>
+				    <p class="backbox_tit">帐号信息</p>
+			    </div>
+				<div class="backbox_th p_lr10px bg_br2px">
+				    <ul>
+					    <li class="b_das" id="changeAccount">
+					    	    <span class="input_lbg">预约帐号：</span>
+					    	    <span class="input_m14px" id="accountNo"></span>
+					    	    <a class="link_rbg"></a>
+					    </li>
+					    <li>
+					    	    <p>
+					    	    	<span class="input_lbg">可用余额：</span>
+					    	        <span class="input_m12px" id="balance"></span>元
+					    	    </p>  				    	    
+					    </li>
+				    
+				    </ul>
+			    </div>
+			</div>
+			<div class="content_box5px">
+				<div class="backbox_tit_bg">
+				    <p class="backbox_tit_ico"></p>
+				    <p class="backbox_tit">预约信息填写</p>
+				    
+			    </div>
+				<div class="backbox_th p_lr10px">
+				    <ul>
+					    <li>
+					    	    <span class="input_lbg">预约金额：</span>
+					    	    <input class="input_m14px" type="number" id="orderMoney" placeholder="预约金额不高于2000元"></input>
+					    	    
+					    </li>
+					    <li>
+					    	    <span class="input_lbg">设置预约码：</span>
+					    	    <input class="input_m14px" type="password" id="orderNum" placeholder="请设置6位纯数字预约码"></input>
+					    	    <input type="hidden" id="_orderNum" />
+					    	    <input type="hidden" id="_orderNum_md5" />
+					    </li>
+					    <li>
+					    	    <span class="input_lbg">重复预约码：</span>
+					    	    <input class="input_m14px" type="password" id="orderNum2" placeholder="请确认预约码"></input>
+					    	    <input type="hidden" id="_orderNum2" />
+					    	    <input type="hidden" id="_orderNum2_md5" />
+					    </li>
+				    </ul>
+			    </div>
+			</div>
+		
+		
+			<!--<div class="tip">
+				<div class="tip-title">
+					温馨提示：
+				</div>
+				
+					<p class="tip-title">1、通过手机银行的无卡预约取款功能，选定账户、设置取款金额及预约码，成功预约后，
+						凭银行短信发送的预约信息在约定的事件内通过我行的自助取款机和自助存取款机即可进行无卡预约取款 。</p>
+					<p class="tip-title">2、取款金额应不高于预约金额，单次预约金额不高于2000元。一次预约使用后预约码
+						当即失效。</p>
+					<p class="tip-title">3、预约号码为手机银行的注册号码。</p>
+					<p class="tip-title">4、同一客户当日无卡预约取款不能超过三次。</p>
+				
+			</div>-->
+			<div class="content_box5px p_lr10px box_top15px p_down66px">
+				<p class="hint">温馨提示</p>
+				<p class="hint_con fz_12">1、通过手机银行的无卡预约取款功能，选定账户、设置取款金额及预约码，成功预约后，凭银行短信发送的预约信息在约定的事件内通过我行的自助取款机和自助存取款机即可进行无卡预约取款 。</p>
+				<p class="hint_con fz_12">2、取款金额应不高于预约金额，单次预约金额不高于2000元。一次预约使用后预约码当即失效。</p>
+				<p class="hint_con fz_12">3、预约号码为手机银行的注册号码。</p>
+				<p class="hint_con fz_12">4、同一客户当日无卡预约取款不能超过三次。</p>
+		   </div>
+
+			<div class="btn_bg_f2" id="abc">
+				<button class="but_315px but_red" path="drawInfo_Confirm.html" noCheck="true" id="drawInfo_Confirm">下一步</button>
+			</div>	
+		</div>     
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script src="../../js/common/smart.poppicker.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script type="text/javascript" src="../../js/common/common.js"></script>
+		<script src="../../js/core/param.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/common/keyboard/plugin-wtxc-keyboard.js"></script>
+		<script>
+			seajs.config({ 
+				base: "../../js/controllers/"
+			});
+			seajs.use('drawWithoutCard/drawWithoutCard');
+		</script>			
+	</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>理财产品交易</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+	</head>
+	
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+		    	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">关于我们</h1>
+		    </div>
+		</header>
+		<div class="content_BOXall p_down20px hb_cont">
+			<div class="backbox_fo">
+				<div class="abus_logobg">
+					<p class="abus_logo"></p>
+					<p class="color_3" id="version"></p>
+				</div>
+				<ul class="p_lr30px">
+		    	        <li>
+		    	    	        <span class="detail_left">湖北银行公众号</span><span class="detail_right">wx_hubeibank</span>
+		    	        </li>
+		    	        <li>
+		    	    	        <span class="detail_left">湖北银行官网</span><span class="detail_right">www.hubeibank.cn</span>
+		    	        </li>
+		        </ul>
+			</div>
+			 <div class="content_box5px">
+		   	    <div class="backbox_tit_bg">
+				    <p class="backbox_tit_ico"></p>
+				    <p class="backbox_tit">客服热线</p>
+			    </div>
+			    <div class="backbox_th p_lr10px">
+				    <ul>
+					    <li onclick="dail('96599')">
+				    	        <a class="fz_16 color_3">96599&nbsp;&nbsp;<span class="color_9">(湖北)</span></a>
+				    	        <p class="abus_phico1"></p>
+					    </li>
+					    <li onclick="dail('400-85-96599')">
+				    	        <a class="fz_16 color_3">400-85-96599&nbsp;&nbsp;<span class="color_9">(全国)</span></a>
+				    	        <p class="abus_phico1"></p>
+					    </li>
+				    </ul>
+			    </div>
+			    <!--<div class="backbox_th p_lr10px">
+					<ul>
+						
+					    <li style="padding-top: 0;">
+				    	    <span class="input_lbg" style="padding-left: 25px;"></span>
+				    	    <span class="input_m14px" style="padding-right: 25px;"><a class="color_g" onclick="dail('96599')">96599（湖北）</a></br><a class="color_g" onclick="dail('400-85-96599')">400-85-96599(全国)</a></span>
+				    	   
+					    </li>
+					</ul>
+			   	</div>-->
+			</div>    
+			<!--<div class="content_box5px">
+				<div class="backbox_tit_bg">
+				    <p class="backbox_tit_ico"></p>
+			    </div>
+				<div class="backbox_th p_lr10px">
+					<ul>
+						<li>
+				    	    <a class="mui-navigate-right"><span>意见反馈</span></a>
+				    	    <span class="input_m14px"></span>
+					    </li>
+					    <li id="share">
+				    	    <a class="mui-navigate-right"><span>我要分享</span></a>
+				    	    <span class="input_m14px"></span>
+					    </li>
+					</ul>
+			   	</div>
+			</div>-->
+			<!--<div class="but_m20px">
+				<button class="but_315px but_red" id="backButton">返回</button>
+			</div>-->
+		</div>
+		
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('user/aboutUs');
+		</script>
+	</body>
+</html>

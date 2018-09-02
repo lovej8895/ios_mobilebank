@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>基金超市</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+		<style>
+			.mui-segmented-control.mui-scroll-wrapper{
+				height: 42px;
+			}
+			.mui-segmented-control.mui-segmented-control-inverted{
+				padding-top: 0;
+			}
+			.mui-segmented-control.mui-scroll-wrapper .mui-scroll{
+				height: 40px;
+				margin-top: 2px;
+			}
+			.mui-segmented-control .mui-control-item{
+				
+				line-height: 38px;
+			}
+			.mui-segmented-control-inverted .mui-scroll .mui-control-item{
+				border-left: 1px solid #ddd;
+			}
+			.mui-segmented-control-inverted .mui-scroll .mui-control-item:first-child{
+				border: none;
+			}
+			.mui-scroll-wrapper.mui-slider-indicator.mui-segmented-control.mui-segmented-control-inverted .mui-scroll .mui-control-item.mui-active{
+				border-bottom: 2px solid #CF155C;
+			}
+			.mui-slider-item{
+				background: none;
+			}
+		</style>
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">	
+		        <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+		        <h1 class="mui-title hb-title" id="test">基金超市</h1>
+		</header>
+		<!--<div class="content_BOXall p_down20px hb_cont">
+			<div class="backbox_fundtype_bg">
+				<div class="backbox_fundtype">
+				<a>新发</a>
+				<a class="fundtype_bottom color_3">全部</a>
+				<a>宝类</a>
+				<a>可定投</a>
+				<a>股票型</a>
+				<a>债券型</a>
+				<a>混合</a>
+				<a>货币</a>
+				<a>指数</a>
+				<a>QDII</a>
+				<a>ETF</a>
+				<a>LOF</a>
+				<a>分级基金</a>
+				<a>组合</a>
+				</div>
+			</div>
+			<div class="backbox_fundmarket m_top10px">
+				<ul class="fundmarket_tabtit">
+					<li class="fundmarket_tableft"><span class="fund_tabtitle">基金名称</span><span class="fund_tabarrow tabarrow_no"></span></li>
+					<li class="fundmarket_tabm"><span class="fund_tabtitle">最新净值</span><span class="fund_tabarrow tabarrow_down"></span></li>
+					<li class="fundmarket_tabright"><span class="fund_tabtitle">月涨跌幅</span><span class="fund_tabarrow tabarrow_top"></span></li>
+				</ul>
+				<ul class="fundmarket_tabcont">
+					<li class="fundmarket_tableft"><p>基金名称基金名称基金名称基金名称</p><p class="color_6 fz_15">950001</p></li>
+					<li class="fundmarket_tabm_l"><p>¥00.00</p><p class="color_9">2017-05-19</p></li>
+					<li class="fundmarket_tabright"><p class="color_red fz_16 m_top5px">1.00%</p></li>
+				</ul>
+				<ul class="fundmarket_tabcont">
+					<li class="fundmarket_tableft"><p>基金名称基金名称</p><p class="color_6 fz_15">950001</p></li>
+					<li class="fundmarket_tabm_l"><p>¥00.00</p><p class="color_9">2017-05-19</p></li>
+					<li class="fundmarket_tabright"><p class="color_red fz_16 m_top5px">1.00%</p></li>
+				</ul>
+				<ul class="fundmarket_tabcont">
+					<li class="fundmarket_tableft"><p>基金名称基金名称</p><p class="color_6 fz_15">950001</p></li>
+					<li class="fundmarket_tabm_l"><p>¥00.00</p><p class="color_9">2017-05-19</p></li>
+					<li class="fundmarket_tabright"><p class="color_red fz_16 m_top5px"">1.00%</p></li>
+				</ul>
+			</div>
+		</div>-->
+		<div id="slider" class="mui-slider mui-fullscreen">
+		<div class="content_BOXall p_down10px hb_cont">
+			<!--<div class="backbox_fundtype_bg">	
+				<div class="backbox_fundtype">-->
+					<div id="sliderSegmentedControl" class="mui-scroll-wrapper mui-slider-indicator mui-segmented-control mui-segmented-control-inverted banner_bg_boxshw">
+						<div class="mui-scroll">	
+							
+							<a class="mui-control-item mui-active" href="#item1mobile">全部</a
+							><a class="mui-control-item" href="#item2mobile">宝类</a
+							><a class="mui-control-item" href="#item3mobile">可定投</a
+							><a class="mui-control-item" href="#item4mobile">股票型</a
+							><a class="mui-control-item" href="#item5mobile">债券型</a
+							><a class="mui-control-item" href="#item6mobile">混合</a
+							><a class="mui-control-item" href="#item7mobile">货币</a
+							><a class="mui-control-item" href="#item8mobile">指数</a
+							><a class="mui-control-item" href="#item9mobile">QDII</a
+							><a class="mui-control-item" href="#item10mobile">LOF</a
+							><a class="mui-control-item" href="#item11mobile">组合</a>
+						</div>
+					</div>
+				<!--</div>
+			</div>-->
+		</div>
+		<div class="mui-slider-group">
+			<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+				<div id="pullrefresh1" class="mui-scroll-wrapper">
+					<div class="mui-scroll p_down140px">
+						<div class="backbox_fundmarket">
+							<ul class="fundmarket_tabtit">
+								<li id="nameUpdownFlag1" class="fundmarket_tableft"><span class="fund_tabtitle">基金名称</span><span id="name1class" class="fund_tabarrow tabarrow_no"></span></li>
+								<li id="navUpdownFlag1" class="fundmarket_tabm"><span class="fund_tabtitle">最新净值</span><span id="nav1class" class="fund_tabarrow tabarrow_no"></span></li>
+								<li id="rzdfUpdownFlag1" class="fundmarket_tabright"><span class="fund_tabtitle">月涨跌幅</span><span id="rzdf1class" class="fund_tabarrow tabarrow_top"></span></li>
+							</ul>
+							<div id="item1DetailList">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="item2mobile" class="mui-slider-item mui-control-content">
+				<div id="pullrefresh2" class="mui-scroll-wrapper">
+					<div class="mui-scroll p_down140px">
+						<div class="backbox_fundmarket">
+							<ul class="fundmarket_tabtit">
+								<li id="nameUpdownFlag2" class="fundmarket_tableft"><span class="fund_tabtitle">基金名称</span><span id="name2class" class="fund_tabarrow tabarrow_no"></span></li>
+								<li id="navUpdownFlag2" class="fundmarket_tabm"><span class="fund_tabtitle">万份收益</span><span id="nav2class" class="fund_tabarrow tabarrow_no"></span></li>
+								<li id="rzdfUpdownFlag2" class="fundmarket_tabright"><span class="fund_tabtitle">七日年化</span><span id="rzdf2class" class="fund_tabarrow tabarrow_top"></span></li>
+							</ul>
+							<div id="item2DetailList">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="item3mobile" class="mui-slider-item mui-control-content">
+				<div id="pullrefresh3" class="mui-scroll-wrapper">
+					<div class="mui-scroll p_down140px">
+						<div class="backbox_fundmarket">
+							<ul class="fundmarket_tabtit">
+								<li id="nameUpdownFlag3" class="fundmarket_tableft"><span class="fund_tabtitle">基金名称</span><span id="name3class" class="fund_tabarrow tabarrow_no"></span></li>
+								<li id="navUpdownFlag3" class="fundmarket_tabm"><span class="fund_tabtitle">最新净值</span><span id="nav3class" class="fund_tabarrow tabarrow_no"></span></li>
+								<li id="rzdfUpdownFlag3" class="fundmarket_tabright"><span class="fund_tabtitle">月涨跌幅</span><span id="rzdf3class" class="fund_tabarrow tabarrow_top"></span></li>
+							</ul>
+							<div id="item3DetailList">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="item4mobile" class="mui-slider-item mui-control-content">
+				<div id="pullrefresh4" class="mui-scroll-wrapper">
+					<div class="mui-scroll p_down140px">
+						<div class="backbox_fundmarket">
+							<ul class="fundmarket_tabtit">
+								<li id="nameUpdownFlag4" class="fundmarket_tableft"><span class="fund_tabtitle">基金名称</span><span id="name4class" class="fund_tabarrow tabarrow_no"></span></li>
+								<li id="navUpdownFlag4" class="fundmarket_tabm"><span class="fund_tabtitle">最新净值</span><span id="nav4class" class="fund_tabarrow tabarrow_no"></span></li>
+								<li id="rzdfUpdownFlag4" class="fundmarket_tabright"><span class="fund_tabtitle">月涨跌幅</span><span id="rzdf4class" class="fund_tabarrow tabarrow_top"></span></li>
+							</ul>
+							<div id="item4DetailList">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="item5mobile" class="mui-slider-item mui-control-content">
+				<div id="pullrefresh5" class="mui-scroll-wrapper">
+					<div class="mui-scroll p_down140px">
+						<div class="backbox_fundmarket">
+							<ul class="fundmarket_tabtit">
+								<li id="nameUpdownFlag5" class="fundmarket_tableft"><span class="fund_tabtitle">基金名称</span><span id="name5class" class="fund_tabarrow tabarrow_no"></span></li>
+								<li id="navUpdownFlag5" class="fundmarket_tabm"><span class="fund_tabtitle">最新净值</span><span id="nav5class" class="fund_tabarrow tabarrow_no"></span></li>
+								<li id="rzdfUpdownFlag5" class="fundmarket_tabright"><span class="fund_tabtitle">月涨跌幅</span><span id="rzdf5class" class="fund_tabarrow tabarrow_top"></span></li>
+							</ul>
+							<div id="item5DetailList">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="item6mobile" class="mui-slider-item mui-control-content">
+				<div id="pullrefresh6" class="mui-scroll-wrapper">
+					<div class="mui-scroll p_down140px">
+						<div class="backbox_fundmarket">
+							<ul class="fundmarket_tabtit">
+								<li id="nameUpdownFlag6" class="fundmarket_tableft"><span class="fund_tabtitle">基金名称</span><span id="name6class" class="fund_tabarrow tabarrow_no"></span></li>
+								<li id="navUpdownFlag6" class="fundmarket_tabm"><span class="fund_tabtitle">最新净值</span><span id="nav6class" class="fund_tabarrow tabarrow_no"></span></li>
+								<li id="rzdfUpdownFlag6" class="fundmarket_tabright"><span class="fund_tabtitle">月涨跌幅</span><span id="rzdf6class" class="fund_tabarrow tabarrow_top"></span></li>
+							</ul>
+							<div id="item6DetailList">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="item7mobile" class="mui-slider-item mui-control-content">
+				<div id="pullrefresh7" class="mui-scroll-wrapper">
+					<div class="mui-scroll p_down140px">
+						<div class="backbox_fundmarket">
+							<ul class="fundmarket_tabtit">
+								<li id="nameUpdownFlag7" class="fundmarket_tableft"><span class="fund_tabtitle">基金名称</span><span id="name7class" class="fund_tabarrow tabarrow_no"></span></li>
+								<li id="navUpdownFlag7" class="fundmarket_tabm"><span class="fund_tabtitle">万份收益</span><span id="nav7class" class="fund_tabarrow tabarrow_no"></span></li>
+								<li id="rzdfUpdownFlag7" class="fundmarket_tabright"><span class="fund_tabtitle">七日年化</span><span id="rzdf7class" class="fund_tabarrow tabarrow_top"></span></li>
+							</ul>
+							<div id="item7DetailList">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="item8mobile" class="mui-slider-item mui-control-content">
+				<div id="pullrefresh8" class="mui-scroll-wrapper">
+					<div class="mui-scroll p_down140px">
+						<div class="backbox_fundmarket">
+							<ul class="fundmarket_tabtit">
+								<li id="nameUpdownFlag8" class="fundmarket_tableft"><span class="fund_tabtitle">基金名称</span><span id="name8class" class="fund_tabarrow tabarrow_no"></span></li>
+								<li id="navUpdownFlag8" class="fundmarket_tabm"><span class="fund_tabtitle">最新净值</span><span id="nav8class" class="fund_tabarrow tabarrow_no"></span></li>
+								<li id="rzdfUpdownFlag8" class="fundmarket_tabright"><span class="fund_tabtitle">月涨跌幅</span><span id="rzdf8class" class="fund_tabarrow tabarrow_top"></span></li>
+							</ul>
+							<div id="item8DetailList">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="item9mobile" class="mui-slider-item mui-control-content">
+				<div id="pullrefresh9" class="mui-scroll-wrapper">
+					<div class="mui-scroll p_down140px">
+						<div class="backbox_fundmarket">
+							<ul class="fundmarket_tabtit">
+								<li id="nameUpdownFlag9" class="fundmarket_tableft"><span class="fund_tabtitle">基金名称</span><span id="name9class" class="fund_tabarrow tabarrow_no"></span></li>
+								<li id="navUpdownFlag9" class="fundmarket_tabm"><span class="fund_tabtitle">最新净值</span><span id="nav9class" class="fund_tabarrow tabarrow_no"></span></li>
+								<li id="rzdfUpdownFlag9" class="fundmarket_tabright"><span class="fund_tabtitle">月涨跌幅</span><span id="rzdf9class" class="fund_tabarrow tabarrow_top"></span></li>
+							</ul>
+							<div id="item9DetailList">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="item10mobile" class="mui-slider-item mui-control-content">
+				<div id="pullrefresh10" class="mui-scroll-wrapper">
+					<div class="mui-scroll p_down140px">
+						<div class="backbox_fundmarket">
+							<ul class="fundmarket_tabtit">
+								<li id="nameUpdownFlag10" class="fundmarket_tableft"><span class="fund_tabtitle">基金名称</span><span id="name10class" class="fund_tabarrow tabarrow_no"></span></li>
+								<li id="navUpdownFlag10" class="fundmarket_tabm"><span class="fund_tabtitle">最新净值</span><span id="nav10class" class="fund_tabarrow tabarrow_no"></span></li>
+								<li id="rzdfUpdownFlag10" class="fundmarket_tabright"><span class="fund_tabtitle">月涨跌幅</span><span id="rzdf10class" class="fund_tabarrow tabarrow_top"></span></li>
+							</ul>
+							<div id="item10DetailList">
+								
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="item11mobile" class="mui-slider-item mui-control-content">
+				<div id="pullrefresh11" class="mui-scroll-wrapper">
+					<div class="mui-scroll p_down140px">
+						<div class="backbox_fundmarket">
+							<ul class="fundmarket_tabtit">
+								<!--<li class="fundmarket_tableft"><span class="fund_tabtitle">基金名称</span><span class="fund_tabarrow tabarrow_no"></span></li>
+								<li class="fundmarket_tabm"><span class="fund_tabtitle">最新净值</span><span class="fund_tabarrow tabarrow_down"></span></li>
+								<li class="fundmarket_tabright"><span class="fund_tabtitle">月涨跌幅</span><span class="fund_tabarrow tabarrow_top"></span></li>-->
+							</ul>
+							<!--<ul class="fundmarket_tabcont" id="item11DetailList">
+								
+							</ul>-->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<input type="hidden" id="showUpdownFlag" value="1"/><!--升降序标志-->
+		
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script type="text/javascript" src="../../js/core/param.js"></script>
+		<script type="text/javascript" src="../../js/mui.pullToRefresh.js"></script>
+		<script type="text/javascript" src="../../js/mui.pullToRefresh.material.js"></script>
+		<script type="text/javascript">
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('fund/fundmarket');
+			(function($) {
+				//阻尼系数
+				var deceleration = mui.os.ios?0.003:0.0009;
+				$('.mui-scroll-wrapper').scroll({
+					bounce: false,
+					indicators: true, //是否显示滚动条
+					deceleration:deceleration
+				});
+				$.ready(function() {
+					//循环初始化所有下拉刷新，上拉加载。
+					$.each(document.querySelectorAll('.mui-slider-group .mui-scroll-wrapper'), function(index, pullRefreshEl) {
+						mui(pullRefreshEl).pullRefresh({
+							down: {
+								callback: function() {
+									var self = this;
+									pulldownfresh(pullRefreshEl,self);
+								}
+							},
+							up: {
+								callback: function() {
+									var self = this;
+									pullupRefresh(pullRefreshEl,self);
+								}
+							},
+						});
+					});
+				});
+			})(mui);
+		</script>
+	</body>
+</html>

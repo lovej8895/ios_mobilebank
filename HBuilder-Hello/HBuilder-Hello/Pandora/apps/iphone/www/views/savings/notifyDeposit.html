@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>通知存款</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />		
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css"  />
+		<style>
+			.mui-scroll-wrapper {
+				position: absolute;
+				z-index: 2;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				width: 100%
+			}		
+	        .mui-scroll{
+	        	position: relative;
+	        }			
+		</style>
+	</head>
+	
+	<body>  
+		<div class="bg_screen content_box5px">
+		    <div class="backbox_th p_lr10px">
+				<ul>
+					<li class="b_das" id="changeAccount">
+					    	<span class="input_lbg">请选择账号</span>
+					    	<span class="input_m14px" id="accountNo"></span>
+					    	<a class="link_rbg_red_d"></a>
+					</li>					
+				</ul>
+		    </div>
+		</div>
+		<div id="pullrefresh" class="mui-scroll-wrapper p_down140px">
+		<div class="mui-scroll">		
+		    <div class="m_top70px">
+				<div class="content_box5px m_top10px">
+				    <div  id="subAccountList">
+				   
+				    	  	
+	
+				    </div>
+			    
+				</div>
+           </div>
+  		</div>
+		</div>
+    
+        <nav class="btn_bg_f2">
+	       <div class="but_bg_f">
+	       	 <button class="but_315px but_w" id="demand2Notify"><img class="btn_ico" src="../../img/btn_ico1.png" />开立通知存款</button>
+	       </div>
+        </nav>
+
+
+
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/core/param.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+        <script src="../../js/common/smart.poppicker.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script src="../../js/core/param.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('savings/notifyDeposit');
+		</script>			
+	</body>
+</html>

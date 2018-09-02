@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="Cache-Control" content="no-cache, must-revalidate">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>日志详情</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+		     	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">日志详情</h1>
+		    </div>
+		</header>
+			<div id="pullrefresh" class="mui-scroll-wrapper">
+				<div class="mui-scroll">		
+					<div class="content_box5px">		
+						<div id="logInfoList" style="padding-top: 45px;"> 
+							<!--<div class="backbox_tit_homebg m_top10px">
+								<div class="backbox_tit_homeline">
+									<p class="backbox_tit_homeico"></p>
+									
+								</div>
+							</div>
+							
+						   	<div class="backbox_th p_lr10px">
+								<ul>
+									<li>
+							    	    <span class="input_lbg">操作名称：</span>
+							    	    <span class="input_m14px" id="oprationName"></span>
+								    </li>
+								    <li>
+							    	    <span class="input_lbg">操作时间：</span>
+							    	    <span class="input_m14px" id="oprationTime"></span>
+								    </li>
+								    <li>
+							    	    <span class="input_lbg">结果：</span>
+							    	    <span class="input_m14px" id="operationResult"></span>
+								    </li>
+								    <li>
+							    	    <span class="input_lbg">备注：</span>
+							    	    <span class="input_m14px" id="logInfo">登录ID:13632273607,UUID:359556064779158,登录方式:手势</span>
+								    </li>
+								</ul>
+						   	</div>--> 
+						</div>
+					</div>
+		  		</div>
+			</div>
+			<div class="content_box5px m_top130px" id="showMsgDiv" style="display: none;"></div>
+		
+		<!--<div class="content_BOXall">
+		<div class="content_box5px" id="pullrefresh" class="mui-scroll-wrapper" style="margin-top: 10px;">
+			<div class="mui-scroll">
+				<div id="limitList" ></div>
+			</div>-->
+			
+		
+				
+				
+			   	
+			   	
+		<!--</div>-->
+			
+		
+		<!--<div class="but_m20px but_t16">
+				
+				<button class="but_315px but_red" id="limitDetailBack" noCheck="true">返回</button>
+		</div>-->
+		<!--</div>-->
+		<script src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script src="../../js/common/mui.min.js"></script>
+		<script src="../../js/common/sea.js"></script>
+		<script src="../../js/core/format.js"></script>
+		<script type="text/javascript">
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('user/logDetail');
+		</script>
+	</body>
+</html>

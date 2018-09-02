@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>当日委托查询</title>
+		<link rel="stylesheet" href="../../css/mui.min.css" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css"  />
+		<style>
+			.mui-scroll-wrapper {
+				position: absolute;
+				z-index: 2;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				width: 100%
+			}		
+	        .mui-scroll{
+	        	position: relative;
+	        }
+		</style>
+	</head>
+	<body>
+		<div class="position_top_b fundzlbg_color">
+			<div class="content_box5px" id="changeAccount">
+				<div class="searchDiv_zl m_top10px">
+                    <p class="color_fff fz_15" id="accountNo"></p>
+                    <a class="link_rbghund_red_d"></a>
+               </div>	
+			</div>
+			<div class="fund_zlbox">
+				<div class="fund_zltit color_fff" >
+					<p><span class="fz_16 color_fff">¥</span><span class = "color_fff fz_18" id = "total_fundval"></span></p>
+					<p class = "color_fff">总市值</p>				
+				</div>
+				<ul>
+					<li><span class="fz_16 color_fff">¥</span><span class="fz_16 color_fff" id="total_profit_loss"></span><br /><span class="color_ddd">总盈亏 </span></li>
+					<li><span class="fz_16 color_fff">¥</span><span class="fz_16 color_fff" id="total_appamount"></span><br /><span class="color_ddd">在途总资金</span></li>					
+				</ul>
+			</div>
+		</div>	
+		<!--<div class="bg_screen content_box5px hb_soso">		
+			<div class="backbox_th2 p_lr10px">				
+			    <ul>
+				    <li class="b_das" id="changeAccount">
+			    	    <span class="input_lbg">银行账号</span>
+			    	    <span class="input_m14px" id="accountNo"></span>
+			    	    <a class="link_rbg"></a>
+				    </li>
+			    </ul>
+		    </div>
+		</div>-->
+		
+		<!--<div class="content_BOXall" style="margin-top: 0px;">
+		    <div class="content_box10px" >
+				<div class="backbox_tit_bg" >
+				   <p class="backbox_tit_ico"></p>
+				    <p class="backbox_tit">基金总览</p>
+			    </div>
+				<div class="backbox_th p_lr10px bg_br2px">
+				    <ul>
+					    
+					    <li>
+					    	    <p>
+					    	    	<span class="input_lbg">总市值</span>
+					    	        <span class="input_m12px" id="total_fundval"></span>&nbsp;元
+					    	    </p>  
+					    </li>
+					    <li>
+					    	    <p>
+					    	    	<span class="input_lbg">总盈亏</span>
+					    	        <span class="input_m12px" id="total_profit_loss"></span>&nbsp;元
+					    	    </p>  
+					    </li>					   
+				    </ul>
+			    </div>
+			</div>
+		</div>-->
+		<!--<div class="content_BOXall hb_cont" >-->		
+		<div id="pullRefresh" class="mui-scroll-wrapper p_down66px" style="margin-top: 193px;">
+			<div class="content_box5px" >
+				<ul id="fundList"></ul>
+			<!--<div class="content_box5px">
+				<div class="fund_bgfff1 m_top10px">
+					<ul id="fundList"></ul>-->
+					<!--<div class="mynotice_left">
+						<p><span class="fz_22 color_red">10.00</span>%</p>
+						<p class="color_6">七日年化收益</p> 
+					</div>
+					<div class="mynotice_right">
+						<p class="mynotice_fundtit m_top5px fz_15">基金名称<span class="color_6">(950001)</span></p>
+						<p class="m_top5px"><span class="color_6">万份收益</span>&nbsp;<span class="color_red">¥00.00</span></p>
+						<p class="color_9 m_top10px">交易时间&nbsp;&nbsp;2017-05-19</p>
+						<div class="mynoticearrow_right"></div>
+					</div>-->
+			<!--	</div>	
+			</div>-->
+		    </div>   		
+		</div>
+	
+		<div class="content_box5px m_top130px" id="showMsgDiv" style="margin-top: 210px;display: none;"></div>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script src="../../js/common/smart.poppicker.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('fund/myFundList');
+		</script>
+	</body>
+</html>

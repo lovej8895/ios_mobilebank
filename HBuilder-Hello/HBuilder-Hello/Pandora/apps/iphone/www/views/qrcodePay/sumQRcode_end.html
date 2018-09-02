@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>支付成功</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+	</head>
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+			<h1 class="mui-title hb-title">支付结果</h1>
+		</header>
+		<div class="content_BOXall p_down10px hb_cont" id="noShowDetail" style="display: none;">
+			<div class="">
+			    <div class="warn_icon1 suc_pdtop"></div>
+				<p class="fz_15 text_m" id="msg"></p>
+				<p class="fz_12 text_m hint_con" id="tip"></p>
+			</div>
+		</div>	
+		<div class="content_BOXall hb_cont" id="showDetail" style="display: none;">
+			<div class="qrcode_paybg">
+				<div class="qr_paylogobox">
+					<img class="qr_paylogo" src="../../img/qr_success.png"/>
+					<p class="fz_16 color_6">支付成功</p>
+					<div class="qr_sum1 m_top10px"><span class="fz_28">¥</span><span id="txnAmt"></span><span class="qr_sum2 fz_through fz_14 color_9" id="originAmt"></span></div>
+				    <div class="color_9 m_top5px"><span id="merName"></span><a class="color_b m_left10px" id="detailBtn">查看详情</a></div>
+				</div>
+				<div class="qr_messagebg m_top20px">
+					<div style="display: none;">
+						<span class="qr_paylogo2"><img src="../../img/qr_logo2.png" /></span>
+				     	<span class="fz_15 m_left10px color_6">商城名称</span>
+					</div>	
+					<div>
+				     	<p class="qr_message_l fz_15 m_left10px color_6">支付信息</p>
+				     	<p class="qr_message_r color_6"><span class="fz_15 color_6" id="accountNo"></span><br /><span id="accType"></span></p>
+				    </div>
+				</div>
+				
+			</div>
+			<img class="qr_bgd" src="../../img/qr_bgd.png" />
+			<div class="btn_bg_f2">
+				<button class="but_315px but_red" id="backBtn">完&nbsp;&nbsp;成</button>
+			</div>
+		</div>
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('qrcodePay/sumQRcode_end');
+		</script>
+	</body>
+</html>

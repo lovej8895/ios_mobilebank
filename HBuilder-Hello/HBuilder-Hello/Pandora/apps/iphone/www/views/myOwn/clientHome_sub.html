@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>定活互转</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />	
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css"  />
+		<style>
+			.mui-scroll-wrapper {
+				position: absolute;
+				z-index: 2;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				width: 100%
+			}		
+	        .mui-scroll{
+	        	position: relative;
+	        }
+	        .m_top10{
+	        	margin-top: 20px;
+	        }
+	        .p_down60px{
+	        	padding-bottom: 75px;
+	        }
+		</style>
+	</head>
+	
+	<body> 
+		
+		<div id="pullrefresh" class="mui-scroll-wrapper p_down60px">
+		<div class="mui-scroll">
+		    <div class="content_box5px">
+				<div class="content_box5px m_top5px" id="rmbAccount">
+					<!--<ul class="bg_h160px bg_br2px m_top10px">
+					<li>
+						<P class="color_6 m_left10px m_top14px">账号&nbsp;&nbsp;<span class="fz_16">1000&nbsp;***&nbsp;0000</span>&nbsp;&nbsp;<span class="color_9">姓名</span></P>
+						<p class="color_9 m_left10px fz_12">(别名)</p>
+						<p class="owncard_type">储蓄卡</p>
+					</li>
+					<li class="own_money_box m_left10px">
+						<p ><span>活期余额</span><br /><span class="color_6 fz_12">币种／人民币</span></p>
+                        <p class="own_money" style="">
+                        	    <span class="color_red">¥</span>
+                        	    <span class="fz_18 color_red">60,000.00</span>
+                        	    <a class="link_own_rbg"></a>
+                        </p>
+					</li>
+					<li class="own_btn_bg">
+						<div class="pub_btnbox2">
+							<a><span class="fz_12 color_9">明细</span><img src="../../img/icon10.png" /></a>
+							<a><span class="fz_12 color_9">挂失</span><img src="../../img/icon11.png" /></a>
+							<a><span class="fz_12 color_9">编辑</span><img src="../../img/icon12.png" /></a>
+							<a><span class="fz_12 color_9">删除</span><img src="../../img/icon13.png" /></a>
+						</div>
+					</li>
+				</ul>-->
+				</div>
+			</div>
+  		</div>
+		</div>
+    
+        <nav class="btn_bg_f2">	
+           <div class="but_bg_f">
+       	       <button class="but_315px but_w" id="addAccount"><img class="btn_ico" src="../../img/btn_ico1.png" />添加新账户</button>
+           </div>
+        </nav>
+		
+
+
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+        <script src="../../js/common/smart.poppicker.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script src="../../js/core/param.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('myOwn/clientHome_sub');
+		</script>			
+	</body>
+</html>

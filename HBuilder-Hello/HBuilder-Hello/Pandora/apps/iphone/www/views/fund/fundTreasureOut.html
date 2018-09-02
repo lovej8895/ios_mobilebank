@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>宝类转出</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" type="text/css" href="../../css/app.css" />
+		<link rel="stylesheet" href="../../css/public.css" />
+		<link rel="stylesheet" href="../../css/style.css" />	
+		
+		<style type="text/css">
+        .mui-input-row label{
+            padding:0;
+        }
+        .mui-radio input[type=radio]{
+        	position: absolute;
+        	top: 2px;
+        	right: 0;
+        }
+        </style>
+	</head>
+	
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">宝类基金转出</h1>
+		    </div>
+		</header>
+  
+		<div class="content_BOXall hb_cont">
+			<div class="content_box5px" id="outInfo" style="display: none;">
+				<div class="backbox_tit_bg">
+				    <p class="backbox_tit_ico"></p>
+				    <p class="backbox_tit">转出信息</p>
+			    </div>
+				<div class="backbox_th p_lr10px bg_br2px">
+				    <ul>
+					    <!--<li class="b_das" id="changeAccount">
+					    	    <span class="input_lbg">付款账号</span>
+					    	    <span class="input_m14px" id="accountNo"></span>
+					    	    <a class="link_rbg"></a>
+					    </li>-->
+					    <li>
+					    	    <p>
+					    	    	<span class="input_lbg">基金名称</span>
+					    	        <span class="input_m12px" id="productName"></span>
+					    	    </p>  
+					    </li>
+					    <li>
+					    	    <p>
+					    	    	<span class="input_lbg">交易账号</span>
+					    	        <span class="input_m12px" id="accountNo"></span>
+					    	    </p>  
+					    </li>
+					    <li>
+					    	    <p>
+					    	    	<span class="input_lbg">可用余额</span>
+					    	        <span class="input_m12px" id="avdilvol"></span>&nbsp;元
+					    	    </p>  
+					    </li>
+					    <!-- <li>
+					    	    <p>
+					    	    	<span class="input_lbg">最低赎回份额</span>
+					    	        <span class="input_m12px" id="lowestRedemption"></span>&nbsp;份
+					    	    </p>  
+					    </li>-->
+				    </ul>
+			    </div>
+			</div>
+			<br />
+			
+			
+			<div class="content_box5px">
+				<!--<div class="backbox_tit_bg">
+				    <p class="backbox_tit_ico"></p>
+				    <p class="backbox_tit">转出方式</p>
+			   </div>-->
+			   <div class="backbox_th p_lr10px bg_br2px">
+				    <ul>
+					    <li >
+                            <div class="mui-input-row mui-radio mui-right">
+                                <label>
+                                 <p> 快速转出 <span class="color_9">（当日无收益）</span> </p>
+                                 <p class="color_9 fz_12">马上到账，单日限额<span id="limitvol" class="fz_12" style="line-height:15px;"></span>元，今日还剩<span id="residueLimitvol"  class="fz_12" style="line-height:15px;"></span>元</p>
+                                </label>
+                                <input name="redeem_flag" type="radio" value="0" checked>
+                            </div>
+					    </li>
+					     <li >
+                            <div class="mui-input-row mui-radio mui-right">
+                                <label>
+                                 <p> 普通转出 <span class="color_9">（当日有收益）</span> </p>
+                                 <p class="color_9 fz_12">T+1日到账（节假日顺延），不限额度与次数</p>
+                                </label>
+                                <input name="redeem_flag" type="radio" value="1" >
+                            </div>
+                        </li>
+				    </ul>
+			    </div>
+			  <!-- <div class="backbox_tit_bg" style="height: 10px;">
+			   </div>-->
+			   	</br>
+				<div class="backbox_th p_lr10px bg_br2px" >
+				    <ul>
+				    	<li id="">
+					    	<p >转出金额</p >
+                            <p class="fz_28 m_top10px">
+	                            <span>￥</span>
+					    	    <input  id="redemptionLot" class="input_lbg2 fz_28" type="text"  placeholder="请输入转账金额"></input>
+					    	    <span class="fz_12 color_b flo_rihgt m_top10px" id="allSwitchLi" >全部转出</span>
+					        </p >
+                            <p id="avdilvolP" class="color_9 fz_12">
+                           		<span class="color_9 fz_12">剩余基金份额:</span>
+                           		<span class="color_9 fz_12" id="avdilvolSpan"></span>&nbsp;元</p >
+					    </li>
+					    
+				    	<!--<li id="allSwitchLi">
+					    	<span class="input_lbg">全部转出</span>
+					    	<div class="mui-switch mui-switch-blue mui-switch-mini flo_rihgt" id="bookSwitch">
+						        <div class="mui-switch-handle"></div>
+					       </div>				       
+					    </li>-->
+					    
+					   <!-- <li id='putMoney'>
+				    	    <p>
+				    	    	<span class="input_lbg">转出金额</span>
+				    	    	<input type="number" class="input_m12px" id="redemptionLot" placeholder="请输入转出金额" />
+				    	    	<p class="input_rmb">元</p>-->
+				    	        <!--<span class="input_m12px" id="redemptionLot"></span>-->
+				    	 <!--   </p>  
+					    </li>-->
+					   <!-- <li id='putMoneyAll'>
+				    	    <p>
+				    	    	<span class="input_lbg">转出金额</span>				    	    	
+				    	    	<span class="input_m12px" id="redemptionLotAll"></span>&nbsp;元-->
+				    	        <!--<span class="input_m12px" id="redemptionLot"></span>-->
+				    	<!--    </p>  
+					    </li>-->
+					    
+					    
+					   <!-- <li  class="bookLi" id="notPeriodLi">
+					    	<span class="input_lbg">如遇巨额赎回</span>
+					    		<select id="largerRedemption">
+					    			<option value="">请选择</option>
+						            <option id= "type1" value="0" >取消</option>
+						            <option id= "type2" value="1">顺延</option>
+					          </select>				        
+					    </li>
+	   -->
+				    </ul>
+				    
+			    </div>
+			</div>
+			
+			<div class="content_box5px p_lr10px box_top15px p_down66px">
+				<p class="hint">温馨提示</p>
+				<p class="hint_con fz_12">客户新转入未达到起息时间的资金不会享受收益，快速转出与普通转出当日均无收益。</p>
+			</div>
+		</div>
+		
+		
+
+			<div class="btn_bg_f2">
+				<button class="but_315px but_red" id="nextButton">下一步</button>
+			</div>	
+		
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script src="../../js/common/smart.poppicker.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script type="text/javascript" src="../../js/core/utils.js"></script>
+		<script src="../../js/core/param.js"></script> 
+		<script src="../../js/core/utils.js"></script> 
+		<script type="text/javascript" src="../../js/core/initSecurityContent.js"></script>
+		<script type="text/javascript" src="../../js/common/keyboard/plugin-wtxc-keyboard.js"></script> 		
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('fund/fundTreasureOut');
+		</script>			
+	</body>
+</html>

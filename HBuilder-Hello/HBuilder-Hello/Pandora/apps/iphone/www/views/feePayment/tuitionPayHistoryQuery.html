@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <title>学杂费查询</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+        <link href="../../css/mui.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="../../css/public.css" />
+        <link rel="stylesheet" href="../../css/style.css" />         
+        <style>
+            span.mui-icon {
+                font-size: 14px;
+                color: #007aff;
+                margin-left: -15px;
+                padding-right: 10px;
+            }
+            .mui-off-canvas-left, .mui-off-canvas-right{
+                background:#fff;
+            }
+            .mui-off-canvas-right {
+                color: #fff;
+            }
+            .mui-table-view-inverted{
+                 background:#fff;
+            }
+            .title {
+                margin: 35px 15px 10px;
+            }
+            .title+.content {
+                margin: 10px 15px 35px;
+                color: #bbb;
+                text-indent: 1em;
+                font-size: 14px;
+                line-height: 24px;
+            }
+            input {
+                color: #000;
+            }
+            
+            .searchDiv{
+                width:90%;
+                margin:0 auto;
+                margin-top: 10px;
+                height:30px;
+                line-height: 30px;
+            }
+            .searchDiv p{
+                height:30px;
+                border:1px solid #ddd;
+                border-radius: 4px;
+                box-shadow: none;
+            }
+            .searchDiv p input{
+                margin-top: 0;
+                height:27px;
+                line-height: 27px;
+            }
+            .searchDiv a{
+                width:30px;
+                height:30px;
+                position: absolute;
+                right: 12px;
+                top:-7px;
+			}
+			
+            .return{
+    			transform:rotate(90deg);
+			}
+        </style>
+    </head>
+
+    <body>
+        <!--侧滑菜单容器-->
+        <div id="offCanvasWrapper" class="mui-off-canvas-wrap mui-draggable mui-slide-in">
+            <!--菜单部分-->
+            <aside id="offCanvasSide" class="mui-off-canvas-right">
+                <div id="offCanvasSideScroll">
+                	<div style="text-align:center; background:#cf155c;padding:20px;color:#fff;">
+	                	<img class="pub_li_left return" id="offCanvasHide" src="../../img/a_lx_fff_d.png"   alt="" />
+	                	选择城市
+	            	</div>
+                	<div id="pullrefresh1" class="mui-scroll-wrapper" style="margin-top: 62px;" >
+                		<div class="mui-scroll" >
+	                        <ul id="AreaNamUL" >
+	                        </ul>
+                       	</div>
+                	</div>
+                </div>
+                <div id="offCanvasSideScroll_school" style="display: none;">
+                	<div style="text-align:center; background:#cf155c;padding:20px;color:#fff;">
+	                	<img class="pub_li_left return" id="offCanvasHide_school" src="../../img/a_lx_fff_d.png"   alt="" />
+	                	选择学校
+	            	</div>
+	            	
+	            	<div class="searchDiv">
+                        <p>
+                          <input type="text" placeholder="请输入学校名称" id="schoolKey" />
+                          <a href="">
+                              <img src="../../img/soso.png"  alt=""  id="searchSchool"/>
+                          </a> 
+                        </p>                     
+                    </div>
+                    
+                	<div id="pullrefresh2" class="mui-scroll-wrapper" style="margin-top: 100px;" >
+                		<div class="mui-scroll" >
+	                        <ul id="UnitNamUL" >
+	                        </ul>
+                       	</div>
+                	</div>
+                	
+                	<div id="searchFailDiv"  style="margin-top: 100px;text-align:center;display: none;" >未查询到相应的缴费单位</div>
+                </div>
+            </aside>
+            
+            <div class="mui-inner-wrap">
+                <header class="mui-bar mui-bar-nav hb-header" style="border-bottom:1px solid #ddd;">
+                    <a class="mui-action-back mui-icon mui-icon-back mui-pull-left hb_back"></a>
+                    <h1 class="mui-title hb-title">学杂费查询</h1>
+                </header>
+                <div id="offCanvasContentScroll" class="mui-content ">
+                    <div class="">
+                        <div style="">
+		                    <div class="backbox_th p_lr10px m_top10px" style="box-shadow:none; -webkit-box-shadow:none;margin-top: 0px;">
+		                        <ul>
+			                        <li class="b_das" id="offCanvasShowLi" >
+			                            <img class="m_right5px" src="../../img/icon17_1.png" alt="" />
+			                            <strong id="offCanvasShow" class="fz_18 color_red">宜昌市</strong>                           
+			                        </li>
+			                        <li id="changeArea">
+									    	<span class="input_lbg">缴费单位</span>
+									    	<span class="input_m12px" id="schoolPicker"></span>
+									    	<a class="link_rbg"></a>
+			                        </li>
+									<li id="batNoLi">
+										<span class="input_lbg">缴费批次</span>
+										<span class="input_m14px" id="batNoPicker"></span>
+										<a class="link_rbg"></a>
+									</li>
+									<li>
+										<span class="input_lbg">缴费编号</span>
+										<input class="input_m12px" type="text" id="payNoInput" placeholder="请输入缴费编号" value=""></input>
+									</li>
+		                    	</ul>
+		                    </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mui-off-canvas-backdrop"></div>
+            </div>
+            
+            <!--<div class="content_box5px p_lr10px box_top15px p_down66px">
+				<p class="hint">温馨提示</p>
+				<p class="hint_con fz_12">1、单次查询起止日期的跨度不超过90天，您可以查询最近一年的交易记录。</p>
+			</div>-->
+			<div class="btn_bg_f2">
+				<button class="but_150px but_red" style="width: 80%;"  id="queryBtn">查询</button>
+		   	</div>
+			
+        </div>
+      	<script src="../../js/common/mui.min.js"></script>
+      	
+        <script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/smart.poppicker.js"></script>
+		<script type="text/javascript" src="../../js/mui.pullToRefresh.js"></script>
+		<script type="text/javascript" src="../../js/mui.pullToRefresh.material.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('feePayment/tuitionPayHistoryQuery');
+			(function($) {
+				//阻尼系数
+				var deceleration = mui.os.ios?0.003:0.0009;
+				$('.mui-scroll-wrapper').scroll({
+					bounce: false,
+					indicators: true, //是否显示滚动条
+					deceleration:deceleration
+				});
+				$.ready(function() {
+					//循环初始化所有下拉刷新，上拉加载。
+					$.each(document.querySelectorAll('.mui-scroll-wrapper'), function(index, pullRefreshEl) {
+						mui(pullRefreshEl).pullRefresh({
+							down: {
+								callback: function() {
+									var self = this;
+									pulldownfresh(pullRefreshEl,self);
+								}
+							},
+							up: {
+								callback: function() {
+									var self = this;
+									pullupRefresh(pullRefreshEl,self);
+								}
+							},
+						});
+					});
+				});
+			})(mui);
+		</script>
+        
+    </body>
+
+</html>

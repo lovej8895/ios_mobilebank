@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>交易详情</title>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/public.css" />
+	</head>
+	
+	<body>
+		<header class="mui-bar mui-bar-nav hb-header">
+		    <div class="header_wraper">
+		     	<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left hb_back"></a>
+				<h1 class="mui-title hb-title">交易详情</h1>
+		    </div>
+		</header>
+		<div class="content_BOXall hb_cont">
+			<div class="backbox_fo">
+				
+					<ul class="p_lr30px">
+						<li>
+				    	    <span class="detail_left">交易渠道</span>
+				    	    <span class="detail_right" id="finanChll"></span>
+					    </li>
+						<li>
+				    	    <span class="detail_left">银行卡号</span>
+				    	    <span class="detail_right" id="finanCordNo"></span>
+					    </li>
+					    <li>
+				    	    <span class="detail_left">交易类型</span>
+				    	    <span class="detail_right" id="finanBusiCode"></span>
+					    </li>
+					    <li>
+				    	    <span class="detail_left">产品代码</span>
+				    	    <span class="detail_right" id="finanProdCode"></span>
+					    </li>
+					    <li>
+				    	    <span class="detail_left">产品名称</span>
+				    	    <span class="detail_right" id="finanProdName"></span>
+					    </li>
+					    <li>
+				    	    <span class="detail_left">交易日期</span>
+				    	    <span class="detail_right" id="finanTransferDate"></span>
+					    </li>
+					    <li id="transVolLi">
+				    	    <span class="detail_left" id="transVolTitle">申请金额</span>
+				    	    <span class="detail_right" id="transVol"></span>
+					    </li>
+					    <li id="finanTransferAmtLi">
+				    	    <span class="detail_left">交易金额</span>
+				    	    <span class="detail_right" id="finanTransferAmt"></span>
+					    </li>
+					     
+
+					    <li>
+				    	    <span class="detail_left">交易信息</span>
+				    	    <span class="detail_right" id="finanMsg"></span>
+					    </li>
+					</ul>
+			   	
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="../../js/common/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="../../js/common/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/common/sea.js"></script>
+		<script>
+			seajs.config({
+				base: "../../js/controllers/"
+			});
+			seajs.use('productList/transactionDetail');
+		</script>
+	</body>
+</html>
